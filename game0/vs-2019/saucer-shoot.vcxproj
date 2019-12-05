@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="CharacterSelectMenu.h" />
     <ClInclude Include="EventHealth.h" />
     <ClInclude Include="EventNuke.h" />
     <ClInclude Include="Explosion.h" />
@@ -170,6 +171,7 @@
   <ItemGroup>
     <ClCompile Include="..\game.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CharacterSelectMenu.cpp" />
     <ClCompile Include="EventHealth.cpp" />
     <ClCompile Include="EventNuke.cpp" />
     <ClCompile Include="Explosion.cpp" />

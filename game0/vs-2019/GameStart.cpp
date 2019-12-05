@@ -8,6 +8,7 @@
 #include "HealthPack.h"
 #include "ResourceManager.h"
 #include "Platform.h"
+#include "CharacterSelectMenu.h"
 
 GameStart::GameStart() {
 	setSprite("title");
@@ -48,8 +49,8 @@ void GameStart::start() {
 		new Saucer;
 	}*/
 
-	new Platform();
-
+	//new Platform();
+	new CharacterSelectMenu();
 	//new Hero;
 
 	//HUD

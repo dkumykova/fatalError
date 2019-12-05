@@ -15,14 +15,13 @@ Plans for Alpha, Saturday 7th:
 ● Health bar implemented  
 ● Platform  
 ● Start + End screens 
+● Start work on character selection menu 
  
 Plans for Monday, 9th: 
 ● Have all characters implemented with special ability + final sprite 
-● Start work on character selection menu Plans for Final, Wednesday 11th: 
 ● Have all audio implemented 
 ● Background added in 
-● Finished character selection menu 
-● Check for bugs + polish 
+
 
 Plans for Final, Wednesday 11th: 
 ● Have all audio implemented 
