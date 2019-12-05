@@ -7,6 +7,7 @@
 #include "Hero.h"
 #include "HealthPack.h"
 #include "ResourceManager.h"
+#include "Platform.h"
 
 GameStart::GameStart() {
 	setSprite("gamestart");
@@ -14,9 +15,9 @@ GameStart::GameStart() {
 	setType("GameStart");
 	registerInterest(df::KEYBOARD_EVENT);
 
-	start_music = RM.getMusic("startMusic");
-	game_music = RM.getMusic("gameMusic");
-	playMusic(start_music);
+	//start_music = RM.getMusic("startMusic");
+	//game_music = RM.getMusic("gameMusic");
+	//playMusic(start_music);
 	setLocation(df::CENTER_CENTER);
 
 }
@@ -43,31 +44,32 @@ int GameStart::eventHandler(const df::Event* p_e) {
 }
 
 void GameStart::start() {
-	for (int i = 0; i < 7; i++) {
+	/*for (int i = 0; i < 7; i++) {
 		new Saucer;
-	}
+	}*/
 
+	new Platform();
 
-	new Hero;
+	//new Hero;
 
 	//HUD
-	new Points;
-	df::ViewObject* p_vo = new df::ViewObject; //count nukes
-	p_vo->setLocation(df::TOP_LEFT);
-	p_vo->setViewString("Nukes");
-	p_vo->setValue(1);
-	p_vo->setColor(df::YELLOW);
+	//new Points;
+	//df::ViewObject* p_vo = new df::ViewObject; //count nukes
+	//p_vo->setLocation(df::TOP_LEFT);
+	//p_vo->setViewString("Nukes");
+	//p_vo->setValue(1);
+	//p_vo->setColor(df::YELLOW);
 
-	df::ViewObject* p_health = new df::ViewObject; //keep track of health
-	p_health->setLocation(df::TOP_CENTER);
-	p_health->setViewString("Health");
-	p_health->setValue(50);
-	p_health->setColor(df::GREEN);
+	//df::ViewObject* p_health = new df::ViewObject; //keep track of health
+	//p_health->setLocation(df::TOP_CENTER);
+	//p_health->setViewString("Health");
+	//p_health->setValue(50);
+	//p_health->setColor(df::GREEN);
 
 	setActive(false);
-	start_music->pause();
+	//start_music->pause();
 
-	playMusic(game_music);
+	//playMusic(game_music);
 }
 
 int GameStart::draw() {

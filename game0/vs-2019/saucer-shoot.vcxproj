@@ -159,6 +159,7 @@
     <ClInclude Include="GameStart.h" />
     <ClInclude Include="HealthPack.h" />
     <ClInclude Include="Hero.h" />
+    <ClInclude Include="Platform.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="Saucer.h">
@@ -176,6 +177,7 @@
     <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="HealthPack.cpp" />
     <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="Platform.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />

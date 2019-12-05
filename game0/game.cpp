@@ -13,14 +13,16 @@
 #include "vs-2019/Star.h"
 #include "vs-2019/GameStart.h"
 #include "Pause.h"
+#include "WorldManager.h"
+#include "DisplayManager.h"
 
 
-
+using namespace df;
 void loadResources(void);
 void populateWorld(void);
 
 int main(int argc, char *argv[]) {
-
+	 
   // Start up game manager.
   if (GM.startUp())  {
     LM.writeLog("Error starting game manager!");
@@ -31,6 +33,9 @@ int main(int argc, char *argv[]) {
 
   // Set flush of logfile during development (when done, make false).
   LM.setFlush(true);
+ 
+  
+ 
 
   // Show splash screen.
   df::splash();
@@ -58,6 +63,7 @@ void loadResources(void) {
 	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
 	RM.loadSprite("sprites/healthpack-spr.txt", "healthpack");
+	RM.loadSprite("sprites/platform-spr.txt", "platform");
 
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
