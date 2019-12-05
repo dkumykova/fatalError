@@ -10,7 +10,7 @@
 #include "Platform.h"
 
 GameStart::GameStart() {
-	setSprite("gamestart");
+	setSprite("title");
 
 	setType("GameStart");
 	registerInterest(df::KEYBOARD_EVENT);
@@ -28,10 +28,10 @@ int GameStart::eventHandler(const df::Event* p_e) {
 			(df::EventKeyboard *) p_e;
 		
 		switch (p_key_event->getKey()) {
-		case df::Keyboard::P:
+		case df::Keyboard::F:
 			start();
 			break;
-		case df::Keyboard::Q:
+		case df::Keyboard::ESCAPE:
 			GM.setGameOver();
 			break;
 		default:

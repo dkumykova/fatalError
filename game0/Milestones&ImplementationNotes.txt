@@ -1,0 +1,33 @@
+Things that need to be implemented overall:
+
+-Playable Character base class
+-Class for each playable character
+-Health ObjectView
+-Start + End Screen ObjectViews
+-Character Menu Class
+-Class for each Special Ability Object (parenthesis, plus, etc)
+-Background ObjectView
+-Platform Class
+
+Plans for Alpha, Saturday 7th: 
+● Have base player character class implemented with Attack 1 (punch), Attack 2 (kick) and movement 
+● Have 1-2 player characters implemented with special abilities, but with simplified versions of character sprites 
+● Health bar implemented  
+● Platform  
+● Start + End screens 
+ 
+Plans for Monday, 9th: 
+● Have all characters implemented with special ability + final sprite 
+● Start work on character selection menu Plans for Final, Wednesday 11th: 
+● Have all audio implemented 
+● Background added in 
+● Finished character selection menu 
+● Check for bugs + polish 
+
+Plans for Final, Wednesday 11th: 
+● Have all audio implemented 
+● Background added in 
+● Finished character selection menu 
+● Check for bugs + polish 
+ 
+ 

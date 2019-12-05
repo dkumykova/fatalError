@@ -64,6 +64,7 @@ void loadResources(void) {
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
 	RM.loadSprite("sprites/healthpack-spr.txt", "healthpack");
 	RM.loadSprite("sprites/platform-spr.txt", "platform");
+	RM.loadSprite("sprites/title-screen-spr.txt", "title");
 
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
