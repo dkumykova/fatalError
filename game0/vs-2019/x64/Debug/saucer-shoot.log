@@ -1,3 +1,1 @@
-﻿  PlayerChracter.cpp
-C:\Users\RAPHAEL-IMGD3000\Documents\GitHub\fatalError\game0\vs-2019\PlayerChracter.cpp(104,22): warning C4305: '+=': truncation from 'double' to 'float'
-  saucer-shoot.vcxproj -> C:\Users\RAPHAEL-IMGD3000\Documents\GitHub\fatalError\game0\vs-2019\x64\Debug\saucer-shoot.exe
+﻿
