@@ -160,6 +160,7 @@
     <ClInclude Include="GameStart.h" />
     <ClInclude Include="HealthPack.h" />
     <ClInclude Include="Hero.h" />
+    <ClInclude Include="MenuReticle.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="Reticle.h" />
