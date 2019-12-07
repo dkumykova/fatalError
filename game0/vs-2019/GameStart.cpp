@@ -58,16 +58,16 @@ void GameStart::start() {
 		new Saucer;
 	}*/
 
-	new Platform();
+	//new Platform();
 	
-	//new CharacterSelectMenu();
+	new CharacterSelectMenu();
 	//new Hero;
 	//new MenuReticle();
 	//new Player1Reticle();
 	//new Player2Reticle();
 
 	// Chracter Initialization
-	new TestCharacter;
+	//new TestCharacter;
 
 
 

@@ -1,3 +1,6 @@
+#ifndef __PLAYER2_RETICLE_H__
+#define __PLAYER2_RETICLE_H__
+
 #include "Object.h"
 #include "MenuReticle.h"
 
@@ -11,4 +14,5 @@ public:
 
 
 };
+#endif
 

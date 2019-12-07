@@ -3,6 +3,7 @@
 
 #include "Object.h"
 #include "EventKeyboard.h"
+using namespace df;
 
 class MenuReticle : public df::Object {
 private:
@@ -10,6 +11,8 @@ private:
 	void step();
 	int move_slowdown;
 	int move_countdown;
+	Vector highlightedChar;
+	bool characterSet; //true if character has been selected
 
 
 public:
@@ -17,6 +20,10 @@ public:
 	void move(int dy);
 	int eventHandler(const df::Event* p_e);
 	~MenuReticle();
+	void setHighlightedChar();
+	Vector getHighlightedChar() const;
+	void setCharacterSet(bool isSet);
+	bool getCharacterSet() const;
 
 
 };

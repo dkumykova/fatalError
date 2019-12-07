@@ -8,12 +8,15 @@ using namespace df;
 MenuReticle::MenuReticle() {
 	move_slowdown = 2;
 	move_countdown = move_slowdown;
-	setSprite("menureticle");
+	//setSprite("menureticle");
 	setType("MenuReticle");
+	highlightedChar = Vector();
 
 	registerInterest(df::KEYBOARD_EVENT);
 	registerInterest(df::STEP_EVENT);
 	registerInterest(df::MSE_EVENT);
+
+	characterSet = false;
 }
 
 void MenuReticle::kbd(const df::EventKeyboard* p_key_event) {
@@ -78,6 +81,49 @@ int MenuReticle::eventHandler(const df::Event* p_e) {
 }
 MenuReticle::~MenuReticle() {
 
+}
+
+void MenuReticle::setHighlightedChar() {
+	Vector currentPos = getPosition();
+	int x = currentPos.getX();
+	LM.writeLog("Set highlighted char called");
+	setCharacterSet(true);
+	switch (x)
+	{
+	case 38:
+		//Lisp
+		break;
+	case 63:
+		//Java
+		break;
+	case 88:
+		//C++
+		break;
+	case 113:
+		//python
+		break;
+	case 138:
+		//C
+		break;
+	case 163:
+		//javascript
+		break;
+
+	default:
+
+		break;
+	}
+}
+
+Vector MenuReticle::getHighlightedChar() const{
+	return highlightedChar;
+}
+
+void MenuReticle::setCharacterSet(bool isSet) {
+	characterSet = isSet;
+}
+bool MenuReticle::getCharacterSet() const {
+	return characterSet;
 }
 
 
