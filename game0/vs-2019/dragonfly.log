@@ -1,400 +1,427 @@
-18:36:30    0 ****************************************************
-18:36:30    0 ** Dragonfly version 4.15 **
-18:36:30    0 ** Game engine started **
-18:36:30    0 ****************************************************
-18:36:32    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 68 ms
-18:36:32    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-18:36:32    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-18:36:32    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-18:36:32    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-18:36:32    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-18:36:32    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
-18:36:32    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
-18:36:32    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-18:36:32   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-18:36:32   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
-18:36:33   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-18:36:33   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
-18:36:33   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
-18:36:33   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-18:36:33   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 95 ms
-18:36:33   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
-18:36:33   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-18:36:33   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-18:36:33   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'ship' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'platform' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'title' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'test character' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'select' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle1-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'menureticle1' loaded.
-18:36:33   22 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle2-spr.txt'.
-18:36:33   22 ResourceManager::loadSprite(): Sprite 'menureticle2' loaded.
-18:36:33   22 Pause::Pause(): Pause enabled.  Press any other key to resume.
-18:36:34    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 527 ms
-18:36:35    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 537 ms
-18:36:35    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 281 ms
-18:36:35    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
-18:36:35    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
-18:36:36    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 169 ms
-18:36:36    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
-18:36:36    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 172 ms
-18:36:36    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
-18:36:36   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
-18:36:37   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
-18:36:37   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 191 ms
-18:36:37   13 move reticle with D
-18:36:37   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
-18:36:37   14 move reticle with D
-18:36:37   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
-18:36:37   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
-18:36:37   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
-18:36:38   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
-18:36:38   18 move reticle with D
-18:36:38   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 199 ms
-18:36:38   19 move reticle with D
-18:36:38   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 164 ms
-18:36:38   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
-18:36:38   21 GameManager::run(): Can't keep up! frame_time 33 ms, split 169 ms
-18:36:39   22 GameManager::run(): Can't keep up! frame_time 33 ms, split 171 ms
-18:36:39   23 move reticle with D
-18:36:39   23 GameManager::run(): Can't keep up! frame_time 33 ms, split 168 ms
-18:36:39   24 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
-18:36:39   25 GameManager::run(): Can't keep up! frame_time 33 ms, split 171 ms
-18:36:39   26 GameManager::run(): Can't keep up! frame_time 33 ms, split 182 ms
-18:36:39   27 move reticle with D
-18:36:39   27 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
-18:36:40   28 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-18:36:40   29 GameManager::run(): Can't keep up! frame_time 33 ms, split 209 ms
-18:36:40   30 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
-18:36:40   31 move reticle with D
-18:36:40   31 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
-18:36:40   32 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
-18:36:40   33 move reticle with D
-18:36:41   33 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
-18:36:41   34 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
-18:36:41   35 move reticle with D
-18:36:41   35 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
-18:36:41   36 move reticle with D
-18:36:41   36 GameManager::run(): Can't keep up! frame_time 33 ms, split 195 ms
-18:36:41   37 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
-18:36:41   38 move reticle with A
-18:36:41   38 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
-18:36:42   39 move reticle with A
-18:36:42   39 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
-18:36:42   40 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
-18:36:42   41 move reticle with A
-18:36:42   41 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
-18:36:42   42 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
-18:36:42   43 GameManager::run(): Can't keep up! frame_time 33 ms, split 182 ms
-18:36:43   44 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
-18:36:43   45 Characters have not been set!
-18:36:43   45 confirm character for player 1
-18:36:43   45 Set highlighted char called
-18:36:43   45 GameManager::run(): Can't keep up! frame_time 33 ms, split 196 ms
-18:36:43   46 Characters have not been set!
-18:36:43   46 confirm character for player 1
-18:36:43   46 Set highlighted char called
-18:36:43   46 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
-18:36:43   47 Characters have not been set!
-18:36:43   47 confirm character for player 1
-18:36:43   47 Set highlighted char called
-18:36:43   47 GameManager::run(): Can't keep up! frame_time 33 ms, split 182 ms
-18:36:43   48 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
-18:36:44   49 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
-18:36:44   50 GameManager::run(): Can't keep up! frame_time 33 ms, split 171 ms
-18:36:44   51 GameManager::run(): Can't keep up! frame_time 33 ms, split 193 ms
-18:36:44   52 Characters have not been set!
-18:36:44   52 confirm character for player 2
-18:36:44   52 Set highlighted char called
-18:36:44   52 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
-18:36:44   53 GameManager::run(): Can't keep up! frame_time 33 ms, split 206 ms
-18:36:44   54 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
-18:36:45   55 GameManager::run(): Can't keep up! frame_time 33 ms, split 190 ms
-18:36:45   56 GameManager::run(): Can't keep up! frame_time 33 ms, split 191 ms
-18:36:45   57 GameManager::run(): Can't keep up! frame_time 33 ms, split 187 ms
-18:36:45   58 GameManager::run(): Can't keep up! frame_time 33 ms, split 195 ms
-18:36:45   59 GameManager::run(): Can't keep up! frame_time 33 ms, split 187 ms
-18:36:46   60 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
-18:36:46   61 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
-18:36:46   62 GameManager::run(): Can't keep up! frame_time 33 ms, split 199 ms
-18:36:46   63 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
-18:36:46   64 Both characters have been set!
-18:36:46   64 Acceleration: 0.000000, 0.500000
-18:36:46   64 velocity to: 0.000000, 0.000000
-18:36:46   65 Acceleration: 0.000000, 0.500000
-18:36:46   65 velocity to: 0.000000, 0.500000
-18:36:46   66 Acceleration: 0.000000, 0.500000
-18:36:46   66 velocity to: 0.000000, 1.000000
-18:36:46   67 Acceleration: 0.000000, 0.500000
-18:36:46   67 velocity to: 0.000000, 1.500000
-18:36:46   68 Acceleration: 0.000000, 0.500000
-18:36:46   68 velocity to: 0.000000, 2.000000
-18:36:46   69 Acceleration: 0.000000, 0.500000
-18:36:46   69 velocity to: 0.000000, 2.500000
-18:36:46   70 Acceleration: 0.000000, 0.500000
-18:36:46   70 velocity to: 0.000000, 3.000000
-18:36:46   71 Acceleration: 0.000000, 0.500000
-18:36:46   71 velocity to: 0.000000, 3.000000
-18:36:46   72 Acceleration: 0.000000, 0.500000
-18:36:46   72 velocity to: 0.000000, 3.000000
-18:36:46   73 Acceleration: 0.000000, 0.500000
-18:36:46   73 velocity to: 0.000000, 0.000000
-18:36:46   74 Acceleration: 0.000000, 0.500000
-18:36:46   74 velocity to: 0.000000, 0.500000
-18:36:46   75 Acceleration: 0.000000, 0.500000
-18:36:46   75 velocity to: 0.000000, 0.000000
-18:36:47   76 Acceleration: 0.000000, 0.500000
-18:36:47   76 velocity to: 0.000000, 0.500000
-18:36:47   77 Acceleration: 0.000000, 0.500000
-18:36:47   77 velocity to: 0.000000, 0.000000
-18:36:47   78 Acceleration: 0.000000, 0.500000
-18:36:47   78 velocity to: 0.000000, 0.000000
-18:36:47   79 Acceleration: 0.000000, 0.500000
-18:36:47   79 velocity to: 0.000000, 0.000000
-18:36:47   80 Acceleration: 0.000000, 0.500000
-18:36:47   80 velocity to: 0.000000, 0.000000
-18:36:47   81 Acceleration: 0.000000, 0.500000
-18:36:47   81 velocity to: 0.000000, 0.000000
-18:36:47   82 Acceleration: 0.000000, 0.500000
-18:36:47   82 velocity to: 0.000000, 0.000000
-18:36:47   83 Acceleration: 0.000000, 0.500000
-18:36:47   83 velocity to: 0.000000, 0.000000
-18:36:47   84 Acceleration: 0.000000, 0.500000
-18:36:47   84 velocity to: 0.000000, 0.000000
-18:36:47   85 Acceleration: 0.000000, 0.500000
-18:36:47   85 velocity to: 0.000000, 0.000000
-18:36:47   86 Acceleration: 0.000000, 0.500000
-18:36:47   86 velocity to: 0.000000, 0.000000
-18:36:47   87 Acceleration: 0.000000, 0.500000
-18:36:47   87 velocity to: 0.000000, 0.000000
-18:36:47   88 Acceleration: 0.000000, 0.500000
-18:36:47   88 velocity to: 0.000000, 0.000000
-18:36:47   89 Acceleration: 0.000000, 0.500000
-18:36:47   89 velocity to: 0.000000, 0.000000
-18:36:47   90 Acceleration: 0.000000, 0.500000
-18:36:47   90 velocity to: 0.000000, 0.000000
-18:36:47   91 Acceleration: 0.000000, 0.500000
-18:36:47   91 velocity to: 0.000000, 0.000000
-18:36:47   92 Acceleration: 0.000000, 0.500000
-18:36:47   92 velocity to: 0.000000, 0.000000
-18:36:47   93 Acceleration: 0.000000, 0.500000
-18:36:47   93 velocity to: 0.000000, 0.000000
-18:36:47   94 Acceleration: 0.000000, 0.500000
-18:36:47   94 velocity to: 0.000000, 0.000000
-18:36:47   95 Acceleration: 0.000000, 0.500000
-18:36:47   95 velocity to: 0.000000, 0.000000
-18:36:47   96 Acceleration: 0.000000, 0.500000
-18:36:47   96 velocity to: 0.000000, 0.000000
-18:36:47   97 Acceleration: 0.000000, 0.500000
-18:36:47   97 velocity to: 0.000000, 0.000000
-18:36:47   98 Acceleration: 0.000000, 0.500000
-18:36:47   98 velocity to: 0.000000, 0.000000
-18:36:47   99 Acceleration: 0.000000, 0.500000
-18:36:47   99 velocity to: 0.000000, 0.000000
-18:36:47  100 Acceleration: 0.000000, 0.500000
-18:36:47  100 velocity to: 0.000000, 0.000000
-18:36:47  101 Acceleration: 0.000000, 0.500000
-18:36:47  101 velocity to: 0.000000, 0.000000
-18:36:47  102 Key down W*
-18:36:47  102 Setting velocity to: 0.000000, -6.000000
-18:36:47  102 Acceleration: 0.000000, 0.500000
-18:36:47  102 velocity to: 0.000000, -6.000000
-18:36:47  103 Key down W*
-18:36:47  103 Too quick to jump!
-18:36:47  103 31
-18:36:47  103 Acceleration: 0.000000, 0.500000
-18:36:47  103 velocity to: 0.000000, -5.500000
-18:36:47  103 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
-18:36:47  104 Key down W*
-18:36:47  104 Too quick to jump!
-18:36:47  104 60
-18:36:47  104 Acceleration: 0.000000, 0.500000
-18:36:47  104 velocity to: 0.000000, -5.000000
-18:36:47  105 Key down W*
-18:36:47  105 Too quick to jump!
-18:36:47  105 93
-18:36:47  105 Acceleration: 0.000000, 0.500000
-18:36:47  105 velocity to: 0.000000, -4.500000
-18:36:48  106 Acceleration: 0.000000, 0.500000
-18:36:48  106 velocity to: 0.000000, -4.000000
-18:36:48  107 Acceleration: 0.000000, 0.500000
-18:36:48  107 velocity to: 0.000000, -3.500000
-18:36:48  108 Acceleration: 0.000000, 0.500000
-18:36:48  108 velocity to: 0.000000, -3.000000
-18:36:48  109 Acceleration: 0.000000, 0.500000
-18:36:48  109 velocity to: 0.000000, -2.500000
-18:36:48  110 Acceleration: 0.000000, 0.500000
-18:36:48  110 velocity to: 0.000000, -2.000000
-18:36:48  111 Acceleration: 0.000000, 0.500000
-18:36:48  111 velocity to: 0.000000, -1.500000
-18:36:48  112 Acceleration: 0.000000, 0.500000
-18:36:48  112 velocity to: 0.000000, -1.000000
-18:36:48  113 Acceleration: 0.000000, 0.500000
-18:36:48  113 velocity to: 0.000000, -0.500000
-18:36:48  114 Acceleration: 0.000000, 0.500000
-18:36:48  114 velocity to: 0.000000, 0.000000
-18:36:48  115 Acceleration: 0.000000, 0.500000
-18:36:48  115 velocity to: 0.000000, 0.500000
-18:36:48  116 Acceleration: 0.000000, 0.500000
-18:36:48  116 velocity to: 0.000000, 1.000000
-18:36:48  117 Acceleration: 0.000000, 0.500000
-18:36:48  117 velocity to: 0.000000, 1.500000
-18:36:48  118 Acceleration: 0.000000, 0.500000
-18:36:48  118 velocity to: 0.000000, 2.000000
-18:36:48  119 Acceleration: 0.000000, 0.500000
-18:36:48  119 velocity to: 0.000000, 2.500000
-18:36:48  120 Acceleration: 0.000000, 0.500000
-18:36:48  120 velocity to: 0.000000, 3.000000
-18:36:48  121 Acceleration: 0.000000, 0.500000
-18:36:48  121 velocity to: 0.000000, 3.000000
-18:36:48  122 Acceleration: 0.000000, 0.500000
-18:36:48  122 velocity to: 0.000000, 3.000000
-18:36:48  123 Acceleration: 0.000000, 0.500000
-18:36:48  123 velocity to: 0.000000, 3.000000
-18:36:48  124 Acceleration: 0.000000, 0.500000
-18:36:48  124 velocity to: 0.000000, 3.000000
-18:36:48  125 Acceleration: 0.000000, 0.500000
-18:36:48  125 velocity to: 0.000000, 3.000000
-18:36:48  126 Acceleration: 0.000000, 0.500000
-18:36:48  126 velocity to: 0.000000, 3.000000
-18:36:48  127 Acceleration: 0.000000, 0.500000
-18:36:48  127 velocity to: 0.000000, 3.000000
-18:36:48  128 Acceleration: 0.000000, 0.500000
-18:36:48  128 velocity to: 0.000000, 0.000000
-18:36:48  129 Key down W*
-18:36:48  129 Too quick to jump!
-18:36:48  129 895
-18:36:48  129 Acceleration: 0.000000, 0.500000
-18:36:48  129 velocity to: 0.000000, 0.500000
-18:36:48  130 Key down W*
-18:36:48  130 Too quick to jump!
-18:36:48  130 926
-18:36:48  130 Acceleration: 0.000000, 0.500000
-18:36:48  130 velocity to: 0.000000, 1.000000
-18:36:48  131 Key down W*
-18:36:48  131 Too quick to jump!
-18:36:48  131 959
-18:36:48  131 Acceleration: 0.000000, 0.500000
-18:36:48  131 velocity to: 0.000000, 0.000000
-18:36:48  132 Key down W*
-18:36:48  132 Too quick to jump!
-18:36:48  132 993
-18:36:48  132 Acceleration: 0.000000, 0.500000
-18:36:48  132 velocity to: 0.000000, 0.000000
-18:36:48  133 Acceleration: 0.000000, 0.500000
-18:36:48  133 velocity to: 0.000000, 0.000000
-18:36:48  134 Acceleration: 0.000000, 0.500000
-18:36:48  134 velocity to: 0.000000, 0.000000
-18:36:48  135 Acceleration: 0.000000, 0.500000
-18:36:48  135 velocity to: 0.000000, 0.000000
-18:36:49  136 Acceleration: 0.000000, 0.500000
-18:36:49  136 velocity to: 0.000000, 0.000000
-18:36:49  137 Acceleration: 0.000000, 0.500000
-18:36:49  137 velocity to: 0.000000, 0.000000
-18:36:49  138 Acceleration: 0.000000, 0.500000
-18:36:49  138 velocity to: 0.000000, 0.000000
-18:36:49  139 Acceleration: 0.000000, 0.500000
-18:36:49  139 velocity to: 0.000000, 0.000000
-18:36:49  140 Acceleration: 0.000000, 0.500000
-18:36:49  140 velocity to: 0.000000, 0.000000
-18:36:49  141 Acceleration: 0.000000, 0.500000
-18:36:49  141 velocity to: 0.000000, 0.000000
-18:36:49  142 Acceleration: 0.000000, 0.500000
-18:36:49  142 velocity to: 0.000000, 0.000000
-18:36:49  143 Acceleration: 0.000000, 0.500000
-18:36:49  143 velocity to: 0.000000, 0.000000
-18:36:49  144 Acceleration: 0.000000, 0.500000
-18:36:49  144 velocity to: 0.000000, 0.000000
-18:36:49  145 Acceleration: 0.000000, 0.500000
-18:36:49  145 velocity to: 0.000000, 0.000000
-18:36:49  146 Acceleration: 0.000000, 0.500000
-18:36:49  146 velocity to: 0.000000, 0.000000
-18:36:49  147 Acceleration: 0.000000, 0.500000
-18:36:49  147 velocity to: 0.000000, 0.000000
-18:36:49  148 Acceleration: 0.000000, 0.500000
-18:36:49  148 velocity to: 0.000000, 0.000000
-18:36:49  149 Acceleration: 0.000000, 0.500000
-18:36:49  149 velocity to: 0.000000, 0.000000
-18:36:49  150 Acceleration: 0.000000, 0.500000
-18:36:49  150 velocity to: 0.000000, 0.000000
-18:36:49  151 Acceleration: 0.000000, 0.500000
-18:36:49  151 velocity to: 0.000000, 0.000000
-18:36:49  152 Acceleration: 0.000000, 0.500000
-18:36:49  152 velocity to: 0.000000, 0.000000
-18:36:49  153 Acceleration: 0.000000, 0.500000
-18:36:49  153 velocity to: 0.000000, 0.000000
-18:36:49  153 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-18:36:49  154 Acceleration: 0.000000, 0.500000
-18:36:49  154 velocity to: 0.000000, 0.000000
-18:36:49  155 Acceleration: 0.000000, 0.500000
-18:36:49  155 velocity to: 0.000000, 0.000000
-18:36:49  156 Acceleration: 0.000000, 0.500000
-18:36:49  156 velocity to: 0.000000, 0.000000
-18:36:49  157 Acceleration: 0.000000, 0.500000
-18:36:49  157 velocity to: 0.000000, 0.000000
-18:36:49  158 Acceleration: 0.000000, 0.500000
-18:36:49  158 velocity to: 0.000000, 0.000000
-18:36:49  159 Acceleration: 0.000000, 0.500000
-18:36:49  159 velocity to: 0.000000, 0.000000
-18:36:49  160 Acceleration: 0.000000, 0.500000
-18:36:49  160 velocity to: 0.000000, 0.000000
-18:36:49  161 Acceleration: 0.000000, 0.500000
-18:36:49  161 velocity to: 0.000000, 0.000000
-18:36:49  162 Acceleration: 0.000000, 0.500000
-18:36:49  162 velocity to: 0.000000, 0.000000
-18:36:49  163 Acceleration: 0.000000, 0.500000
-18:36:49  163 velocity to: 0.000000, 0.000000
-18:36:49  164 Acceleration: 0.000000, 0.500000
-18:36:49  164 velocity to: 0.000000, 0.000000
-18:36:49  165 Acceleration: 0.000000, 0.500000
-18:36:49  165 velocity to: 0.000000, 0.000000
-18:36:50  166 Acceleration: 0.000000, 0.500000
-18:36:50  166 velocity to: 0.000000, 0.000000
-18:36:50  167 Acceleration: 0.000000, 0.500000
-18:36:50  167 velocity to: 0.000000, 0.000000
-18:36:50  168 Acceleration: 0.000000, 0.500000
-18:36:50  168 velocity to: 0.000000, 0.000000
-18:36:50  169 Acceleration: 0.000000, 0.500000
-18:36:50  169 velocity to: 0.000000, 0.000000
-18:36:50  170 Acceleration: 0.000000, 0.500000
-18:36:50  170 velocity to: 0.000000, 0.000000
-18:36:50  171 Acceleration: 0.000000, 0.500000
-18:36:50  171 velocity to: 0.000000, 0.000000
-18:36:50  172 Acceleration: 0.000000, 0.500000
-18:36:50  172 velocity to: 0.000000, 0.000000
-18:36:50  173 Acceleration: 0.000000, 0.500000
-18:36:50  173 velocity to: 0.000000, 0.000000
-18:36:50  174 Acceleration: 0.000000, 0.500000
-18:36:50  174 velocity to: 0.000000, 0.000000
-18:36:50  175 Acceleration: 0.000000, 0.500000
-18:36:50  175 velocity to: 0.000000, 0.000000
-18:36:50  175 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-18:36:50  176 Acceleration: 0.000000, 0.500000
-18:36:50  176 velocity to: 0.000000, 0.000000
-18:36:50  176 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-18:36:50  177 Acceleration: 0.000000, 0.500000
-18:36:50  177 velocity to: 0.000000, 0.000000
-18:36:50  177 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
-18:36:50  178 Acceleration: 0.000000, 0.500000
-18:36:50  178 velocity to: 0.000000, 0.000000
-18:36:50  179 Acceleration: 0.000000, 0.500000
-18:36:50  179 velocity to: 0.000000, 0.000000
+18:56:03    0 ****************************************************
+18:56:03    0 ** Dragonfly version 4.15 **
+18:56:03    0 ** Game engine started **
+18:56:03    0 ****************************************************
+18:56:05    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
+18:56:06    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 71 ms
+18:56:06    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
+18:56:06    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
+18:56:06    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
+18:56:06    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
+18:56:06    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
+18:56:06    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
+18:56:06    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 48 ms
+18:56:06   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
+18:56:06   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
+18:56:06   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
+18:56:06   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
+18:56:06   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
+18:56:06   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
+18:56:06   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
+18:56:06   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 48 ms
+18:56:06   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
+18:56:06   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 85 ms
+18:56:07   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
+18:56:07   21 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
+18:56:07   22 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
+18:56:07   23 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'platform' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'title' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'test character' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'select' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle1-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'menureticle1' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle2-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'menureticle2' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/one-is-selected-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'selected1' loaded.
+18:56:09   82 ResourceManager::loadSprite(): Loading sprite 'sprites/two-is-selected-spr.txt'.
+18:56:09   82 ResourceManager::loadSprite(): Sprite 'selected2' loaded.
+18:56:09   82 Pause::Pause(): Pause enabled.  Press any other key to resume.
+18:56:10   29 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
+18:56:10   30 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
+18:56:10   31 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+18:56:10   32 GameManager::run(): Can't keep up! frame_time 33 ms, split 170 ms
+18:56:11   33 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+18:56:11   34 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:11   35 GameManager::run(): Can't keep up! frame_time 33 ms, split 189 ms
+18:56:11   36 GameManager::run(): Can't keep up! frame_time 33 ms, split 168 ms
+18:56:11   37 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:12   38 GameManager::run(): Can't keep up! frame_time 33 ms, split 172 ms
+18:56:12   39 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
+18:56:12   40 move reticle with D
+18:56:12   40 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+18:56:12   41 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
+18:56:12   42 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+18:56:12   43 GameManager::run(): Can't keep up! frame_time 33 ms, split 164 ms
+18:56:12   44 move reticle with D
+18:56:13   44 GameManager::run(): Can't keep up! frame_time 33 ms, split 165 ms
+18:56:13   45 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
+18:56:13   46 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
+18:56:13   47 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+18:56:13   48 move reticle with D
+18:56:13   48 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
+18:56:14   49 GameManager::run(): Can't keep up! frame_time 33 ms, split 196 ms
+18:56:14   50 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:14   51 GameManager::run(): Can't keep up! frame_time 33 ms, split 169 ms
+18:56:14   52 move reticle with D
+18:56:14   52 GameManager::run(): Can't keep up! frame_time 33 ms, split 165 ms
+18:56:14   53 GameManager::run(): Can't keep up! frame_time 33 ms, split 171 ms
+18:56:14   54 move reticle with D
+18:56:14   54 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+18:56:15   55 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
+18:56:15   56 move reticle with D
+18:56:15   56 GameManager::run(): Can't keep up! frame_time 33 ms, split 200 ms
+18:56:15   57 move reticle with D
+18:56:15   57 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:15   58 move reticle with D
+18:56:15   58 GameManager::run(): Can't keep up! frame_time 33 ms, split 187 ms
+18:56:15   59 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+18:56:15   60 move reticle with A
+18:56:16   60 GameManager::run(): Can't keep up! frame_time 33 ms, split 195 ms
+18:56:16   61 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+18:56:16   62 GameManager::run(): Can't keep up! frame_time 33 ms, split 166 ms
+18:56:16   63 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+18:56:16   64 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+18:56:16   65 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+18:56:17   66 GameManager::run(): Can't keep up! frame_time 33 ms, split 167 ms
+18:56:17   67 GameManager::run(): Can't keep up! frame_time 33 ms, split 160 ms
+18:56:17   68 confirm character for player 1
+18:56:17   68 Set highlighted char called
+18:56:17   68 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
+18:56:17   69 GameManager::run(): Can't keep up! frame_time 33 ms, split 185 ms
+18:56:17   70 GameManager::run(): Can't keep up! frame_time 33 ms, split 208 ms
+18:56:17   71 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+18:56:18   72 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
+18:56:18   73 confirm character for player 2
+18:56:18   73 Set highlighted char called
+18:56:18   73 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
+18:56:18   74 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
+18:56:18   75 GameManager::run(): Can't keep up! frame_time 33 ms, split 189 ms
+18:56:18   76 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:19   77 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
+18:56:19   78 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
+18:56:19   79 GameManager::run(): Can't keep up! frame_time 33 ms, split 169 ms
+18:56:19   80 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+18:56:19   81 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+18:56:19   82 GameManager::run(): Can't keep up! frame_time 33 ms, split 169 ms
+18:56:20   83 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
+18:56:20   84 GameManager::run(): Can't keep up! frame_time 33 ms, split 170 ms
+18:56:20   85 GameManager::run(): Can't keep up! frame_time 33 ms, split 167 ms
+18:56:20   86 GameManager::run(): Can't keep up! frame_time 33 ms, split 171 ms
+18:56:20   87 GameManager::run(): Can't keep up! frame_time 33 ms, split 189 ms
+18:56:20   88 GameManager::run(): Can't keep up! frame_time 33 ms, split 174 ms
+18:56:21   89 GameManager::run(): Can't keep up! frame_time 33 ms, split 167 ms
+18:56:21   90 GameManager::run(): Can't keep up! frame_time 33 ms, split 166 ms
+18:56:21   91 GameManager::run(): Can't keep up! frame_time 33 ms, split 177 ms
+18:56:21   92 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+18:56:21   93 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+18:56:21   94 Both characters have been set!
+18:56:21   94 Acceleration: 0.000000, 0.500000
+18:56:21   94 velocity to: 0.000000, 0.000000
+18:56:21   95 Acceleration: 0.000000, 0.500000
+18:56:21   95 velocity to: 0.000000, 0.500000
+18:56:21   96 Acceleration: 0.000000, 0.500000
+18:56:21   96 velocity to: 0.000000, 1.000000
+18:56:21   97 Acceleration: 0.000000, 0.500000
+18:56:21   97 velocity to: 0.000000, 1.500000
+18:56:21   98 Acceleration: 0.000000, 0.500000
+18:56:21   98 velocity to: 0.000000, 2.000000
+18:56:22   99 Acceleration: 0.000000, 0.500000
+18:56:22   99 velocity to: 0.000000, 2.500000
+18:56:22  100 Acceleration: 0.000000, 0.500000
+18:56:22  100 velocity to: 0.000000, 3.000000
+18:56:22  101 Acceleration: 0.000000, 0.500000
+18:56:22  101 velocity to: 0.000000, 3.000000
+18:56:22  102 Acceleration: 0.000000, 0.500000
+18:56:22  102 velocity to: 0.000000, 3.000000
+18:56:22  103 Acceleration: 0.000000, 0.500000
+18:56:22  103 velocity to: 0.000000, 0.000000
+18:56:22  104 Acceleration: 0.000000, 0.500000
+18:56:22  104 velocity to: 0.000000, 0.500000
+18:56:22  105 Acceleration: 0.000000, 0.500000
+18:56:22  105 velocity to: 0.000000, 0.000000
+18:56:22  106 Acceleration: 0.000000, 0.500000
+18:56:22  106 velocity to: 0.000000, 0.500000
+18:56:22  107 Acceleration: 0.000000, 0.500000
+18:56:22  107 velocity to: 0.000000, 0.000000
+18:56:22  108 Acceleration: 0.000000, 0.500000
+18:56:22  108 velocity to: 0.000000, 0.000000
+18:56:22  109 Acceleration: 0.000000, 0.500000
+18:56:22  109 velocity to: 0.000000, 0.000000
+18:56:22  110 Acceleration: 0.000000, 0.500000
+18:56:22  110 velocity to: 0.000000, 0.000000
+18:56:22  111 Acceleration: 0.000000, 0.500000
+18:56:22  111 velocity to: 0.000000, 0.000000
+18:56:22  111 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+18:56:22  112 Acceleration: 0.000000, 0.500000
+18:56:22  112 velocity to: 0.000000, 0.000000
+18:56:22  113 Acceleration: 0.000000, 0.500000
+18:56:22  113 velocity to: 0.000000, 0.000000
+18:56:22  114 Acceleration: 0.000000, 0.500000
+18:56:22  114 velocity to: 0.000000, 0.000000
+18:56:22  115 Acceleration: 0.000000, 0.500000
+18:56:22  115 velocity to: 0.000000, 0.000000
+18:56:22  116 Acceleration: 0.000000, 0.500000
+18:56:22  116 velocity to: 0.000000, 0.000000
+18:56:22  116 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+18:56:22  117 Acceleration: 0.000000, 0.500000
+18:56:22  117 velocity to: 0.000000, 0.000000
+18:56:22  118 Acceleration: 0.000000, 0.500000
+18:56:22  118 velocity to: 0.000000, 0.000000
+18:56:22  119 Acceleration: 0.000000, 0.500000
+18:56:22  119 velocity to: 0.000000, 0.000000
+18:56:22  120 Acceleration: 0.000000, 0.500000
+18:56:22  120 velocity to: 0.000000, 0.000000
+18:56:22  121 Acceleration: 0.000000, 0.500000
+18:56:22  121 velocity to: 0.000000, 0.000000
+18:56:22  122 Acceleration: 0.000000, 0.500000
+18:56:22  122 velocity to: 0.000000, 0.000000
+18:56:22  123 Acceleration: 0.000000, 0.500000
+18:56:22  123 velocity to: 0.000000, 0.000000
+18:56:22  123 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+18:56:22  124 Acceleration: 0.000000, 0.500000
+18:56:22  124 velocity to: 0.000000, 0.000000
+18:56:22  125 Acceleration: 0.000000, 0.500000
+18:56:22  125 velocity to: 0.000000, 0.000000
+18:56:22  126 Acceleration: 0.000000, 0.500000
+18:56:22  126 velocity to: 0.000000, 0.000000
+18:56:22  127 Acceleration: 0.000000, 0.500000
+18:56:22  127 velocity to: 0.000000, 0.000000
+18:56:23  128 Acceleration: 0.000000, 0.500000
+18:56:23  128 velocity to: 0.000000, 0.000000
+18:56:23  129 Acceleration: 0.000000, 0.500000
+18:56:23  129 velocity to: 0.000000, 0.000000
+18:56:23  130 Acceleration: 0.000000, 0.500000
+18:56:23  130 velocity to: 0.000000, 0.000000
+18:56:23  131 Acceleration: 0.000000, 0.500000
+18:56:23  131 velocity to: 0.000000, 0.000000
+18:56:23  132 Acceleration: 0.000000, 0.500000
+18:56:23  132 velocity to: 0.000000, 0.000000
+18:56:23  133 Acceleration: 0.000000, 0.500000
+18:56:23  133 velocity to: 0.000000, 0.000000
+18:56:23  134 Acceleration: 0.000000, 0.500000
+18:56:23  134 velocity to: 0.000000, 0.000000
+18:56:23  135 Acceleration: 0.000000, 0.500000
+18:56:23  135 velocity to: 0.000000, 0.000000
+18:56:23  136 Acceleration: 0.000000, 0.500000
+18:56:23  136 velocity to: 0.000000, 0.000000
+18:56:23  137 Acceleration: 0.000000, 0.500000
+18:56:23  137 velocity to: 0.000000, 0.000000
+18:56:23  138 Acceleration: 0.000000, 0.500000
+18:56:23  138 velocity to: 0.000000, 0.000000
+18:56:23  139 Acceleration: 0.000000, 0.500000
+18:56:23  139 velocity to: 0.000000, 0.000000
+18:56:23  140 Acceleration: 0.000000, 0.500000
+18:56:23  140 velocity to: 0.000000, 0.000000
+18:56:23  141 Acceleration: 0.000000, 0.500000
+18:56:23  141 velocity to: 0.000000, 0.000000
+18:56:23  142 Acceleration: 0.000000, 0.500000
+18:56:23  142 velocity to: 0.000000, 0.000000
+18:56:23  143 Acceleration: 0.000000, 0.500000
+18:56:23  143 velocity to: 0.000000, 0.000000
+18:56:23  144 Acceleration: 0.000000, 0.500000
+18:56:23  144 velocity to: 0.000000, 0.000000
+18:56:23  144 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+18:56:23  145 Acceleration: 0.000000, 0.500000
+18:56:23  145 velocity to: 0.000000, 0.000000
+18:56:23  146 Acceleration: 0.000000, 0.500000
+18:56:23  146 velocity to: 0.000000, 0.000000
+18:56:23  147 Acceleration: 0.000000, 0.500000
+18:56:23  147 velocity to: 0.000000, 0.000000
+18:56:23  148 Acceleration: 0.000000, 0.500000
+18:56:23  148 velocity to: 0.000000, 0.000000
+18:56:23  149 Acceleration: 0.000000, 0.500000
+18:56:23  149 velocity to: 0.000000, 0.000000
+18:56:23  150 Acceleration: 0.000000, 0.500000
+18:56:23  150 velocity to: 0.000000, 0.000000
+18:56:23  151 Acceleration: 0.000000, 0.500000
+18:56:23  151 velocity to: 0.000000, 0.000000
+18:56:23  152 Acceleration: 0.000000, 0.500000
+18:56:23  152 velocity to: 0.000000, 0.000000
+18:56:23  153 Acceleration: 0.000000, 0.500000
+18:56:23  153 velocity to: 0.000000, 0.000000
+18:56:23  154 Acceleration: 0.000000, 0.500000
+18:56:23  154 velocity to: 0.000000, 0.000000
+18:56:23  155 Acceleration: 0.000000, 0.500000
+18:56:23  155 velocity to: 0.000000, 0.000000
+18:56:23  156 Acceleration: 0.000000, 0.500000
+18:56:23  156 velocity to: 0.000000, 0.000000
+18:56:23  157 Acceleration: 0.000000, 0.500000
+18:56:23  157 velocity to: 0.000000, 0.000000
+18:56:24  158 Acceleration: 0.000000, 0.500000
+18:56:24  158 velocity to: 0.000000, 0.000000
+18:56:24  159 Key down W*
+18:56:24  159 Setting velocity to: 0.000000, -6.000000
+18:56:24  159 Acceleration: 0.000000, 0.500000
+18:56:24  159 velocity to: 0.000000, -6.000000
+18:56:24  160 Key down W*
+18:56:24  160 Too quick to jump!
+18:56:24  160 33
+18:56:24  160 Acceleration: 0.000000, 0.500000
+18:56:24  160 velocity to: 0.000000, -5.500000
+18:56:24  161 Key down W*
+18:56:24  161 Too quick to jump!
+18:56:24  161 66
+18:56:24  161 Acceleration: 0.000000, 0.500000
+18:56:24  161 velocity to: 0.000000, -5.000000
+18:56:24  162 Key down W*
+18:56:24  162 Too quick to jump!
+18:56:24  162 99
+18:56:24  162 Acceleration: 0.000000, 0.500000
+18:56:24  162 velocity to: 0.000000, -4.500000
+18:56:24  163 Acceleration: 0.000000, 0.500000
+18:56:24  163 velocity to: 0.000000, -4.000000
+18:56:24  164 Acceleration: 0.000000, 0.500000
+18:56:24  164 velocity to: 0.000000, -3.500000
+18:56:24  165 Acceleration: 0.000000, 0.500000
+18:56:24  165 velocity to: 0.000000, -3.000000
+18:56:24  166 Acceleration: 0.000000, 0.500000
+18:56:24  166 velocity to: 0.000000, -2.500000
+18:56:24  167 Acceleration: 0.000000, 0.500000
+18:56:24  167 velocity to: 0.000000, -2.000000
+18:56:24  168 Acceleration: 0.000000, 0.500000
+18:56:24  168 velocity to: 0.000000, -1.500000
+18:56:24  169 Acceleration: 0.000000, 0.500000
+18:56:24  169 velocity to: 0.000000, -1.000000
+18:56:24  170 Acceleration: 0.000000, 0.500000
+18:56:24  170 velocity to: 0.000000, -0.500000
+18:56:24  171 Acceleration: 0.000000, 0.500000
+18:56:24  171 velocity to: 0.000000, 0.000000
+18:56:24  171 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
+18:56:24  172 Acceleration: 0.000000, 0.500000
+18:56:24  172 velocity to: 0.000000, 0.500000
+18:56:24  172 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
+18:56:24  173 Acceleration: 0.000000, 0.500000
+18:56:24  173 velocity to: 0.000000, 1.000000
+18:56:24  174 Acceleration: 0.000000, 0.500000
+18:56:24  174 velocity to: 0.000000, 1.500000
+18:56:24  175 Acceleration: 0.000000, 0.500000
+18:56:24  175 velocity to: 0.000000, 2.000000
+18:56:24  176 Acceleration: 0.000000, 0.500000
+18:56:24  176 velocity to: 0.000000, 2.500000
+18:56:24  177 Acceleration: 0.000000, 0.500000
+18:56:24  177 velocity to: 0.000000, 3.000000
+18:56:24  178 Acceleration: 0.000000, 0.500000
+18:56:24  178 velocity to: 0.000000, 3.000000
+18:56:24  179 Acceleration: 0.000000, 0.500000
+18:56:24  179 velocity to: 0.000000, 3.000000
+18:56:24  180 Acceleration: 0.000000, 0.500000
+18:56:24  180 velocity to: 0.000000, 3.000000
+18:56:24  181 Acceleration: 0.000000, 0.500000
+18:56:24  181 velocity to: 0.000000, 3.000000
+18:56:24  182 Acceleration: 0.000000, 0.500000
+18:56:24  182 velocity to: 0.000000, 3.000000
+18:56:24  183 Acceleration: 0.000000, 0.500000
+18:56:24  183 velocity to: 0.000000, 3.000000
+18:56:24  184 Acceleration: 0.000000, 0.500000
+18:56:24  184 velocity to: 0.000000, 3.000000
+18:56:24  184 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+18:56:24  185 Acceleration: 0.000000, 0.500000
+18:56:24  185 velocity to: 0.000000, 0.000000
+18:56:25  186 Acceleration: 0.000000, 0.500000
+18:56:25  186 velocity to: 0.000000, 0.500000
+18:56:25  187 Acceleration: 0.000000, 0.500000
+18:56:25  187 velocity to: 0.000000, 1.000000
+18:56:25  188 Acceleration: 0.000000, 0.500000
+18:56:25  188 velocity to: 0.000000, 0.000000
+18:56:25  189 Acceleration: 0.000000, 0.500000
+18:56:25  189 velocity to: 0.000000, 0.000000
+18:56:25  190 Acceleration: 0.000000, 0.500000
+18:56:25  190 velocity to: 0.000000, 0.000000
+18:56:25  191 Acceleration: 0.000000, 0.500000
+18:56:25  191 velocity to: 0.000000, 0.000000
+18:56:25  192 Acceleration: 0.000000, 0.500000
+18:56:25  192 velocity to: 0.000000, 0.000000
+18:56:25  193 Acceleration: 0.000000, 0.500000
+18:56:25  193 velocity to: 0.000000, 0.000000
+18:56:25  194 Acceleration: 0.000000, 0.500000
+18:56:25  194 velocity to: 0.000000, 0.000000
+18:56:25  195 Acceleration: 0.000000, 0.500000
+18:56:25  195 velocity to: 0.000000, 0.000000
+18:56:25  196 Acceleration: 0.000000, 0.500000
+18:56:25  196 velocity to: 0.000000, 0.000000
+18:56:25  197 Acceleration: 0.000000, 0.500000
+18:56:25  197 velocity to: 0.000000, 0.000000
+18:56:25  197 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+18:56:25  198 Acceleration: 0.000000, 0.500000
+18:56:25  198 velocity to: 0.000000, 0.000000
+18:56:25  198 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
+18:56:25  199 Acceleration: 0.000000, 0.500000
+18:56:25  199 velocity to: 0.000000, 0.000000
+18:56:25  200 Acceleration: 0.000000, 0.500000
+18:56:25  200 velocity to: 0.000000, 0.000000
+18:56:25  201 Acceleration: 0.000000, 0.500000
+18:56:25  201 velocity to: 0.000000, 0.000000
+18:56:25  202 Acceleration: 0.000000, 0.500000
+18:56:25  202 velocity to: 0.000000, 0.000000
+18:56:25  203 Acceleration: 0.000000, 0.500000
+18:56:25  203 velocity to: 0.000000, 0.000000
+18:56:25  204 Acceleration: 0.000000, 0.500000
+18:56:25  204 velocity to: 0.000000, 0.000000
+18:56:25  205 Acceleration: 0.000000, 0.500000
+18:56:25  205 velocity to: 0.000000, 0.000000
+18:56:25  206 Acceleration: 0.000000, 0.500000
+18:56:25  206 velocity to: 0.000000, 0.000000
+18:56:25  207 Acceleration: 0.000000, 0.500000
+18:56:25  207 velocity to: 0.000000, 0.000000
+18:56:25  207 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+18:56:25  208 Acceleration: 0.000000, 0.500000
+18:56:25  208 velocity to: 0.000000, 0.000000
+18:56:25  208 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+18:56:25  209 Acceleration: 0.000000, 0.500000
+18:56:25  209 velocity to: 0.000000, 0.000000
+18:56:25  210 Acceleration: 0.000000, 0.500000
+18:56:25  210 velocity to: 0.000000, 0.000000
+18:56:25  211 Acceleration: 0.000000, 0.500000
+18:56:25  211 velocity to: 0.000000, 0.000000
+18:56:25  212 Acceleration: 0.000000, 0.500000
+18:56:25  212 velocity to: 0.000000, 0.000000
+18:56:25  213 Acceleration: 0.000000, 0.500000
+18:56:25  213 velocity to: 0.000000, 0.000000
+18:56:25  214 Acceleration: 0.000000, 0.500000
+18:56:25  214 velocity to: 0.000000, 0.000000
+18:56:26  215 Acceleration: 0.000000, 0.500000
+18:56:26  215 velocity to: 0.000000, 0.000000
+18:56:26  216 Acceleration: 0.000000, 0.500000
+18:56:26  216 velocity to: 0.000000, 0.000000
+18:56:26  217 Acceleration: 0.000000, 0.500000
+18:56:26  217 velocity to: 0.000000, 0.000000
+18:56:26  218 Acceleration: 0.000000, 0.500000
+18:56:26  218 velocity to: 0.000000, 0.000000
+18:56:26  219 Acceleration: 0.000000, 0.500000
+18:56:26  219 velocity to: 0.000000, 0.000000
+18:56:26  220 Acceleration: 0.000000, 0.500000
+18:56:26  220 velocity to: 0.000000, 0.000000
+18:56:26  221 Acceleration: 0.000000, 0.500000
+18:56:26  221 velocity to: 0.000000, 0.000000
+18:56:26  222 Acceleration: 0.000000, 0.500000
+18:56:26  222 velocity to: 0.000000, 0.000000
+18:56:26  223 Acceleration: 0.000000, 0.500000
+18:56:26  223 velocity to: 0.000000, 0.000000
+18:56:26  224 Acceleration: 0.000000, 0.500000
+18:56:26  224 velocity to: 0.000000, 0.000000
+18:56:26  225 Acceleration: 0.000000, 0.500000
+18:56:26  225 velocity to: 0.000000, 0.000000
+18:56:26  226 Acceleration: 0.000000, 0.500000
+18:56:26  226 velocity to: 0.000000, 0.000000
+18:56:26  227 Acceleration: 0.000000, 0.500000
+18:56:26  227 velocity to: 0.000000, 0.000000

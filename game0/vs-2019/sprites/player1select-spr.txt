@@ -15,7 +15,7 @@ slowdown 15
         \     ||  |  ||     ||     |\    ||     |    |     ||     ||     ||  .  \    |  |    |  | |     ||  |  |  |  |  |     ||  .  \|  |            
          \____||__|__| \___/  \___/  \___||_____|    |____/  \___/  \__,_||__|\_|    |__|   |____||___,_||__|__|  |__|  |_____||__|\_||__|            
                                                                                                                                                       
-                                                            ***Press Enter to Begin***                                                                
+                                                            ***Press SPACE to Begin***                                                                
                                                                                                                                                       
 Player 1:   Left Shift to Select, Left Control to UnSelect                                                                                            
                                                                                                                                                       

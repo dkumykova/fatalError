@@ -31,7 +31,7 @@ void Player1Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	case df::Keyboard::LEFTSHIFT:
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			LM.writeLog("confirm character for player 1");
-			DM.drawString(Vector(20, 40), "Player 1 has selected", CENTER_JUSTIFIED, RED);
+			//DM.drawString(Vector(100, 10), "Player 1 has selected", CENTER_JUSTIFIED, RED);
 			setHighlightedChar();
 		}
 		break;

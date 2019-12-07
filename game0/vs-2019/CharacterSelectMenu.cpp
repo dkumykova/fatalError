@@ -48,19 +48,14 @@ int CharacterSelectMenu::eventHandler(const df::Event* p_e) {
 			dynamic_cast <const df::EventKeyboard*> (p_e);
 
 		switch (p_key_event->getKey()) {
-		case df::Keyboard::LEFTSHIFT:
+		case df::Keyboard::SPACE:
 
 			if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 				start();
 				return 1;
 			}
 			break;
-		case df::Keyboard::RIGHTSHIFT:
-			if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-				start();
-				return 1;
-			}
-			break;
+
 		default:
 			break;
 		}

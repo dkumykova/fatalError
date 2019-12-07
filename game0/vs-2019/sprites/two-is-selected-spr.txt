@@ -1,0 +1,14 @@
+<HEADER>
+frames 1
+width 27
+height 1
+color green
+slowdown 3
+</HEADER>
+<BODY>
+Player 2 Character Selected
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

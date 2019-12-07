@@ -165,6 +165,7 @@
     <ClInclude Include="Player1Reticle.h" />
     <ClInclude Include="Player2Reticle.h" />
     <ClInclude Include="PlayerCharacter.h" />
+    <ClInclude Include="PlayerSelected.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="Saucer.h">
@@ -189,6 +190,7 @@
     <ClCompile Include="Player1Reticle.cpp" />
     <ClCompile Include="Player2Reticle.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
+    <ClCompile Include="PlayerSelected.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />

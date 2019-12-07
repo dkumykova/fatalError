@@ -3,6 +3,7 @@
 
 #include "Object.h"
 #include "EventKeyboard.h"
+#include "PlayerSelected.h"
 using namespace df;
 
 class MenuReticle : public df::Object {
@@ -13,6 +14,7 @@ private:
 	int move_countdown;
 	Vector highlightedChar;
 	bool characterSet; //true if character has been selected
+	
 
 
 public:
@@ -24,6 +26,7 @@ public:
 	Vector getHighlightedChar() const;
 	void setCharacterSet(bool isSet);
 	bool getCharacterSet() const;
+	PlayerSelected selectedString;
 
 
 };

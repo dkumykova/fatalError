@@ -21,6 +21,7 @@
     <ClCompile Include="MenuReticle.cpp" />
     <ClCompile Include="Player1Reticle.cpp" />
     <ClCompile Include="Player2Reticle.cpp" />
+    <ClCompile Include="PlayerSelected.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -42,5 +43,6 @@
     <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="Player1Reticle.h" />
     <ClInclude Include="Player2Reticle.h" />
+    <ClInclude Include="PlayerSelected.h" />
   </ItemGroup>
 </Project>
