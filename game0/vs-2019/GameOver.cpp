@@ -49,11 +49,11 @@ GameOver::~GameOver() {
 		if (p_o->getType() == "GameStart") {
 			p_o->setActive(true);
 			//pause game music and play menu music again
-			dynamic_cast <GameStart*> (p_o)->game_music->pause();
-			dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
+			//dynamic_cast <GameStart*> (p_o)->game_music->pause();
+			//dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
 		}
 	}
-	//GM.setGameOver();
+	GM.setGameOver();
 }
 
 int GameOver::draw() {

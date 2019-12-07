@@ -6,9 +6,9 @@ Platform::Platform() {
 	setSprite("platform");
 
 	setType("Platform");
-	df::Vector p(40, 16); //place in bottom third of screen
+	df::Vector p(100, 47); //place in bottom third of screen
 	setPosition(p);
-
+	setSolidness(df::HARD);
 }
 
 //int Platform::draw() {

@@ -1,6 +1,7 @@
+#pragma once
+
 #define RETICLE_CHAR '+'
 #include "Object.h"
-
 
 class Reticle : public df::Object {
 public:

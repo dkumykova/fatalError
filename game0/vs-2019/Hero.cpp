@@ -4,7 +4,7 @@
 #include "ResourceManager.h"
 #include "GameManager.h"
 #include "EventStep.h"
-#include <stdlib.h>
+//#include <stdlib.h>
 #include "Bullet.h"
 #include "EventMouse.h"
 #include "EventKeyboard.h"

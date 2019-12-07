@@ -1,46 +1,38 @@
-22:55:46    0 ****************************************************
-22:55:46    0 ** Dragonfly version 4.15 **
-22:55:46    0 ** Game engine started **
-22:55:46    0 ****************************************************
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'ship' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/platform-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'platform' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'title' loaded.
-22:55:48   31 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
-22:55:48   31 ResourceManager::loadSprite(): Sprite 'select1' loaded.
-22:55:48   31 Pause::Pause(): Pause enabled.  Press any other key to resume.
-22:55:49   26 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-22:55:49   27 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-22:55:50   53 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
-22:55:50   54 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
-22:55:50   55 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
-22:55:50   63 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
-22:55:50   64 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
-22:55:50   65 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-22:55:50   66 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-22:55:50   67 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-22:55:50   68 GameManager::run(): Can't keep up! frame_time 33 ms, split 77 ms
-22:55:50   71 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-22:55:50   77 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-22:55:51   78 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-22:55:51   79 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-22:55:51   87 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-22:55:51   95 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-22:55:51   96 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-22:55:51   97 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-22:55:51   98 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
-22:55:51   99 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
+10:20:20    0 ****************************************************
+10:20:20    0 ** Dragonfly version 4.15 **
+10:20:20    0 ** Game engine started **
+10:20:20    0 ****************************************************
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'platform' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'title' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'select1' loaded.
+10:20:21   28 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
+10:20:21   28 ResourceManager::loadSprite(): Sprite 'test character' loaded.
+10:20:21   28 Pause::Pause(): Pause enabled.  Press any other key to resume.
+10:20:21    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
+10:20:21    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+10:20:22   37 collide!
+10:20:22   38 collide!
+10:20:22   39 collide!
+10:20:22   40 collide!
+10:20:22   41 collide!
+10:20:22   42 collide!
+10:20:22   43 collide!
+10:20:25  132 ****************************************************
+10:20:25  132 ** Game engine stopped **

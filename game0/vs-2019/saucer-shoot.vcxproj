@@ -161,12 +161,14 @@
     <ClInclude Include="HealthPack.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Platform.h" />
+    <ClInclude Include="PlayerChracter.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="Saucer.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Star.h" />
+    <ClInclude Include="TestingCharacter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\game.cpp" />
@@ -180,10 +182,12 @@
     <ClCompile Include="HealthPack.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="PlayerChracter.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />
     <ClCompile Include="Star.cpp" />
+    <ClCompile Include="TestingCharacter.cpp" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -11,12 +11,12 @@
 # ...
 
 # Window dimensions in pixels.
-window_horizontal_pixels:1024,
-window_vertical_pixels:768,
+window_horizontal_pixels:1440,
+window_vertical_pixels:800,
 
 # Window dimensions in characters.
-window_horizontal_chars:80,
-window_vertical_chars:24,
+window_horizontal_chars:200,
+window_vertical_chars:50,
 
 # Font scale multiplier (2.0 is "normal", 1.0 for "square").
 font_scale:2.0,

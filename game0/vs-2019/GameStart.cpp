@@ -1,14 +1,21 @@
+
+// Game Includes
 #include "GameStart.h"
-#include "EventKeyboard.h"
-#include "WorldManager.h"
-#include "GameManager.h"
 #include "Points.h"
 #include "Saucer.h"
 #include "Hero.h"
 #include "HealthPack.h"
-#include "ResourceManager.h"
 #include "Platform.h"
 #include "CharacterSelectMenu.h"
+#include "TestingCharacter.h"
+
+// Event Includes
+#include "EventKeyboard.h"
+
+// Manager Includes
+#include "WorldManager.h"
+#include "GameManager.h"
+#include "ResourceManager.h"
 
 GameStart::GameStart() {
 	setSprite("title");
@@ -49,9 +56,18 @@ void GameStart::start() {
 		new Saucer;
 	}*/
 
-	//new Platform();
-	new CharacterSelectMenu();
+	new Platform();
+	
+	//new CharacterSelectMenu();
 	//new Hero;
+
+
+
+	// Chracter Initialization
+	new TestCharacter;
+
+
+
 
 	//HUD
 	//new Points;
