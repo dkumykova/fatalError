@@ -61,6 +61,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TestingCharacter.h">
+    <ClInclude Include="MenuReticle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
