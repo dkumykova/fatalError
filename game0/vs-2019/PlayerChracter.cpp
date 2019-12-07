@@ -14,6 +14,7 @@
 #include "WorldManager.h"
 #include "ResourceManager.h"
 #include "GameManager.h"
+#include "DisplayManager.h"
 
 PlayerChracter::PlayerChracter() {
 	// Move Attributes 
@@ -21,7 +22,8 @@ PlayerChracter::PlayerChracter() {
 	move_countdown = move_slowdown;
 
 	// Acceleration
-	acceleration = 0;
+	acceleration = 0.5;
+	on_ground = false;
 
 	// Hit Point
 	health = 100;
@@ -39,9 +41,11 @@ PlayerChracter::PlayerChracter() {
 	setType("PlayerCharacter");
 
 	// Set Starting Position
-	df::Vector position(7, WM.getBoundary().getVertical() / 2);
+	df::Vector position(WM.getView().getHorizontal() / 2, WM.getBoundary().getVertical() / 2);
 	setPosition(position);
-	setSolidness(df::HARD);
+	
+	// Set Altitude
+	setAltitude(3);
 }
 
 PlayerChracter::~PlayerChracter() {
@@ -100,8 +104,16 @@ void PlayerChracter::step() {
 	if (move_countdown < 0)
 		move_countdown = 0;
 
-	if (acceleration < 2)
-		acceleration += 0.3;
+	// Mimic gravity
+	if (!on_ground) {
+		acceleration += 0.05;
+		setAcceleration(df::Vector(0, acceleration));
+	}
+
+	// Error Check for Height
+	if (this->getPosition().getY() > 43.5) {
+		this->setPosition(df::Vector(getPosition().getX(), 43));
+	}
 }
 
 void PlayerChracter::move(int dx, int dy) {
@@ -123,16 +135,21 @@ void PlayerChracter::mouse(const df::EventMouse* p_mouse_event) {
 void PlayerChracter::kbd(const df::EventKeyboard* p_key_event) {
 	
 	switch (p_key_event->getKey()) {
-	case df::Keyboard::W:       // Up
+	case df::Keyboard::W:       // Jump
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			//if (acceleration == 0)
-			//acceleration = -10;
-			setAcceleration(df::Vector(0, 1));
+			if (on_ground) {
+				on_ground = false;
+				acceleration = -0.6;
+				setAcceleration(df::Vector(0, acceleration));
+				return;
+			}
 		}
 		break;
 	case df::Keyboard::A:       // Left
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
+		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			move(-1, 0);
+			return;
+		}
 		break;
 	case df::Keyboard::S:       // Defend
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
@@ -157,8 +174,16 @@ void PlayerChracter::kbd(const df::EventKeyboard* p_key_event) {
 void PlayerChracter::collide(const df::EventCollision* p_c_event){
 	if ((p_c_event->getObject1()->getType() == "Platform") ||
 		(p_c_event->getObject2()->getType() == "Platform")) {
-		LM.writeLog("collide!");
-		if (getAcceleration().getY() != 0)
+		if (on_ground)
+			return;
+		if (getAcceleration().getY() > 0 && !on_ground) {
+			on_ground = true;
 			this->setAcceleration(df::Vector(0, 0));
+
+			// Helps eliminate the bug that sometimes it cannot land "on ground", but collide
+			// I guess this is happening because of collision prediction, or over move.
+			this->setPosition(df::Vector(getPosition().getX(), 42.5));  
+		}
+
 	}
 }

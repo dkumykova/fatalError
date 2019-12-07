@@ -8,9 +8,6 @@ TestCharacter::TestCharacter(){
 	// Set Type
 	setType("TestCharacter");
 
-	// Set Altitude 
-	setAltitude(4);
-
 	// Set Starting Position
 	df::Vector position(20, WM.getBoundary().getVertical() / 2);
 	setPosition(position);

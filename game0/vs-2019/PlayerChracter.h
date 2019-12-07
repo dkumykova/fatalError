@@ -20,6 +20,7 @@ private:
 
 	// Acceleration Related
 	float acceleration;
+	bool on_ground;
 
 	// Mouse Related
 	Reticle* p_reticle;
