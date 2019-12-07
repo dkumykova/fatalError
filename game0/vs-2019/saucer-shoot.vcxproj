@@ -162,7 +162,9 @@
     <ClInclude Include="Hero.h" />
     <ClInclude Include="MenuReticle.h" />
     <ClInclude Include="Platform.h" />
-    <ClInclude Include="PlayerChracter.h" />
+    <ClInclude Include="Player1Reticle.h" />
+    <ClInclude Include="Player2Reticle.h" />
+    <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="Saucer.h">
@@ -182,8 +184,11 @@
     <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="HealthPack.cpp" />
     <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="MenuReticle.cpp" />
     <ClCompile Include="Platform.cpp" />
-    <ClCompile Include="PlayerChracter.cpp" />
+    <ClCompile Include="Player1Reticle.cpp" />
+    <ClCompile Include="Player2Reticle.cpp" />
+    <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />

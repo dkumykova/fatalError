@@ -8,6 +8,8 @@
 #include "Platform.h"
 #include "CharacterSelectMenu.h"
 #include "TestingCharacter.h"
+#include "Player1Reticle.h"
+#include "Player2Reticle.h"
 
 // Event Includes
 #include "EventKeyboard.h"
@@ -60,8 +62,9 @@ void GameStart::start() {
 	
 	//new CharacterSelectMenu();
 	//new Hero;
-
-
+	//new MenuReticle();
+	//new Player1Reticle();
+	//new Player2Reticle();
 
 	// Chracter Initialization
 	new TestCharacter;

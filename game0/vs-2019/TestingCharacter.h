@@ -1,8 +1,8 @@
 #pragma once
 
-#include "PlayerChracter.h"
+#include "PlayerCharacter.h"
 
-class TestCharacter : public PlayerChracter {
+class TestCharacter : public PlayerCharacter {
 
 public:
 	TestCharacter();

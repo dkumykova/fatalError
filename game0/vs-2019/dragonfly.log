@@ -1,0 +1,520 @@
+11:58:48    0 ****************************************************
+11:58:48    0 ** Dragonfly version 4.15 **
+11:58:48    0 ** Game engine started **
+11:58:48    0 ****************************************************
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'platform' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'title' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'test character' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'select' loaded.
+11:58:49    1 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle-spr.txt'.
+11:58:49    1 ResourceManager::loadSprite(): Sprite 'menureticle' loaded.
+11:58:49    1 Pause::Pause(): Pause enabled.  Press any other key to resume.
+11:58:49    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
+11:58:49    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
+11:58:49    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
+11:58:49    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
+11:58:49    5 Acceleration: 0.000000, 0.500000
+11:58:49    5 velocity to: 0.000000, 0.000000
+11:58:49    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
+11:58:49    6 Acceleration: 0.000000, 0.500000
+11:58:49    6 velocity to: 0.000000, 0.500000
+11:58:49    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
+11:58:49    7 Acceleration: 0.000000, 0.500000
+11:58:49    7 velocity to: 0.000000, 1.000000
+11:58:49    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
+11:58:49    8 Acceleration: 0.000000, 0.500000
+11:58:49    8 velocity to: 0.000000, 1.500000
+11:58:49    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 124 ms
+11:58:49    9 Acceleration: 0.000000, 0.500000
+11:58:49    9 velocity to: 0.000000, 2.000000
+11:58:50    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 73 ms
+11:58:50   10 Acceleration: 0.000000, 0.500000
+11:58:50   10 velocity to: 0.000000, 2.500000
+11:58:50   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 70 ms
+11:58:50   11 Acceleration: 0.000000, 0.500000
+11:58:50   11 velocity to: 0.000000, 3.000000
+11:58:50   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
+11:58:50   12 Acceleration: 0.000000, 0.500000
+11:58:50   12 velocity to: 0.000000, 3.000000
+11:58:50   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 73 ms
+11:58:50   13 Acceleration: 0.000000, 0.500000
+11:58:50   13 velocity to: 0.000000, 3.000000
+11:58:50   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 66 ms
+11:58:50   14 Acceleration: 0.000000, 0.500000
+11:58:50   14 velocity to: 0.000000, 0.000000
+11:58:50   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
+11:58:50   15 Acceleration: 0.000000, 0.500000
+11:58:50   15 velocity to: 0.000000, 0.500000
+11:58:50   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 72 ms
+11:58:50   16 Acceleration: 0.000000, 0.500000
+11:58:50   16 velocity to: 0.000000, 0.000000
+11:58:50   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
+11:58:50   17 Acceleration: 0.000000, 0.500000
+11:58:50   17 velocity to: 0.000000, 0.500000
+11:58:50   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 71 ms
+11:58:50   18 Acceleration: 0.000000, 0.500000
+11:58:50   18 velocity to: 0.000000, 0.000000
+11:58:50   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 75 ms
+11:58:50   19 Key down W*
+11:58:50   19 Too quick to jump!
+11:58:50   19 949
+11:58:50   19 Acceleration: 0.000000, 0.500000
+11:58:50   19 velocity to: 0.000000, 0.000000
+11:58:50   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
+11:58:50   20 Key down W*
+11:58:50   20 Setting velocity to: 0.000000, -6.000000
+11:58:50   20 Acceleration: 0.000000, 0.500000
+11:58:50   20 velocity to: 0.000000, -6.000000
+11:58:50   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
+11:58:50   21 Key down W*
+11:58:50   21 Too quick to jump!
+11:58:50   21 67
+11:58:50   21 Acceleration: 0.000000, 0.500000
+11:58:50   21 velocity to: 0.000000, -5.500000
+11:58:50   21 GameManager::run(): Can't keep up! frame_time 33 ms, split 72 ms
+11:58:50   22 Key down W*
+11:58:50   22 Too quick to jump!
+11:58:50   22 133
+11:58:50   22 Acceleration: 0.000000, 0.500000
+11:58:50   22 velocity to: 0.000000, -5.000000
+11:58:50   22 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
+11:58:50   23 Key down W*
+11:58:50   23 Too quick to jump!
+11:58:50   23 183
+11:58:50   23 Acceleration: 0.000000, 0.500000
+11:58:50   23 velocity to: 0.000000, -4.500000
+11:58:50   24 Key down W*
+11:58:50   24 Too quick to jump!
+11:58:50   24 217
+11:58:50   24 Acceleration: 0.000000, 0.500000
+11:58:50   24 velocity to: 0.000000, -4.000000
+11:58:50   25 Key down W*
+11:58:50   25 Too quick to jump!
+11:58:50   25 249
+11:58:50   25 Acceleration: 0.000000, 0.500000
+11:58:50   25 velocity to: 0.000000, -3.500000
+11:58:50   26 Key down W*
+11:58:50   26 Too quick to jump!
+11:58:50   26 283
+11:58:50   26 Acceleration: 0.000000, 0.500000
+11:58:50   26 velocity to: 0.000000, -3.000000
+11:58:51   27 Key down W*
+11:58:51   27 Too quick to jump!
+11:58:51   27 316
+11:58:51   27 Acceleration: 0.000000, 0.500000
+11:58:51   27 velocity to: 0.000000, -2.500000
+11:58:51   28 Acceleration: 0.000000, 0.500000
+11:58:51   28 velocity to: 0.000000, -2.000000
+11:58:51   29 Acceleration: 0.000000, 0.500000
+11:58:51   29 velocity to: 0.000000, -1.500000
+11:58:51   30 Acceleration: 0.000000, 0.500000
+11:58:51   30 velocity to: 0.000000, -1.000000
+11:58:51   31 Acceleration: 0.000000, 0.500000
+11:58:51   31 velocity to: 0.000000, -0.500000
+11:58:51   32 Acceleration: 0.000000, 0.500000
+11:58:51   32 velocity to: 0.000000, 0.000000
+11:58:51   33 Acceleration: 0.000000, 0.500000
+11:58:51   33 velocity to: 0.000000, 0.500000
+11:58:51   34 Acceleration: 0.000000, 0.500000
+11:58:51   34 velocity to: 0.000000, 1.000000
+11:58:51   35 Acceleration: 0.000000, 0.500000
+11:58:51   35 velocity to: 0.000000, 1.500000
+11:58:51   36 Acceleration: 0.000000, 0.500000
+11:58:51   36 velocity to: 0.000000, 2.000000
+11:58:51   37 Acceleration: 0.000000, 0.500000
+11:58:51   37 velocity to: 0.000000, 2.500000
+11:58:51   38 Acceleration: 0.000000, 0.500000
+11:58:51   38 velocity to: 0.000000, 3.000000
+11:58:51   39 Acceleration: 0.000000, 0.500000
+11:58:51   39 velocity to: 0.000000, 3.000000
+11:58:51   40 Acceleration: 0.000000, 0.500000
+11:58:51   40 velocity to: 0.000000, 3.000000
+11:58:51   41 Acceleration: 0.000000, 0.500000
+11:58:51   41 velocity to: 0.000000, 3.000000
+11:58:51   42 Acceleration: 0.000000, 0.500000
+11:58:51   42 velocity to: 0.000000, 3.000000
+11:58:51   43 Acceleration: 0.000000, 0.500000
+11:58:51   43 velocity to: 0.000000, 3.000000
+11:58:51   43 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
+11:58:51   44 Acceleration: 0.000000, 0.500000
+11:58:51   44 velocity to: 0.000000, 3.000000
+11:58:51   45 Acceleration: 0.000000, 0.500000
+11:58:51   45 velocity to: 0.000000, 3.000000
+11:58:51   46 Key down W*
+11:58:51   46 Too quick to jump!
+11:58:51   46 983
+11:58:51   46 Acceleration: 0.000000, 0.500000
+11:58:51   46 velocity to: 0.000000, 0.000000
+11:58:51   47 Key down W*
+11:58:51   47 Setting velocity to: 0.000000, -6.000000
+11:58:51   47 Acceleration: 0.000000, 0.500000
+11:58:51   47 velocity to: 0.000000, -6.000000
+11:58:51   48 Key down W*
+11:58:51   48 Too quick to jump!
+11:58:51   48 33
+11:58:51   48 Acceleration: 0.000000, 0.500000
+11:58:51   48 velocity to: 0.000000, -5.500000
+11:58:51   49 Key down W*
+11:58:51   49 Too quick to jump!
+11:58:51   49 67
+11:58:51   49 Acceleration: 0.000000, 0.500000
+11:58:51   49 velocity to: 0.000000, -5.000000
+11:58:51   50 Key down W*
+11:58:51   50 Too quick to jump!
+11:58:51   50 110
+11:58:51   50 Acceleration: 0.000000, 0.500000
+11:58:51   50 velocity to: 0.000000, -4.500000
+11:58:51   51 Key down W*
+11:58:51   51 Too quick to jump!
+11:58:51   51 167
+11:58:51   51 Acceleration: 0.000000, 0.500000
+11:58:51   51 velocity to: 0.000000, -4.000000
+11:58:51   52 Key down W*
+11:58:51   52 Too quick to jump!
+11:58:51   52 200
+11:58:51   52 Acceleration: 0.000000, 0.500000
+11:58:51   52 velocity to: 0.000000, -3.500000
+11:58:51   53 Key down W*
+11:58:51   53 Too quick to jump!
+11:58:51   53 233
+11:58:51   53 Acceleration: 0.000000, 0.500000
+11:58:51   53 velocity to: 0.000000, -3.000000
+11:58:51   54 Acceleration: 0.000000, 0.500000
+11:58:51   54 velocity to: 0.000000, -2.500000
+11:58:52   55 Acceleration: 0.000000, 0.500000
+11:58:52   55 velocity to: 0.000000, -2.000000
+11:58:52   56 Acceleration: 0.000000, 0.500000
+11:58:52   56 velocity to: 0.000000, -1.500000
+11:58:52   57 Acceleration: 0.000000, 0.500000
+11:58:52   57 velocity to: 0.000000, -1.000000
+11:58:52   58 Acceleration: 0.000000, 0.500000
+11:58:52   58 velocity to: 0.000000, -0.500000
+11:58:52   59 Acceleration: 0.000000, 0.500000
+11:58:52   59 velocity to: 0.000000, 0.000000
+11:58:52   60 Acceleration: 0.000000, 0.500000
+11:58:52   60 velocity to: 0.000000, 0.500000
+11:58:52   61 Acceleration: 0.000000, 0.500000
+11:58:52   61 velocity to: 0.000000, 1.000000
+11:58:52   62 Acceleration: 0.000000, 0.500000
+11:58:52   62 velocity to: 0.000000, 1.500000
+11:58:52   63 Acceleration: 0.000000, 0.500000
+11:58:52   63 velocity to: 0.000000, 2.000000
+11:58:52   64 Acceleration: 0.000000, 0.500000
+11:58:52   64 velocity to: 0.000000, 2.500000
+11:58:52   65 Acceleration: 0.000000, 0.500000
+11:58:52   65 velocity to: 0.000000, 3.000000
+11:58:52   66 Acceleration: 0.000000, 0.500000
+11:58:52   66 velocity to: 0.000000, 3.000000
+11:58:52   67 Acceleration: 0.000000, 0.500000
+11:58:52   67 velocity to: 0.000000, 3.000000
+11:58:52   68 Acceleration: 0.000000, 0.500000
+11:58:52   68 velocity to: 0.000000, 3.000000
+11:58:52   69 Acceleration: 0.000000, 0.500000
+11:58:52   69 velocity to: 0.000000, 3.000000
+11:58:52   70 Acceleration: 0.000000, 0.500000
+11:58:52   70 velocity to: 0.000000, 3.000000
+11:58:52   71 Acceleration: 0.000000, 0.500000
+11:58:52   71 velocity to: 0.000000, 3.000000
+11:58:52   72 Acceleration: 0.000000, 0.500000
+11:58:52   72 velocity to: 0.000000, 3.000000
+11:58:52   73 Acceleration: 0.000000, 0.500000
+11:58:52   73 velocity to: 0.000000, 0.000000
+11:58:52   74 Key down W*
+11:58:52   74 Setting velocity to: 0.000000, -6.000000
+11:58:52   74 Acceleration: 0.000000, 0.500000
+11:58:52   74 velocity to: 0.000000, -6.000000
+11:58:52   75 Key down W*
+11:58:52   75 Too quick to jump!
+11:58:52   75 33
+11:58:52   75 Acceleration: 0.000000, 0.500000
+11:58:52   75 velocity to: 0.000000, -5.500000
+11:58:52   76 Key down W*
+11:58:52   76 Too quick to jump!
+11:58:52   76 66
+11:58:52   76 Acceleration: 0.000000, 0.500000
+11:58:52   76 velocity to: 0.000000, -5.000000
+11:58:52   77 Key down W*
+11:58:52   77 Too quick to jump!
+11:58:52   77 99
+11:58:52   77 Acceleration: 0.000000, 0.500000
+11:58:52   77 velocity to: 0.000000, -4.500000
+11:58:52   78 Key down W*
+11:58:52   78 Too quick to jump!
+11:58:52   78 132
+11:58:52   78 Acceleration: 0.000000, 0.500000
+11:58:52   78 velocity to: 0.000000, -4.000000
+11:58:52   79 Key down W*
+11:58:52   79 Too quick to jump!
+11:58:52   79 166
+11:58:52   79 Acceleration: 0.000000, 0.500000
+11:58:52   79 velocity to: 0.000000, -3.500000
+11:58:52   79 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+11:58:52   80 Key down W*
+11:58:52   80 Too quick to jump!
+11:58:52   80 199
+11:58:52   80 Acceleration: 0.000000, 0.500000
+11:58:52   80 velocity to: 0.000000, -3.000000
+11:58:52   81 Acceleration: 0.000000, 0.500000
+11:58:52   81 velocity to: 0.000000, -2.500000
+11:58:52   82 Acceleration: 0.000000, 0.500000
+11:58:52   82 velocity to: 0.000000, -2.000000
+11:58:53   83 Acceleration: 0.000000, 0.500000
+11:58:53   83 velocity to: 0.000000, -1.500000
+11:58:53   84 Acceleration: 0.000000, 0.500000
+11:58:53   84 velocity to: 0.000000, -1.000000
+11:58:53   85 Acceleration: 0.000000, 0.500000
+11:58:53   85 velocity to: 0.000000, -0.500000
+11:58:53   86 Acceleration: 0.000000, 0.500000
+11:58:53   86 velocity to: 0.000000, 0.000000
+11:58:53   87 Acceleration: 0.000000, 0.500000
+11:58:53   87 velocity to: 0.000000, 0.500000
+11:58:53   88 Acceleration: 0.000000, 0.500000
+11:58:53   88 velocity to: 0.000000, 1.000000
+11:58:53   89 Acceleration: 0.000000, 0.500000
+11:58:53   89 velocity to: 0.000000, 1.500000
+11:58:53   90 Acceleration: 0.000000, 0.500000
+11:58:53   90 velocity to: 0.000000, 2.000000
+11:58:53   91 Acceleration: 0.000000, 0.500000
+11:58:53   91 velocity to: 0.000000, 2.500000
+11:58:53   92 Acceleration: 0.000000, 0.500000
+11:58:53   92 velocity to: 0.000000, 3.000000
+11:58:53   93 Acceleration: 0.000000, 0.500000
+11:58:53   93 velocity to: 0.000000, 3.000000
+11:58:53   94 Acceleration: 0.000000, 0.500000
+11:58:53   94 velocity to: 0.000000, 3.000000
+11:58:53   95 Acceleration: 0.000000, 0.500000
+11:58:53   95 velocity to: 0.000000, 3.000000
+11:58:53   96 Acceleration: 0.000000, 0.500000
+11:58:53   96 velocity to: 0.000000, 3.000000
+11:58:53   96 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
+11:58:53   97 Acceleration: 0.000000, 0.500000
+11:58:53   97 velocity to: 0.000000, 3.000000
+11:58:53   98 Acceleration: 0.000000, 0.500000
+11:58:53   98 velocity to: 0.000000, 3.000000
+11:58:53   99 Acceleration: 0.000000, 0.500000
+11:58:53   99 velocity to: 0.000000, 3.000000
+11:58:53  100 Acceleration: 0.000000, 0.500000
+11:58:53  100 velocity to: 0.000000, 3.000000
+11:58:53  101 Acceleration: 0.000000, 0.500000
+11:58:53  101 velocity to: 0.000000, 0.000000
+11:58:53  102 Key down W*
+11:58:53  102 Too quick to jump!
+11:58:53  102 958
+11:58:53  102 Acceleration: 0.000000, 0.500000
+11:58:53  102 velocity to: 0.000000, 0.500000
+11:58:53  103 Key down W*
+11:58:53  103 Too quick to jump!
+11:58:53  103 999
+11:58:53  103 Acceleration: 0.000000, 0.500000
+11:58:53  103 velocity to: 0.000000, 0.000000
+11:58:53  103 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+11:58:53  104 Key down W*
+11:58:53  104 Setting velocity to: 0.000000, -6.000000
+11:58:53  104 Acceleration: 0.000000, 0.500000
+11:58:53  104 velocity to: 0.000000, -6.000000
+11:58:53  105 Key down W*
+11:58:53  105 Too quick to jump!
+11:58:53  105 34
+11:58:53  105 Acceleration: 0.000000, 0.500000
+11:58:53  105 velocity to: 0.000000, -5.500000
+11:58:53  106 Key down W*
+11:58:53  106 Too quick to jump!
+11:58:53  106 65
+11:58:53  106 Acceleration: 0.000000, 0.500000
+11:58:53  106 velocity to: 0.000000, -5.000000
+11:58:53  107 Key down W*
+11:58:53  107 Too quick to jump!
+11:58:53  107 99
+11:58:53  107 Acceleration: 0.000000, 0.500000
+11:58:53  107 velocity to: 0.000000, -4.500000
+11:58:53  108 Acceleration: 0.000000, 0.500000
+11:58:53  108 velocity to: 0.000000, -4.000000
+11:58:53  109 Acceleration: 0.000000, 0.500000
+11:58:53  109 velocity to: 0.000000, -3.500000
+11:58:53  110 Acceleration: 0.000000, 0.500000
+11:58:53  110 velocity to: 0.000000, -3.000000
+11:58:53  111 Acceleration: 0.000000, 0.500000
+11:58:53  111 velocity to: 0.000000, -2.500000
+11:58:54  112 Acceleration: 0.000000, 0.500000
+11:58:54  112 velocity to: 0.000000, -2.000000
+11:58:54  113 Acceleration: 0.000000, 0.500000
+11:58:54  113 velocity to: 0.000000, -1.500000
+11:58:54  114 Acceleration: 0.000000, 0.500000
+11:58:54  114 velocity to: 0.000000, -1.000000
+11:58:54  115 Acceleration: 0.000000, 0.500000
+11:58:54  115 velocity to: 0.000000, -0.500000
+11:58:54  116 Acceleration: 0.000000, 0.500000
+11:58:54  116 velocity to: 0.000000, 0.000000
+11:58:54  117 Acceleration: 0.000000, 0.500000
+11:58:54  117 velocity to: 0.000000, 0.500000
+11:58:54  118 Acceleration: 0.000000, 0.500000
+11:58:54  118 velocity to: 0.000000, 1.000000
+11:58:54  119 Acceleration: 0.000000, 0.500000
+11:58:54  119 velocity to: 0.000000, 1.500000
+11:58:54  120 Acceleration: 0.000000, 0.500000
+11:58:54  120 velocity to: 0.000000, 2.000000
+11:58:54  121 Acceleration: 0.000000, 0.500000
+11:58:54  121 velocity to: 0.000000, 2.500000
+11:58:54  121 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+11:58:54  122 Acceleration: 0.000000, 0.500000
+11:58:54  122 velocity to: 0.000000, 3.000000
+11:58:54  123 Acceleration: 0.000000, 0.500000
+11:58:54  123 velocity to: 0.000000, 3.000000
+11:58:54  124 Acceleration: 0.000000, 0.500000
+11:58:54  124 velocity to: 0.000000, 3.000000
+11:58:54  125 Acceleration: 0.000000, 0.500000
+11:58:54  125 velocity to: 0.000000, 3.000000
+11:58:54  126 Acceleration: 0.000000, 0.500000
+11:58:54  126 velocity to: 0.000000, 3.000000
+11:58:54  127 Acceleration: 0.000000, 0.500000
+11:58:54  127 velocity to: 0.000000, 3.000000
+11:58:54  128 Acceleration: 0.000000, 0.500000
+11:58:54  128 velocity to: 0.000000, 3.000000
+11:58:54  129 Acceleration: 0.000000, 0.500000
+11:58:54  129 velocity to: 0.000000, 3.000000
+11:58:54  130 Acceleration: 0.000000, 0.500000
+11:58:54  130 velocity to: 0.000000, 0.000000
+11:58:54  131 Acceleration: 0.000000, 0.500000
+11:58:54  131 velocity to: 0.000000, 0.500000
+11:58:54  132 Key down W*
+11:58:54  132 Too quick to jump!
+11:58:54  132 933
+11:58:54  132 Acceleration: 0.000000, 0.500000
+11:58:54  132 velocity to: 0.000000, 1.000000
+11:58:54  133 Key down W*
+11:58:54  133 Too quick to jump!
+11:58:54  133 966
+11:58:54  133 Acceleration: 0.000000, 0.500000
+11:58:54  133 velocity to: 0.000000, 0.000000
+11:58:54  134 Key down W*
+11:58:54  134 Too quick to jump!
+11:58:54  134 999
+11:58:54  134 Acceleration: 0.000000, 0.500000
+11:58:54  134 velocity to: 0.000000, 0.000000
+11:58:54  135 Key down W*
+11:58:54  135 Setting velocity to: 0.000000, -6.000000
+11:58:54  135 Acceleration: 0.000000, 0.500000
+11:58:54  135 velocity to: 0.000000, -6.000000
+11:58:54  136 Key down W*
+11:58:54  136 Too quick to jump!
+11:58:54  136 37
+11:58:54  136 Acceleration: 0.000000, 0.500000
+11:58:54  136 velocity to: 0.000000, -5.500000
+11:58:54  137 Acceleration: 0.000000, 0.500000
+11:58:54  137 velocity to: 0.000000, -5.000000
+11:58:54  138 Acceleration: 0.000000, 0.500000
+11:58:54  138 velocity to: 0.000000, -4.500000
+11:58:54  139 Acceleration: 0.000000, 0.500000
+11:58:54  139 velocity to: 0.000000, -4.000000
+11:58:54  140 Acceleration: 0.000000, 0.500000
+11:58:54  140 velocity to: 0.000000, -3.500000
+11:58:54  140 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+11:58:54  141 Acceleration: 0.000000, 0.500000
+11:58:54  141 velocity to: 0.000000, -3.000000
+11:58:55  142 Acceleration: 0.000000, 0.500000
+11:58:55  142 velocity to: 0.000000, -2.500000
+11:58:55  143 Acceleration: 0.000000, 0.500000
+11:58:55  143 velocity to: 0.000000, -2.000000
+11:58:55  144 Acceleration: 0.000000, 0.500000
+11:58:55  144 velocity to: 0.000000, -1.500000
+11:58:55  145 Acceleration: 0.000000, 0.500000
+11:58:55  145 velocity to: 0.000000, -1.000000
+11:58:55  146 Acceleration: 0.000000, 0.500000
+11:58:55  146 velocity to: 0.000000, -0.500000
+11:58:55  147 Acceleration: 0.000000, 0.500000
+11:58:55  147 velocity to: 0.000000, 0.000000
+11:58:55  148 Acceleration: 0.000000, 0.500000
+11:58:55  148 velocity to: 0.000000, 0.500000
+11:58:55  149 Acceleration: 0.000000, 0.500000
+11:58:55  149 velocity to: 0.000000, 1.000000
+11:58:55  149 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
+11:58:55  150 Acceleration: 0.000000, 0.500000
+11:58:55  150 velocity to: 0.000000, 1.500000
+11:58:55  150 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
+11:58:55  151 Acceleration: 0.000000, 0.500000
+11:58:55  151 velocity to: 0.000000, 2.000000
+11:58:55  151 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+11:58:55  152 Acceleration: 0.000000, 0.500000
+11:58:55  152 velocity to: 0.000000, 2.500000
+11:58:55  153 Acceleration: 0.000000, 0.500000
+11:58:55  153 velocity to: 0.000000, 3.000000
+11:58:55  154 Acceleration: 0.000000, 0.500000
+11:58:55  154 velocity to: 0.000000, 3.000000
+11:58:55  155 Acceleration: 0.000000, 0.500000
+11:58:55  155 velocity to: 0.000000, 3.000000
+11:58:55  156 Acceleration: 0.000000, 0.500000
+11:58:55  156 velocity to: 0.000000, 3.000000
+11:58:55  157 Acceleration: 0.000000, 0.500000
+11:58:55  157 velocity to: 0.000000, 3.000000
+11:58:55  158 Acceleration: 0.000000, 0.500000
+11:58:55  158 velocity to: 0.000000, 3.000000
+11:58:55  159 Acceleration: 0.000000, 0.500000
+11:58:55  159 velocity to: 0.000000, 3.000000
+11:58:55  160 Acceleration: 0.000000, 0.500000
+11:58:55  160 velocity to: 0.000000, 3.000000
+11:58:55  161 Acceleration: 0.000000, 0.500000
+11:58:55  161 velocity to: 0.000000, 0.000000
+11:58:55  162 Acceleration: 0.000000, 0.500000
+11:58:55  162 velocity to: 0.000000, 0.500000
+11:58:55  163 Acceleration: 0.000000, 0.500000
+11:58:55  163 velocity to: 0.000000, 1.000000
+11:58:55  164 Acceleration: 0.000000, 0.500000
+11:58:55  164 velocity to: 0.000000, 0.000000
+11:58:55  165 Acceleration: 0.000000, 0.500000
+11:58:55  165 velocity to: 0.000000, 0.000000
+11:58:55  166 Acceleration: 0.000000, 0.500000
+11:58:55  166 velocity to: 0.000000, 0.000000
+11:58:55  167 Acceleration: 0.000000, 0.500000
+11:58:55  167 velocity to: 0.000000, 0.000000
+11:58:55  168 Acceleration: 0.000000, 0.500000
+11:58:55  168 velocity to: 0.000000, 0.000000
+11:58:55  169 Acceleration: 0.000000, 0.500000
+11:58:55  169 velocity to: 0.000000, 0.000000
+11:58:55  170 Acceleration: 0.000000, 0.500000
+11:58:55  170 velocity to: 0.000000, 0.000000
+11:58:55  171 Acceleration: 0.000000, 0.500000
+11:58:55  171 velocity to: 0.000000, 0.000000
+11:58:56  172 Acceleration: 0.000000, 0.500000
+11:58:56  172 velocity to: 0.000000, 0.000000
+11:58:56  173 Acceleration: 0.000000, 0.500000
+11:58:56  173 velocity to: 0.000000, 0.000000
+11:58:56  174 Acceleration: 0.000000, 0.500000
+11:58:56  174 velocity to: 0.000000, 0.000000
+11:58:56  175 Acceleration: 0.000000, 0.500000
+11:58:56  175 velocity to: 0.000000, 0.000000
+11:58:56  176 Acceleration: 0.000000, 0.500000
+11:58:56  176 velocity to: 0.000000, 0.000000
+11:58:56  177 Acceleration: 0.000000, 0.500000
+11:58:56  177 velocity to: 0.000000, 0.000000
+11:58:56  178 Acceleration: 0.000000, 0.500000
+11:58:56  178 velocity to: 0.000000, 0.000000
+11:58:56  179 Acceleration: 0.000000, 0.500000
+11:58:56  179 velocity to: 0.000000, 0.000000
+11:58:56  180 Acceleration: 0.000000, 0.500000
+11:58:56  180 velocity to: 0.000000, 0.000000
+11:58:56  181 Acceleration: 0.000000, 0.500000
+11:58:56  181 velocity to: 0.000000, 0.000000
+11:58:56  181 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+11:58:56  182 Acceleration: 0.000000, 0.500000
+11:58:56  182 velocity to: 0.000000, 0.000000
+11:58:56  182 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+11:58:56  183 Acceleration: 0.000000, 0.500000
+11:58:56  183 velocity to: 0.000000, 0.000000
