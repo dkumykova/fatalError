@@ -7,19 +7,19 @@
 #include "GameStart.h"
 
 GameOver::GameOver() {
-	if (setSprite("gameover") == 0) {
+	if (setSprite("KO") == 0) {
 		time_to_live = getAnimation().getSprite()->getFrameCount() * getAnimation().getSprite()->getSlowdown();
 	}
 	else {
 		time_to_live = 0;
 	}
-
+	
 	registerInterest(df::STEP_EVENT);
 
 	setLocation(df::CENTER_CENTER);
 
 	df::Sound* p_sound = RM.getSound("gameOver");
-	p_sound->play();
+	//p_sound->play();
 
 }
 
@@ -43,7 +43,7 @@ GameOver::~GameOver() {
 	df::ObjectListIterator i(&object_list);
 	for (i.first(); !i.isDone(); i.next()) {
 		df::Object* p_o = i.currentObject();
-		if (p_o->getType() == "Saucer" || p_o->getType() == "ViewObject") {
+		if (p_o->getType() == "TestCharacter" || p_o->getType() == "Platform") {
 			WM.markForDelete(p_o);
 		}
 		if (p_o->getType() == "GameStart") {
@@ -53,7 +53,7 @@ GameOver::~GameOver() {
 			//dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
 		}
 	}
-	GM.setGameOver();
+	//GM.setGameOver();
 }
 
 int GameOver::draw() {

@@ -206,6 +206,10 @@ void PlayerCharacter::kbd(const df::EventKeyboard* p_key_event) {
 
 	case df::Keyboard::ESCAPE:  // quit
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			//new GameOver;
+		break;
+	case df::Keyboard::R:  // quit
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;
 		break;
 	default: // Key not handled.
