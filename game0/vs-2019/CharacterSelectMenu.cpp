@@ -33,6 +33,8 @@ void CharacterSelectMenu::start() {
 		setActive(false);
 		player1->setActive(false);
 		player2->setActive(false);
+		player1->selectedString->setActive(false);
+		player2->selectedString->setActive(false);
 
 
 	}

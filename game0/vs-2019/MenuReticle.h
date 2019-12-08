@@ -21,7 +21,7 @@ public:
 	MenuReticle();
 	void move(int dy);
 	int eventHandler(const df::Event* p_e);
-	~MenuReticle();
+	/*~MenuReticle();*/
 	void setHighlightedChar(Vector pos);
 	Vector getHighlightedChar() const;
 	void setCharacterSet(bool isSet);

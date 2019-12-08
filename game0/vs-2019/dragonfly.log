@@ -1,198 +1,129 @@
-21:10:40    0 ****************************************************
-21:10:40    0 ** Dragonfly version 4.15 **
-21:10:40    0 ** Game engine started **
-21:10:40    0 ****************************************************
-21:10:41    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
-21:10:42    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 133 ms
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'ship' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'platform' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'title' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'test character' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'select' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle1-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'menureticle1' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle2-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'menureticle2' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/one-is-selected-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'selected1' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/two-is-selected-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'selected2' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/two-is-unselected-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'unselected2' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/one-is-unselected-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'unselected1' loaded.
-21:10:42    4 ResourceManager::loadSprite(): Loading sprite 'sprites/KO-spr.txt'.
-21:10:42    4 ResourceManager::loadSprite(): Sprite 'KO' loaded.
-21:10:42    4 Pause::Pause(): Pause enabled.  Press any other key to resume.
-21:10:42    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
-21:10:42    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 117 ms
-21:10:42    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 157 ms
-21:10:44    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 1135 ms
-21:10:44    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 665 ms
-21:10:44    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 196 ms
-21:10:45    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:10:45    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 216 ms
-21:10:45    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 256 ms
-21:10:45   10 move reticle with D
-21:10:45   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:10:46   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 204 ms
-21:10:46   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 222 ms
-21:10:46   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 217 ms
-21:10:46   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 226 ms
-21:10:46   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 239 ms
-21:10:47   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 219 ms
-21:10:47   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 241 ms
-21:10:47   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 219 ms
-21:10:47   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 199 ms
-21:10:47   20 confirm character for player 1
-21:10:47   20 Set highlighted char called
-21:10:48   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 216 ms
-21:10:48   21 GameManager::run(): Can't keep up! frame_time 33 ms, split 224 ms
-21:10:48   22 GameManager::run(): Can't keep up! frame_time 33 ms, split 225 ms
-21:10:48   23 GameManager::run(): Can't keep up! frame_time 33 ms, split 196 ms
-21:10:48   24 GameManager::run(): Can't keep up! frame_time 33 ms, split 204 ms
-21:10:49   25 GameManager::run(): Can't keep up! frame_time 33 ms, split 195 ms
-21:10:49   26 GameManager::run(): Can't keep up! frame_time 33 ms, split 203 ms
-21:10:49   27 move reticle with D
-21:10:49   27 GameManager::run(): Can't keep up! frame_time 33 ms, split 190 ms
-21:10:49   28 GameManager::run(): Can't keep up! frame_time 33 ms, split 190 ms
-21:10:49   29 move reticle with D
-21:10:49   29 GameManager::run(): Can't keep up! frame_time 33 ms, split 202 ms
-21:10:50   30 GameManager::run(): Can't keep up! frame_time 33 ms, split 222 ms
-21:10:50   31 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:10:50   32 GameManager::run(): Can't keep up! frame_time 33 ms, split 204 ms
-21:10:50   33 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:10:50   34 GameManager::run(): Can't keep up! frame_time 33 ms, split 203 ms
-21:10:51   35 GameManager::run(): Can't keep up! frame_time 33 ms, split 209 ms
-21:10:51   36 GameManager::run(): Can't keep up! frame_time 33 ms, split 224 ms
-21:10:51   37 GameManager::run(): Can't keep up! frame_time 33 ms, split 201 ms
-21:10:51   38 GameManager::run(): Can't keep up! frame_time 33 ms, split 199 ms
-21:10:51   39 GameManager::run(): Can't keep up! frame_time 33 ms, split 243 ms
-21:10:52   40 GameManager::run(): Can't keep up! frame_time 33 ms, split 214 ms
-21:10:52   41 GameManager::run(): Can't keep up! frame_time 33 ms, split 206 ms
-21:10:52   42 GameManager::run(): Can't keep up! frame_time 33 ms, split 221 ms
-21:10:52   43 GameManager::run(): Can't keep up! frame_time 33 ms, split 202 ms
-21:10:53   44 GameManager::run(): Can't keep up! frame_time 33 ms, split 210 ms
-21:10:53   45 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
-21:10:53   46 GameManager::run(): Can't keep up! frame_time 33 ms, split 220 ms
-21:10:53   47 GameManager::run(): Can't keep up! frame_time 33 ms, split 228 ms
-21:10:53   48 GameManager::run(): Can't keep up! frame_time 33 ms, split 203 ms
-21:10:53   49 unselect character for player 1
-21:10:53   49 Set highlighted char called
-21:10:58   49 GameManager::run(): Can't keep up! frame_time 33 ms, split 4287 ms
-21:10:58   50 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:10:58   51 GameManager::run(): Can't keep up! frame_time 33 ms, split 267 ms
-21:10:58   52 GameManager::run(): Can't keep up! frame_time 33 ms, split 226 ms
-21:10:59   53 GameManager::run(): Can't keep up! frame_time 33 ms, split 265 ms
-21:10:59   54 GameManager::run(): Can't keep up! frame_time 33 ms, split 253 ms
-21:10:59   55 GameManager::run(): Can't keep up! frame_time 33 ms, split 207 ms
-21:10:59   56 GameManager::run(): Can't keep up! frame_time 33 ms, split 237 ms
-21:11:00   57 GameManager::run(): Can't keep up! frame_time 33 ms, split 265 ms
-21:11:00   58 GameManager::run(): Can't keep up! frame_time 33 ms, split 314 ms
-21:11:00   59 GameManager::run(): Can't keep up! frame_time 33 ms, split 323 ms
-21:11:00   60 GameManager::run(): Can't keep up! frame_time 33 ms, split 221 ms
-21:11:01   61 GameManager::run(): Can't keep up! frame_time 33 ms, split 280 ms
-21:11:01   62 move reticle with D
-21:11:01   62 GameManager::run(): Can't keep up! frame_time 33 ms, split 224 ms
-21:11:01   63 GameManager::run(): Can't keep up! frame_time 33 ms, split 299 ms
-21:11:01   64 move reticle with D
-21:11:02   64 GameManager::run(): Can't keep up! frame_time 33 ms, split 283 ms
-21:11:02   65 GameManager::run(): Can't keep up! frame_time 33 ms, split 229 ms
-21:11:02   66 confirm character for player 2
-21:11:02   66 Set highlighted char called
-21:11:02   66 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
-21:11:02   67 GameManager::run(): Can't keep up! frame_time 33 ms, split 230 ms
-21:11:02   68 GameManager::run(): Can't keep up! frame_time 33 ms, split 222 ms
-21:11:03   69 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-21:11:03   70 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:11:03   71 GameManager::run(): Can't keep up! frame_time 33 ms, split 202 ms
-21:11:03   72 GameManager::run(): Can't keep up! frame_time 33 ms, split 216 ms
-21:11:03   73 GameManager::run(): Can't keep up! frame_time 33 ms, split 202 ms
-21:11:04   74 GameManager::run(): Can't keep up! frame_time 33 ms, split 218 ms
-21:11:04   75 unselect character for player 2
-21:11:04   75 Set highlighted char called
-21:11:04   75 GameManager::run(): Can't keep up! frame_time 33 ms, split 234 ms
-21:11:04   76 GameManager::run(): Can't keep up! frame_time 33 ms, split 206 ms
-21:11:04   77 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:11:05   78 GameManager::run(): Can't keep up! frame_time 33 ms, split 203 ms
-21:11:05   79 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-21:11:05   80 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
-21:11:05   81 GameManager::run(): Can't keep up! frame_time 33 ms, split 206 ms
-21:11:05   82 GameManager::run(): Can't keep up! frame_time 33 ms, split 201 ms
-21:11:06   83 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-21:11:06   84 confirm character for player 1
-21:11:06   84 Set highlighted char called
-21:11:06   84 GameManager::run(): Can't keep up! frame_time 33 ms, split 209 ms
-21:11:06   85 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-21:11:06   86 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
-21:11:06   87 GameManager::run(): Can't keep up! frame_time 33 ms, split 230 ms
-21:11:06   88 unselect character for player 1
-21:11:06   88 Set highlighted char called
-21:11:07   88 GameManager::run(): Can't keep up! frame_time 33 ms, split 238 ms
-21:11:07   89 GameManager::run(): Can't keep up! frame_time 33 ms, split 220 ms
-21:11:07   90 GameManager::run(): Can't keep up! frame_time 33 ms, split 200 ms
-21:11:07   91 GameManager::run(): Can't keep up! frame_time 33 ms, split 221 ms
-21:11:07   92 GameManager::run(): Can't keep up! frame_time 33 ms, split 214 ms
-21:11:08   93 GameManager::run(): Can't keep up! frame_time 33 ms, split 187 ms
-21:11:08   94 GameManager::run(): Can't keep up! frame_time 33 ms, split 218 ms
-21:11:08   95 GameManager::run(): Can't keep up! frame_time 33 ms, split 244 ms
-21:11:08   96 GameManager::run(): Can't keep up! frame_time 33 ms, split 193 ms
-21:11:09   97 GameManager::run(): Can't keep up! frame_time 33 ms, split 223 ms
-21:11:09   98 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
-21:11:09   99 GameManager::run(): Can't keep up! frame_time 33 ms, split 200 ms
-21:11:09  100 GameManager::run(): Can't keep up! frame_time 33 ms, split 204 ms
-21:11:09  101 GameManager::run(): Can't keep up! frame_time 33 ms, split 208 ms
-21:11:10  102 GameManager::run(): Can't keep up! frame_time 33 ms, split 212 ms
-21:11:10  103 GameManager::run(): Can't keep up! frame_time 33 ms, split 225 ms
-21:11:10  104 GameManager::run(): Can't keep up! frame_time 33 ms, split 209 ms
-21:11:10  105 GameManager::run(): Can't keep up! frame_time 33 ms, split 221 ms
-21:11:10  106 GameManager::run(): Can't keep up! frame_time 33 ms, split 225 ms
-21:11:11  107 GameManager::run(): Can't keep up! frame_time 33 ms, split 217 ms
-21:11:11  108 GameManager::run(): Can't keep up! frame_time 33 ms, split 219 ms
-21:11:11  109 GameManager::run(): Can't keep up! frame_time 33 ms, split 231 ms
-21:11:11  110 GameManager::run(): Can't keep up! frame_time 33 ms, split 216 ms
-21:11:12  111 GameManager::run(): Can't keep up! frame_time 33 ms, split 224 ms
-21:11:12  112 GameManager::run(): Can't keep up! frame_time 33 ms, split 204 ms
-21:11:12  113 GameManager::run(): Can't keep up! frame_time 33 ms, split 207 ms
-21:11:12  114 GameManager::run(): Can't keep up! frame_time 33 ms, split 229 ms
-21:11:12  115 GameManager::run(): Can't keep up! frame_time 33 ms, split 237 ms
-21:11:13  116 GameManager::run(): Can't keep up! frame_time 33 ms, split 207 ms
-21:11:13  117 GameManager::run(): Can't keep up! frame_time 33 ms, split 207 ms
-21:11:13  118 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:11:13  119 GameManager::run(): Can't keep up! frame_time 33 ms, split 202 ms
-21:11:13  120 GameManager::run(): Can't keep up! frame_time 33 ms, split 208 ms
-21:11:14  121 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:11:14  122 GameManager::run(): Can't keep up! frame_time 33 ms, split 218 ms
-21:11:14  123 GameManager::run(): Can't keep up! frame_time 33 ms, split 206 ms
-21:11:14  124 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
-21:11:14  125 GameManager::run(): Can't keep up! frame_time 33 ms, split 189 ms
-21:11:15  126 GameManager::run(): Can't keep up! frame_time 33 ms, split 263 ms
-21:11:15  127 GameManager::run(): Can't keep up! frame_time 33 ms, split 201 ms
-21:11:15  128 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
-21:11:15  129 GameManager::run(): Can't keep up! frame_time 33 ms, split 227 ms
-21:11:16  130 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
-21:11:16  131 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
-21:11:16  132 GameManager::run(): Can't keep up! frame_time 33 ms, split 208 ms
-21:11:16  133 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
-21:11:16  134 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:11:17  135 GameManager::run(): Can't keep up! frame_time 33 ms, split 207 ms
-21:11:17  136 GameManager::run(): Can't keep up! frame_time 33 ms, split 215 ms
-21:11:17  137 GameManager::run(): Can't keep up! frame_time 33 ms, split 201 ms
-21:11:17  138 GameManager::run(): Can't keep up! frame_time 33 ms, split 229 ms
+21:17:04    0 ****************************************************
+21:17:04    0 ** Dragonfly version 4.15 **
+21:17:04    0 ** Game engine started **
+21:17:04    0 ****************************************************
+21:17:05    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 70 ms
+21:17:05    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 72 ms
+21:17:05    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
+21:17:05    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
+21:17:05    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/healthpack-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'healthpack' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/platform2-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'platform' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/title-screen-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'title' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/testchar-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'test character' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/player1select-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'select' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle1-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'menureticle1' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/menu-reticle2-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'menureticle2' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/one-is-selected-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'selected1' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/two-is-selected-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'selected2' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/two-is-unselected-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'unselected2' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/one-is-unselected-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'unselected1' loaded.
+21:17:05    7 ResourceManager::loadSprite(): Loading sprite 'sprites/KO-spr.txt'.
+21:17:05    7 ResourceManager::loadSprite(): Sprite 'KO' loaded.
+21:17:06    7 Pause::Pause(): Pause enabled.  Press any other key to resume.
+21:17:06    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 89 ms
+21:17:06    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 78 ms
+21:17:06    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 84 ms
+21:17:06    4 GameManager::run(): Can't keep up! frame_time 33 ms, split 89 ms
+21:17:07    5 GameManager::run(): Can't keep up! frame_time 33 ms, split 625 ms
+21:17:07    6 GameManager::run(): Can't keep up! frame_time 33 ms, split 376 ms
+21:17:07    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+21:17:07    8 move reticle with D
+21:17:07    8 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+21:17:07    9 GameManager::run(): Can't keep up! frame_time 33 ms, split 187 ms
+21:17:08   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
+21:17:08   11 GameManager::run(): Can't keep up! frame_time 33 ms, split 197 ms
+21:17:08   12 move reticle with D
+21:17:08   12 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
+21:17:08   13 GameManager::run(): Can't keep up! frame_time 33 ms, split 205 ms
+21:17:08   14 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+21:17:08   15 confirm character for player 2
+21:17:08   15 Set highlighted char called
+21:17:09   15 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+21:17:09   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 200 ms
+21:17:09   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
+21:17:09   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
+21:17:09   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 181 ms
+21:17:09   20 move reticle with D
+21:17:10   20 GameManager::run(): Can't keep up! frame_time 33 ms, split 170 ms
+21:17:10   21 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
+21:17:10   22 move reticle with D
+21:17:10   22 GameManager::run(): Can't keep up! frame_time 33 ms, split 210 ms
+21:17:10   23 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
+21:17:10   24 move reticle with D
+21:17:10   24 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
+21:17:11   25 GameManager::run(): Can't keep up! frame_time 33 ms, split 185 ms
+21:17:11   26 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
+21:17:11   27 GameManager::run(): Can't keep up! frame_time 33 ms, split 193 ms
+21:17:11   28 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
+21:17:11   29 confirm character for player 1
+21:17:11   29 Set highlighted char called
+21:17:11   29 GameManager::run(): Can't keep up! frame_time 33 ms, split 182 ms
+21:17:11   30 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+21:17:12   31 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
+21:17:12   32 GameManager::run(): Can't keep up! frame_time 33 ms, split 192 ms
+21:17:12   33 GameManager::run(): Can't keep up! frame_time 33 ms, split 182 ms
+21:17:12   34 GameManager::run(): Can't keep up! frame_time 33 ms, split 179 ms
+21:17:12   35 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
+21:17:13   36 GameManager::run(): Can't keep up! frame_time 33 ms, split 186 ms
+21:17:13   37 GameManager::run(): Can't keep up! frame_time 33 ms, split 180 ms
+21:17:13   38 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+21:17:13   39 GameManager::run(): Can't keep up! frame_time 33 ms, split 176 ms
+21:17:13   40 GameManager::run(): Can't keep up! frame_time 33 ms, split 209 ms
+21:17:13   41 GameManager::run(): Can't keep up! frame_time 33 ms, split 183 ms
+21:17:14   42 GameManager::run(): Can't keep up! frame_time 33 ms, split 178 ms
+21:17:14   43 GameManager::run(): Can't keep up! frame_time 33 ms, split 198 ms
+21:17:14   44 GameManager::run(): Can't keep up! frame_time 33 ms, split 196 ms
+21:17:14   45 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
+21:17:14   46 GameManager::run(): Can't keep up! frame_time 33 ms, split 184 ms
+21:17:15   47 GameManager::run(): Can't keep up! frame_time 33 ms, split 188 ms
+21:17:15   48 GameManager::run(): Can't keep up! frame_time 33 ms, split 185 ms
+21:17:15   49 GameManager::run(): Can't keep up! frame_time 33 ms, split 175 ms
+21:17:15   50 Both characters have been set!
+21:17:16   84 Key down W*
+21:17:16   85 Key down W*
+21:17:16   85 34
+21:17:16   86 Key down W*
+21:17:16   86 67
+21:17:16   87 Key down W*
+21:17:16   87 100
+21:17:16   88 Key down W*
+21:17:16   88 134
+21:17:16   89 Key down W*
+21:17:16   89 167
+21:17:17  120 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
+21:17:17  121 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
+21:17:17  122 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
+21:17:18  123 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
+21:17:18  124 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+21:17:18  134 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+21:17:19  182 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
+21:17:20  195 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+21:17:20  198 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+21:17:20  199 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
+21:17:20  200 GameManager::run(): Can't keep up! frame_time 33 ms, split 68 ms
+21:17:21  238 ****************************************************
+21:17:21  238 ** Game engine stopped **

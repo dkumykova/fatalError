@@ -63,9 +63,9 @@ int MenuReticle::eventHandler(const df::Event* p_e) {
 	}
 	return 0;
 }
-MenuReticle::~MenuReticle() {
-
-}
+//MenuReticle::~MenuReticle() {
+//
+//}
 
 void MenuReticle::setHighlightedChar(Vector pos) {
 	Vector currentPos = getPosition();

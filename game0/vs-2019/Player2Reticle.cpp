@@ -13,9 +13,9 @@ Player2Reticle::Player2Reticle() {
 //int Player2Reticle::eventHandler(const df::Event* p_e) {
 //
 //}
-Player2Reticle::~Player2Reticle() {
-
-}
+//Player2Reticle::~Player2Reticle() {
+//
+//}
 
 void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	switch (p_key_event->getKey()) {
