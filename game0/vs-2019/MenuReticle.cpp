@@ -17,27 +17,11 @@ MenuReticle::MenuReticle() {
 	registerInterest(df::MSE_EVENT);
 
 	characterSet = false;
+	selectedString = new PlayerSelected();
 }
 
 void MenuReticle::kbd(const df::EventKeyboard* p_key_event) {
-	/*switch (p_key_event->getKey()) {
-	case df::Keyboard::A:
-		
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			LM.writeLog("move reticle with A");
-			move(-25);
-		}
-		break;
-	case df::Keyboard::D:
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			LM.writeLog("move reticle with D");
-			move(+25);
-		}
-		break;
-	default:
-		return;
-	};
-	return;*/
+
 }
 void MenuReticle::move(int dx) {
 	//check if it's ok to move
@@ -83,9 +67,9 @@ MenuReticle::~MenuReticle() {
 
 }
 
-void MenuReticle::setHighlightedChar() {
+void MenuReticle::setHighlightedChar(Vector pos) {
 	Vector currentPos = getPosition();
-	int x = currentPos.getX();
+	int x = pos.getX();// currentPos.getX();
 	LM.writeLog("Set highlighted char called");
 	setCharacterSet(true);
 	switch (x)
@@ -107,6 +91,9 @@ void MenuReticle::setHighlightedChar() {
 		break;
 	case 163:
 		//javascript
+		break;
+	case 0:
+		setCharacterSet(false);
 		break;
 
 	default:

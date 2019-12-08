@@ -1,0 +1,14 @@
+<HEADER>
+frames 1
+width 29
+height 1
+color red
+slowdown 3
+</HEADER>
+<BODY>
+Player 2 Character UnSelected
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

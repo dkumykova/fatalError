@@ -6,6 +6,9 @@ using namespace df;
 Player2Reticle::Player2Reticle() {
 	setPosition(Vector(38, 35)); //38, 13 + 25
 	setSprite("menureticle2");
+	selectedString->setSprite("unselected2");
+	selectedString->setPosition(Vector(5, 35));
+
 }
 //int Player2Reticle::eventHandler(const df::Event* p_e) {
 //
@@ -32,11 +35,20 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	case df::Keyboard::RIGHTSHIFT:
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			LM.writeLog("confirm character for player 2");
-			selectedString.setSprite("selected2");
-			selectedString.setPosition(Vector(38, 35));
-			selectedString = PlayerSelected();
+			selectedString->setSprite("selected2");
+			selectedString->setPosition(Vector(5, 35));
 			//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
-			setHighlightedChar();
+			setHighlightedChar(getPosition());
+		}
+		break;
+	case df::Keyboard::RIGHTCONTROL:
+		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
+			LM.writeLog("unselect character for player 2");
+			selectedString->setSprite("unselected2");
+			selectedString->setPosition(Vector(5, 35));
+			//selectedString = new PlayerSelected();
+			//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
+			setHighlightedChar(Vector());
 		}
 		break;
 	default:

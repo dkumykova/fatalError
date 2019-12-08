@@ -111,8 +111,8 @@ void PlayerCharacter::step() {
 		move_countdown = 0;
 
 	//acceleration.setXY(0, 0.5);
-	LM.writeLog("Acceleration: %f, %f", acceleration.getX(), acceleration.getY());
-	LM.writeLog("velocity to: %f, %f", getVelocity().getX(), getVelocity().getY());
+	//LM.writeLog("Acceleration: %f, %f", acceleration.getX(), acceleration.getY());
+	//LM.writeLog("velocity to: %f, %f", getVelocity().getX(), getVelocity().getY());
 	Vector new_velocity = Vector(0, getVelocity().getY() + acceleration.getY());
 
 	if (new_velocity.getY() > TERMINAL_VELOCITY) {
@@ -169,14 +169,14 @@ void PlayerCharacter::kbd(const df::EventKeyboard* p_key_event) {
 			long int jump_time = my_clock->split() / 1000;
 
 			if (jump_time < 1000) {
-				LM.writeLog("Too quick to jump!");
+				//LM.writeLog("Too quick to jump!");
 				LM.writeLog("%ld", jump_time);
 				break;
 			}
 			
 			my_clock->delta();
 			setVelocity(df::Vector(0, -6));
-			LM.writeLog("Setting velocity to: %f, %f", getVelocity().getX(), getVelocity().getY());
+			//LM.writeLog("Setting velocity to: %f, %f", getVelocity().getX(), getVelocity().getY());
 			//if (on_ground) {
 			//	LM.writeLog("Jump!");
 			//	on_ground = false;

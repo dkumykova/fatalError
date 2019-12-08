@@ -22,11 +22,11 @@ public:
 	void move(int dy);
 	int eventHandler(const df::Event* p_e);
 	~MenuReticle();
-	void setHighlightedChar();
+	void setHighlightedChar(Vector pos);
 	Vector getHighlightedChar() const;
 	void setCharacterSet(bool isSet);
 	bool getCharacterSet() const;
-	PlayerSelected selectedString;
+	PlayerSelected* selectedString;
 
 
 };
