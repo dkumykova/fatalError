@@ -15,6 +15,7 @@
 #include "ResourceManager.h"
 #include "GameManager.h"
 #include "DisplayManager.h"
+#include "EventHealth.h"
 
 
 using namespace df;
@@ -82,9 +83,30 @@ int PlayerCharacter::eventHandler(const df::Event* p_e){
 		collide(p_coll_event);
 		return 1;
 	}
+	if (p_e->getType() == HEALTH_EVENT) {
+		handleHealth();
+		return 1;
+	}
 
 	// If get here, have ignored this event.
 	return 0;
+}
+
+void PlayerCharacter::handleHealth() {
+	if (!health) {
+		return;
+	}
+	health = health - 10;
+
+	//create health event and send to interested objects
+	EventHealth h;
+	WM.onEvent(&h);
+
+	//send view event with updated health value 
+	df::EventView ev("Health", -10, true);
+	WM.onEvent(&ev);
+
+
 }
 
 int PlayerCharacter::getHealth() const{

@@ -4,6 +4,7 @@
 #include "TestingCharacter.h"
 #include <EventStep.h>
 #include <LogManager.h>
+#include <ViewObject.h>
 
 CharacterSelectMenu::CharacterSelectMenu() {
 	//link to sprite
@@ -35,6 +36,12 @@ void CharacterSelectMenu::start() {
 		player2->setActive(false);
 		player1->selectedString->setActive(false);
 		player2->selectedString->setActive(false);
+
+		df::ViewObject* p_health = new df::ViewObject; //keep track of health
+		p_health->setLocation(df::TOP_LEFT);
+		p_health->setViewString("Player 1 Health:");
+		p_health->setValue(100);
+		p_health->setColor(df::GREEN);
 
 
 	}

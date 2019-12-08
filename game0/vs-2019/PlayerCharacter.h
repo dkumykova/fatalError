@@ -64,5 +64,7 @@ public:
 	virtual void attack_1();
 	virtual void attack_2();
 	virtual void specialAttack();
+
+	void handleHealth();
 };
 
