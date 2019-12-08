@@ -16,6 +16,7 @@
 #include "GameManager.h"
 #include "DisplayManager.h"
 #include "EventHealth.h"
+#include "Bullet.h"
 
 
 using namespace df;
@@ -40,7 +41,7 @@ PlayerCharacter::PlayerCharacter() {
 	//create reticle
 	//p_reticle = new Reticle();
 	//p_reticle->draw();
-
+	isPlayer1 = true;
 	// Set Type
 	setType("PlayerCharacter");
 
@@ -58,6 +59,8 @@ PlayerCharacter::PlayerCharacter() {
 PlayerCharacter::~PlayerCharacter() {
 	// Mark Reticle for deletion.
 	//WM.markForDelete(p_reticle);
+	
+
 }
 
 int PlayerCharacter::eventHandler(const df::Event* p_e){
@@ -96,16 +99,21 @@ void PlayerCharacter::handleHealth() {
 	if (!health) {
 		return;
 	}
-	health = health - 10;
+	health = health - 20;
 
 	//create health event and send to interested objects
 	EventHealth h;
 	WM.onEvent(&h);
 
+	if (isPlayer1) {
+		df::EventView ev("Player 1 Health:", -20, true);
+		WM.onEvent(&ev);
+	}
+	else {
+		df::EventView ev("Player 2 Health:", -20, true);
+		WM.onEvent(&ev);
+	}
 	//send view event with updated health value 
-	df::EventView ev("Health", -10, true);
-	WM.onEvent(&ev);
-
 
 }
 
@@ -113,13 +121,39 @@ int PlayerCharacter::getHealth() const{
 	return health;
 }
 
-void PlayerCharacter::attack_1(){
-
+void PlayerCharacter::setIsPlayer1(bool isItTrue) {
+	isPlayer1 = isItTrue;
+}
+bool PlayerCharacter::getIsPlayer1() const {
+	return isPlayer1;
 }
 
-void PlayerCharacter::attack_2(){
-
+void PlayerCharacter::attack_1(bool isPlayer1) {
+	
+	if (isPlayer1) {
+		Bullet* p = new Bullet(Vector(getPosition().getX() + 20, getPosition().getY()));
+		p->setVelocity(df::Vector(0.2, 0));
+	}
+	else {
+		Bullet* p = new Bullet(Vector(getPosition().getX() - 20, getPosition().getY()));
+		p->setVelocity(df::Vector(-0.2, 0));
+	}
+	
 }
+
+void PlayerCharacter::attack_2(bool isPlayer1) {
+	//Bullet* p = new Bullet(getPosition());
+	if (isPlayer1) {
+		Bullet* p = new Bullet(Vector(getPosition().getX() + 20, getPosition().getY()));
+		p->setVelocity(df::Vector(2, 0));
+	}
+	else {
+		Bullet* p = new Bullet(Vector(getPosition().getX() - 20, getPosition().getY()));
+		p->setVelocity(df::Vector(-2, 0));
+	}
+	
+}
+
 
 void PlayerCharacter::specialAttack(){
 
@@ -181,81 +215,14 @@ void PlayerCharacter::mouse(const df::EventMouse* p_mouse_event) {
 }
 
 void PlayerCharacter::kbd(const df::EventKeyboard* p_key_event) {
-	//LM.writeLog("Acceleration is now: %d", acceleration);
-	//long int first_time = my_clock->delta();
 
-	switch (p_key_event->getKey()) {
-	case df::Keyboard::W:       // Jump
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			LM.writeLog("Key down W*");
-			long int jump_time = my_clock->split() / 1000;
-
-			if (jump_time < 1000) {
-				//LM.writeLog("Too quick to jump!");
-				LM.writeLog("%ld", jump_time);
-				break;
-			}
-			
-			my_clock->delta();
-			setVelocity(df::Vector(0, -6));
-			//LM.writeLog("Setting velocity to: %f, %f", getVelocity().getX(), getVelocity().getY());
-			//if (on_ground) {
-			//	LM.writeLog("Jump!");
-			//	on_ground = false;
-			//	//acceleration = -0.6;
-			//setAcceleration(df::Vector(0, acceleration));
-			//	//setVelocity(df::Vector(0, ));
-			//	LM.writeLog("Velocity is now: %d, %d", getVelocity().getX(), getVelocity().getY());
-			//	return;
-			//}
-			//LM.writeLog("Not on ground!");
-		}
-		break;
-	case df::Keyboard::A:       // Left
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			move(-1, 0);
-			return;
-		}
-		break;
-	case df::Keyboard::S:       // Defend
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			//
-		break;
-	case df::Keyboard::D:       // Right
-		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			move(1, 0);
-		break;
-
-	case df::Keyboard::ESCAPE:  // quit
-		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			//new GameOver;
-		break;
-	case df::Keyboard::R:  // quit
-		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			new GameOver;
-		break;
-	default: // Key not handled.
-		return;
-	};
-
-	return;
 }
 
 void PlayerCharacter::collide(const df::EventCollision* p_c_event){
-	if ((p_c_event->getObject1()->getType() == "Platform") ||
-		(p_c_event->getObject2()->getType() == "Platform")) {
-		//LM.writeLog("am colliding with platform");
-		//if (on_ground)
-		//	//return;
-		//if (getAcceleration().getY() > 0 && !on_ground) {
-		//	on_ground = true;
-		//	this->setAcceleration(df::Vector(0, 0));
+	//if ((p_c_event->getObject1()->getType() == "Platform") ||
+	//	(p_c_event->getObject2()->getType() == "Platform")) {
 
-		//	// Helps eliminate the bug that sometimes it cannot land "on ground", but collide
-		//	// I guess this is happening because of collision prediction, or over move.
-		//	this->setPosition(df::Vector(getPosition().getX(), 42.5));  
-		//}
-		setVelocity(df::Vector()); //reset velocity to 0
+	//	setVelocity(df::Vector()); //reset velocity to 0
 
-	}
+	//}
 }

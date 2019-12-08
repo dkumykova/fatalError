@@ -172,6 +172,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Star.h" />
+    <ClInclude Include="TestCharacter2.h" />
     <ClInclude Include="TestingCharacter.h" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +196,7 @@
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />
     <ClCompile Include="Star.cpp" />
+    <ClCompile Include="TestCharacter2.cpp" />
     <ClCompile Include="TestingCharacter.cpp" />
   </ItemGroup>
   <ItemGroup>

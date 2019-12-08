@@ -2,6 +2,7 @@
 #include "CharacterSelectMenu.h"
 #include "Platform.h"
 #include "TestingCharacter.h"
+#include "TestCharacter2.h"
 #include <EventStep.h>
 #include <LogManager.h>
 #include <ViewObject.h>
@@ -31,6 +32,7 @@ void CharacterSelectMenu::start() {
 
 		//this should be replaced with 2 chosen characters based on getHighlightedChar function for each reticle + switch statement
 		new TestCharacter();
+		new TestCharacter2();
 		setActive(false);
 		player1->setActive(false);
 		player2->setActive(false);
@@ -42,6 +44,12 @@ void CharacterSelectMenu::start() {
 		p_health->setViewString("Player 1 Health:");
 		p_health->setValue(100);
 		p_health->setColor(df::GREEN);
+
+		df::ViewObject* p_health2 = new df::ViewObject; //keep track of health
+		p_health2->setLocation(df::TOP_RIGHT);
+		p_health2->setViewString("Player 2 Health:");
+		p_health2->setValue(100);
+		p_health2->setColor(df::GREEN);
 
 
 	}

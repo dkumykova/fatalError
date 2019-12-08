@@ -1,28 +1,27 @@
-#include "TestingCharacter.h"
+#include "TestCharacter2.h"
 #include "WorldManager.h"
 #include "GameOver.h"
 #include <LogManager.h>
 
-TestCharacter::TestCharacter(){
+TestCharacter2::TestCharacter2() {
 	//link to ship sprite
 	setSprite("test character");
 
 	// Set Type
-	setType("TestCharacter");
-
-	setIsPlayer1(true);
+	setType("TestCharacter2");
+	setIsPlayer1(false);
 
 	// Set Starting Position
-	df::Vector position(20, WM.getBoundary().getVertical() / 2);
+	df::Vector position(100, WM.getBoundary().getVertical() / 2);
 	setPosition(position);
 }
 
-void TestCharacter::kbd(const df::EventKeyboard* p_key_event) {
+void TestCharacter2::kbd(const df::EventKeyboard* p_key_event) {
 	//LM.writeLog("Acceleration is now: %d", acceleration);
 	//long int first_time = my_clock->delta();
 
 	switch (p_key_event->getKey()) {
-	case df::Keyboard::W:       // Jump
+	case df::Keyboard::UPARROW:       // Jump
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			LM.writeLog("Key down W*");
 			long int jump_time = my_clock->split() / 1000;
@@ -48,17 +47,17 @@ void TestCharacter::kbd(const df::EventKeyboard* p_key_event) {
 			//LM.writeLog("Not on ground!");
 		}
 		break;
-	case df::Keyboard::A:       // Left
+	case df::Keyboard::LEFTARROW:       // Left
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			move(-1, 0);
 			return;
 		}
 		break;
-	case df::Keyboard::S:       // Defend
+	case df::Keyboard::DOWNARROW:       // Defend
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
 			//
 			break;
-	case df::Keyboard::D:       // Right
+	case df::Keyboard::RIGHTARROW:       // Right
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
 			move(1, 0);
 		break;
@@ -71,12 +70,12 @@ void TestCharacter::kbd(const df::EventKeyboard* p_key_event) {
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;
 		break;
-	case df::Keyboard::C: // attack 1
+	case df::Keyboard::J: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			attack_1(true);
-	case df::Keyboard::V: // attack 2
+			attack_1(false);
+	case df::Keyboard::K: // attack 2
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			attack_2(true);
+			attack_2(false);
 		break;
 
 	default: // Key not handled.
@@ -86,12 +85,14 @@ void TestCharacter::kbd(const df::EventKeyboard* p_key_event) {
 	return;
 }
 
-void TestCharacter::collide(const df::EventCollision* p_c_event) {
+void TestCharacter2::collide(const df::EventCollision* p_c_event) {
 	if ((p_c_event->getObject1()->getType() == "Platform") ||
 		(p_c_event->getObject2()->getType() == "Platform")) {
 
 		setVelocity(df::Vector()); //reset velocity to 0
 
 	}
+
 }
+
 

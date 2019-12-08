@@ -5,6 +5,7 @@
 #include "ResourceManager.h"
 #include "Sound.h"
 #include "GameStart.h"
+#include <LogManager.h>
 
 GameOver::GameOver() {
 	if (setSprite("KO") == 0) {
@@ -39,11 +40,13 @@ void GameOver::step() {
 }
 
 GameOver::~GameOver() {
+	LM.writeLog("Game over");
 	df::ObjectList object_list = WM.getAllObjects(true);
 	df::ObjectListIterator i(&object_list);
 	for (i.first(); !i.isDone(); i.next()) {
 		df::Object* p_o = i.currentObject();
-		if (p_o->getType() == "TestCharacter" || p_o->getType() == "Platform") {
+		if (p_o->getType() == "TestCharacter" || p_o->getType() == "Platform" || p_o->getType() == "Bullet" 
+			|| p_o->getType() == "ViewObject" || p_o->getType() == "TestCharacter2") {
 			WM.markForDelete(p_o);
 		}
 		if (p_o->getType() == "GameStart") {

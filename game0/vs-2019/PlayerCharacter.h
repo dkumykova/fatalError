@@ -20,7 +20,7 @@ private:
 	void step();
 
 	// Move Related
-	void move(int dx, int dy);
+	
 	int move_slowdown;
 	int move_countdown;
 	int jump_countdown;
@@ -34,7 +34,7 @@ private:
 	void mouse(const df::EventMouse* p_mouse_event);
 	
 	// Keyboard Related
-	void kbd(const df::EventKeyboard* p_key_event);
+	void virtual kbd(const df::EventKeyboard* p_key_event);
 
 	// Hit Point Related
 	int health;
@@ -43,28 +43,33 @@ private:
 	int attack_1_damage;
 	int attack_2_damage;
 
-	// Collision Related
-	void collide(const df::EventCollision* p_c_event);
-
-	Clock *my_clock;
+	
+	bool isPlayer1;
+	
 
 public:
-
+	Clock* my_clock;
 	// Constructor and Desctructor 
 	PlayerCharacter(); 
 	~PlayerCharacter();
-
+	void move(int dx, int dy);
 	// Event Handler
-	int eventHandler(const df::Event* p_e);
+	int virtual eventHandler(const df::Event* p_e);
 
 	// Get for Health Point
 	int getHealth() const;
 
 	// Attack Related
-	virtual void attack_1();
-	virtual void attack_2();
+	virtual void attack_1(bool isPlayer1);
+	virtual void attack_2(bool isPlayer1);
 	virtual void specialAttack();
 
 	void handleHealth();
+
+	// Collision Related
+	void virtual collide(const df::EventCollision* p_c_event);
+
+	void setIsPlayer1(bool isItTrue);
+	bool getIsPlayer1() const;
 };
 
