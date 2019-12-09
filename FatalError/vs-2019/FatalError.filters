@@ -46,5 +46,6 @@
     <ClInclude Include="Player2Reticle.h" />
     <ClInclude Include="PlayerSelected.h" />
     <ClInclude Include="TestCharacter2.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
 </Project>

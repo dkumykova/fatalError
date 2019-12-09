@@ -1,12 +1,12 @@
 #include "Bullet.h"
 #include "WorldManager.h"
-#include "Saucer.h"
 #include "EventOut.h"
-#include "TestingCharacter.h"
-#include "TestCharacter2.h"
+#include "PlayerCharacter.h"
+#include "Player.h"
 #include "EventHealth.h"
 #include "GameOver.h"
 #include <LogManager.h>
+#include "Character_C.h"
 
 Bullet::Bullet(df::Vector hero_position) {
 	//link to sprite
@@ -59,55 +59,28 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 	}
 
 	//if bullet hits player 1
-	if ((p_collision_event->getObject1()->getType() == "TestCharacter") ||
-		(p_collision_event->getObject2()->getType() == "TestCharacter")) {
+	if ((p_collision_event->getObject1()->getType() == "PlayerCharacter") ||
+		(p_collision_event->getObject2()->getType() == "PlayerCharacter")) {
 
 		LM.writeLog("Hitting player1");
-		if (p_collision_event->getObject1()->getType() == "TestCharacter") {
-			TestCharacter* hero = dynamic_cast <TestCharacter*> (p_collision_event->getObject1());
+		if (p_collision_event->getObject1()->getType() == "PlayerCharacter") {
+			PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
+			Player* p_p = p_c->getPlayer();
 			//reduce hero health
-			hero->handleHealth();
-			if (hero->getHealth() <= 0) {
+			p_p->handleHealth(p_c->getAttackOneDamage());
+			if (p_p->getHealth() <= 0) {
 				WM.markForDelete(p_collision_event->getObject1());
 				new GameOver();
 			}
 			WM.markForDelete(p_collision_event->getObject2());
 		}
 
-		if (p_collision_event->getObject2()->getType() == "TestCharacter") {
-			TestCharacter* hero = dynamic_cast <TestCharacter*> (p_collision_event->getObject2());
+		if (p_collision_event->getObject2()->getType() == "PlayerCharacter") {
+			PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject2());
+			Player* p_p = p_c->getPlayer();
 			//reduce hero health
-			hero->handleHealth();
-			if (hero->getHealth() <= 0) {
-				WM.markForDelete(p_collision_event->getObject2());
-				new GameOver();
-			}
-			WM.markForDelete(p_collision_event->getObject1());
-		}
-	}
-
-	//if bullet hits player 2
-	if ((p_collision_event->getObject1()->getType() == "TestCharacter2") ||
-		(p_collision_event->getObject2()->getType() == "TestCharacter2")) {
-		LM.writeLog("Hitting player2");
-
-		if (p_collision_event->getObject1()->getType() == "TestCharacter2") {
-			TestCharacter2* hero = dynamic_cast <TestCharacter2*> (p_collision_event->getObject1());
-			//reduce hero health
-			hero->handleHealth();
-			if (hero->getHealth() <= 0) {
-				WM.markForDelete(p_collision_event->getObject1());
-				new GameOver();
-			}
-			WM.markForDelete(p_collision_event->getObject2());
-			
-		}
-
-		if (p_collision_event->getObject2()->getType() == "TestCharacter2") {
-			TestCharacter2* hero = dynamic_cast <TestCharacter2*> (p_collision_event->getObject2());
-			//reduce hero health
-			hero->handleHealth();
-			if (hero->getHealth() <= 0) {
+			p_p->handleHealth(p_c->getAttackTwoDamage());
+			if (p_p->getHealth() <= 0) {
 				WM.markForDelete(p_collision_event->getObject2());
 				new GameOver();
 			}

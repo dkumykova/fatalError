@@ -24,6 +24,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>saucershoot</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>FatalError</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -153,24 +154,19 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="CharacterSelectMenu.h" />
+    <ClInclude Include="Character_C.h" />
     <ClInclude Include="EventHealth.h" />
-    <ClInclude Include="EventNuke.h" />
-    <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="GameStart.h" />
-    <ClInclude Include="HealthPack.h" />
-    <ClInclude Include="Hero.h" />
     <ClInclude Include="MenuReticle.h" />
     <ClInclude Include="Platform.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerOne.h" />
     <ClInclude Include="Player1Reticle.h" />
     <ClInclude Include="Player2Reticle.h" />
     <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="PlayerSelected.h" />
-    <ClInclude Include="Points.h" />
-    <ClInclude Include="Reticle.h" />
-    <ClInclude Include="Saucer.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="PlayerTwo.h" />
     <ClInclude Include="Star.h" />
     <ClInclude Include="TestCharacter2.h" />
     <ClInclude Include="TestingCharacter.h" />
@@ -179,22 +175,19 @@
     <ClCompile Include="..\game.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CharacterSelectMenu.cpp" />
+    <ClCompile Include="Character_C.cpp" />
     <ClCompile Include="EventHealth.cpp" />
-    <ClCompile Include="EventNuke.cpp" />
-    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="GameStart.cpp" />
-    <ClCompile Include="HealthPack.cpp" />
-    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="MenuReticle.cpp" />
     <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerOne.cpp" />
     <ClCompile Include="Player1Reticle.cpp" />
     <ClCompile Include="Player2Reticle.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="PlayerSelected.cpp" />
-    <ClCompile Include="Points.cpp" />
-    <ClCompile Include="Reticle.cpp" />
-    <ClCompile Include="Saucer.cpp" />
+    <ClCompile Include="PlayerTwo.cpp" />
     <ClCompile Include="Star.cpp" />
     <ClCompile Include="TestCharacter2.cpp" />
     <ClCompile Include="TestingCharacter.cpp" />

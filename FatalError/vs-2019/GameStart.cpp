@@ -1,10 +1,6 @@
 
 // Game Includes
 #include "GameStart.h"
-#include "Points.h"
-#include "Saucer.h"
-#include "Hero.h"
-#include "HealthPack.h"
 #include "Platform.h"
 #include "CharacterSelectMenu.h"
 #include "TestingCharacter.h"

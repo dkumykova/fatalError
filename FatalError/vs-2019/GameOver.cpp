@@ -44,17 +44,24 @@ GameOver::~GameOver() {
 	df::ObjectList object_list = WM.getAllObjects(true);
 	df::ObjectListIterator i(&object_list);
 	for (i.first(); !i.isDone(); i.next()) {
+
 		df::Object* p_o = i.currentObject();
-		if (p_o->getType() == "TestCharacter" || p_o->getType() == "Platform" || p_o->getType() == "Bullet" 
-			|| p_o->getType() == "ViewObject" || p_o->getType() == "TestCharacter2") {
-			WM.markForDelete(p_o);
-		}
 		if (p_o->getType() == "GameStart") {
 			p_o->setActive(true);
+			continue;
 			//pause game music and play menu music again
 			//dynamic_cast <GameStart*> (p_o)->game_music->pause();
 			//dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
 		}
+
+		if (p_o->getType() == "Star")
+			continue;
+
+		WM.markForDelete(p_o);
+		//if (p_o->getType() == "Player" || p_o->getType() == "Platform" || p_o->getType() == "Bullet" 
+		//	|| p_o->getType() == "ViewObject" || p_o->getType() == "TestCharacter2") {
+		//	WM.markForDelete(p_o);
+		//}	
 	}
 	//GM.setGameOver();
 }

@@ -1,11 +1,20 @@
 
+// Game Include
 #include "CharacterSelectMenu.h"
 #include "Platform.h"
-#include "TestingCharacter.h"
-#include "TestCharacter2.h"
-#include <EventStep.h>
-#include <LogManager.h>
+#include "Character_C.h"
+#include "PlayerOne.h"
+#include "PlayerTwo.h"
+#include "PlayerCharacter.h"
 #include <ViewObject.h>
+#include "TestCharacter2.h"
+
+// Event Include
+#include <EventStep.h>
+
+// Engine Include
+#include <LogManager.h>
+
 
 CharacterSelectMenu::CharacterSelectMenu() {
 	//link to sprite
@@ -31,8 +40,18 @@ void CharacterSelectMenu::start() {
 		new Platform();
 
 		//this should be replaced with 2 chosen characters based on getHighlightedChar function for each reticle + switch statement
-		new TestCharacter();
-		new TestCharacter2();
+		
+		PlayerOne* p1 = new PlayerOne;
+		PlayerTwo* p2 = new PlayerTwo;
+
+		Character_C* c1 = new Character_C();
+		Character_C* c2 = new Character_C();
+
+		p1->setCharacter(c1);
+		c1->setPlayer(p1);
+		p2->setCharacter(c2);
+		c2->setPlayer(p2);
+
 		setActive(false);
 		player1->setActive(false);
 		player2->setActive(false);
