@@ -53,16 +53,12 @@ int main(int argc, char *argv[]) {
 
 void loadResources(void) {
 	//load saucer sprite
-	RM.loadSprite("sprites/saucer-spr.txt", "saucer");
-	RM.loadSprite("sprites/ship-spr.txt", "ship");
 	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
-	RM.loadSprite("sprites/explosion-spr.txt", "explosion");
 	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
-	RM.loadSprite("sprites/healthpack-spr.txt", "healthpack");
 	RM.loadSprite("sprites/platform2-spr.txt", "platform");
 	RM.loadSprite("sprites/title-screen-spr.txt", "title");
-	RM.loadSprite("sprites/testchar-spr.txt", "test character");
+
 	RM.loadSprite("sprites/player1select-spr.txt", "select");
 	RM.loadSprite("sprites/menu-reticle1-spr.txt", "menureticle1");
 	RM.loadSprite("sprites/menu-reticle2-spr.txt", "menureticle2");
@@ -71,6 +67,10 @@ void loadResources(void) {
 	RM.loadSprite("sprites/two-is-unselected-spr.txt", "unselected2");
 	RM.loadSprite("sprites/one-is-unselected-spr.txt", "unselected1");
 	RM.loadSprite("sprites/KO-spr.txt", "KO");
+
+	RM.loadSprite("sprites/Character_C-spr.txt", "Character_C");
+	RM.loadSprite("sprites/Character_C_flipped-spr.txt", "Character_C_flip");
+	RM.loadSprite("sprites/Character_C_error-spr.txt", "Character_C_error");
 
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");

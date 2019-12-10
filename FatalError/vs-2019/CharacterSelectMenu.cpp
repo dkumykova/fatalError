@@ -49,8 +49,10 @@ void CharacterSelectMenu::start() {
 
 		p1->setCharacter(c1);
 		c1->setPlayer(p1);
+		p1->setOpponentPlayer(p2);
 		p2->setCharacter(c2);
 		c2->setPlayer(p2);
+		p2->setOpponentPlayer(p1);
 
 		setActive(false);
 		player1->setActive(false);

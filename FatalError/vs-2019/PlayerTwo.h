@@ -10,4 +10,5 @@ private:
 public:
 	PlayerTwo();
 	void handleHealth(int damage); // Handle Health
+	void setCharacter(PlayerCharacter* new_char);
 };
