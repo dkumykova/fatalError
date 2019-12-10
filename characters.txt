@@ -1,0 +1,37 @@
+Yongcheng - Python, C, C++, error attack for all
+Diana - Java, Javascript, Lisp, dodge/dash + comment wall
+Higher level languages: Java, Javascript, Python
+Lower Level Languages: C, C++, Lisp
+
+Lower level languages have worse defense but higher attack damage
+Higher level langauges have less attack damage but more effective defense
+
+Error attack - character turns itself into a projectile and launches at opponent; if you miss or are blocked, you are stunned in place for 2-3 seconds then return to start position, but if you hit, 
+you stun your opponent for 2-3 seconds
+
+lower level language defense: comment wall that blocks only some damage from normal + special attacks, but blocks all damage from error attacks
+higher level defense: dash dodge that takes no damage from any attack
+
+C : ranged
+normal - fire a pointer
+special - seg fault: you freeze opponent and erase any opponent projectiles for 2 seconds, but requires a 2 seconds charge up; if interuppted while charging, attack doesn't go through
+
+C++ : melee
+normal - hit with sword made of 2 pluses
+special - increase number of pluses on sword, stacking damage over time
+
+Lisp : ranged
+normal - parenthesis in 1 wave
+special - recursion sequence + sprite in shockwaves
+
+Java : melee
+special - garbage collection; stops all projectiles, clears all walls, stops enemy for attacking for 3 seconds
+normal - jump up and duplicate into 3 versions of self that land, but only 1 does damage - randomly chosen
+
+Javascript : summoner
+super - summons companion npm that drops bombs for a certain time, and when times out character gains ranged attack while companion recharges
+normal - ranged attack
+
+Python : summoner
+super -  summons a companion melee, then goes away after timer
+normal - either buffs companion or debuffs enemy, random
