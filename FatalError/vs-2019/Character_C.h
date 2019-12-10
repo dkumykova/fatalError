@@ -13,4 +13,5 @@ public:
 	void moveRight();
 	void moveLeft();
 	void jump();
+	void flipSprite(PlayerCharacter::SpriteStatus sprite_status);
 };

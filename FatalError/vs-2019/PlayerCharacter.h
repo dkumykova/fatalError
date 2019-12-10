@@ -11,8 +11,12 @@
 #define JUMP_VELOCITY -5
 
 using namespace df;
+
+
+
 class Player; // Helps deal with mutual reference
 class PlayerCharacter : public df::Object {
+	
 	
 	
 private:
@@ -66,6 +70,9 @@ public:
 	void setAttackTwoDamage(int damage);
 	int getAttackTwoDamage() const;
 
+	// Sprite Related
+	enum SpriteStatus { Original, Flipped, Attacking, Defending, Jumping };
+	virtual void flipSprite(SpriteStatus sprite_status);
 
 	// Collision Related
 	void collide(const df::EventCollision* p_c_event); // General Collision Process

@@ -55,6 +55,9 @@ PlayerCharacter::PlayerCharacter() {
 	// Set Attack Damage
 	setAttackOneDamage(10); // If not specifically defined, then it's 10
 	setAttackTwoDamage(20); // If not specifically defined, then it's 20
+
+	// Set Solidness
+	//setSolidness(df::SOFT);
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -122,6 +125,10 @@ void PlayerCharacter::setAttackTwoDamage(int damage){
 
 int PlayerCharacter::getAttackTwoDamage() const{
 	return m_attack_2_damage;
+}
+
+void PlayerCharacter::flipSprite(SpriteStatus sprite_status){
+	// No implementation because this is player dependent
 }
 
 

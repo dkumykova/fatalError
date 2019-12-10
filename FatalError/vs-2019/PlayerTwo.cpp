@@ -83,3 +83,8 @@ void PlayerTwo::handleHealth(int damage){
 	df::EventView ev("Player 2 Health:", -damage, true);
 	WM.onEvent(&ev);
 }
+
+void PlayerTwo::setCharacter(PlayerCharacter* new_char) {
+	m_p_character = new_char;
+	m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Flipped);
+}

@@ -85,3 +85,7 @@ void PlayerOne::handleHealth(int damage){
 	df::EventView ev("Player 1 Health:", -damage, true);
 	WM.onEvent(&ev);
 }
+
+void PlayerOne::setCharacter(PlayerCharacter* new_char) {
+	m_p_character = new_char;
+}

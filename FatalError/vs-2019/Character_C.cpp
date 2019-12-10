@@ -7,11 +7,12 @@
 
 // Engine Include
 #include <WorldManager.h>
+#include <LogManager.h>
 
 Character_C::Character_C() {
 
 	//link to ship sprite
-	setSprite("test character");
+	setSprite("Character_C");
 
 	// Set Damage 
 	setAttackOneDamage(30);
@@ -42,4 +43,22 @@ void Character_C::moveLeft(){
 
 void Character_C::jump(){
 	setVelocity(df::Vector(0, JUMP_VELOCITY));
+	swapOnGroundStatus();
 }
+
+void Character_C::flipSprite(PlayerCharacter::SpriteStatus sprite_status){
+
+	switch (sprite_status) {
+	case PlayerCharacter::SpriteStatus::Original:
+		LM.writeLog("Player setting original");
+		setSprite("Character_C");
+		break;
+	case PlayerCharacter::SpriteStatus::Flipped:
+		LM.writeLog("Player setting flipped");
+		setSprite("Character_C_flip");
+		break;
+	default:
+		break;
+	}
+}
+
