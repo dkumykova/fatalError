@@ -17,6 +17,7 @@
 #include "DisplayManager.h"
 #include "EventHealth.h"
 #include "Bullet.h"
+#include <EventOut.h>
 
 
 using namespace df;
@@ -124,6 +125,108 @@ int PlayerCharacter::getAttackTwoDamage() const{
 	return m_attack_2_damage;
 }
 
+void PlayerCharacter::setErrorAttacking(bool status) {
+	m_error_attacking = status;
+}
+
+bool PlayerCharacter::getErrorAttacking() const {
+	return m_error_attacking;
+}
+
+void PlayerCharacter::startSuperChanneling(){
+	if (super_channeling_slowdown == 0) { // which means no cd for super
+		super_attack_countdown = m_super_cast_time * 30 + super_attack_slowdown;
+		m_super_attacking = true;
+		do_action_super_attack();
+		return;
+	}
+
+	// Else start channeling
+	m_super_channeling = true;
+}
+
+bool PlayerCharacter::isTimeToJump(){
+	if (jump_countdown > 0 || !on_ground)
+		return false;
+	
+	jump_countdown = jump_slowdown;
+	return true;
+}
+
+bool PlayerCharacter::isTimeToHorizontalMove(){
+	if (horizontal_move_countdown > 0)
+		return false;
+
+	horizontal_move_countdown = horizontal_move_slowdown;
+	return true;
+}
+
+bool PlayerCharacter::isTimeToDefense(){
+	if (defense_countdown > 0)
+		return false;
+
+	defense_countdown = defense_slowdown;
+	return true;
+}
+
+bool PlayerCharacter::isTimeToAttackOne(){
+	if (attack_1_countdown > 0)
+		return false;
+	
+	attack_1_countdown = attack_1_slowdown;
+	return true;
+}
+
+bool PlayerCharacter::isTimeToAttackTwo(){
+	if (attack_2_countdown > 0 || getErrorAttacking())
+		return false;
+
+	return true;
+}
+
+bool PlayerCharacter::isTimeToSuperAttack(){
+	if (super_attack_countdown > 0 || m_super_attacking)
+		return false;
+
+	return true;
+}
+
+void PlayerCharacter::getFrozen(int time){
+	int actual_slowdown_time = time * 30; // 30 steps per second
+	
+	horizontal_move_countdown = actual_slowdown_time;
+	jump_countdown = actual_slowdown_time;
+	attack_1_countdown = actual_slowdown_time;
+	attack_2_countdown = actual_slowdown_time;
+	super_attack_countdown = actual_slowdown_time;
+	defense_countdown = actual_slowdown_time;
+}
+
+int PlayerCharacter::eventHandler(const df::Event* p_e){
+	
+	if (p_e->getType() == df::STEP_EVENT) {
+		step();
+		return 1;
+	}
+
+	if (p_e->getType() == df::COLLISION_EVENT) {
+		const df::EventCollision* p_coll_event = dynamic_cast <const df::EventCollision*> (p_e);
+		collide(p_coll_event);
+		return 1;
+	}
+	//handle if character goes out of bounds of box
+	/*if (p_e->getType() == df::OUT_EVENT) {
+		out();
+		return 1;
+	}*/
+
+	// if get super attack end event, then check for caster. If caster is this character, reset counter to slowdown
+	// Also remember to turn super_attacking back to false
+	// To do
+
+	// If get here, have ignored this event.
+	return 0;
+}
 
 void PlayerCharacter::step() {
 	// Move countdown.
@@ -165,10 +268,24 @@ void PlayerCharacter::move(int dx, int dy) {
 		return;
 	move_countdown = move_slowdown;
 	// If stays on window, allow move.
+	int halfWidth = getAnimation().getSprite()->getWidth() / 2;
 	df::Vector new_pos(getPosition().getX() + dx, getPosition().getY() + dy);
-	if ((new_pos.getY() > 3) &&
-		(new_pos.getY() < WM.getBoundary().getVertical()))
+	
+	//handle out of bounds x
+	if (new_pos.getX() < halfWidth && new_pos.getX() < (int)WM.getBoundary().getHorizontal() / 2) { //character went out of bounds on left side
+		WM.moveObject(this, Vector(halfWidth, getPosition().getY()));
+		return;
+	}
+	else if (new_pos.getX() > halfWidth && new_pos.getX() > (int)WM.getBoundary().getHorizontal() - halfWidth) { //character went out of bounds of right side
+		WM.moveObject(this, Vector(WM.getBoundary().getHorizontal() - halfWidth, getPosition().getY()));
+		return;
+	}
+	//handle out of bounds y
+	else if (new_pos.getY() > 3 && new_pos.getY() < WM.getBoundary().getVertical()){
 		WM.moveObject(this, new_pos);
+		return;
+	}
+	
 }
 
 
