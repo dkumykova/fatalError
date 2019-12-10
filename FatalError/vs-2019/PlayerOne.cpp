@@ -14,45 +14,33 @@
 
 PlayerOne::PlayerOne() {
 	setPosition(df::Vector(20, WM.getBoundary().getVertical() / 2));
-	setSolidness(df::SPECTRAL);
 }
 
 void PlayerOne::kbd(const df::EventKeyboard* p_key_event){
 	switch (p_key_event->getKey()) {
-	case df::Keyboard::W:       // Jump
+	case df::Keyboard::W:       // Process Up
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			//LM.writeLog("Player One Key down W*");
-			long int jump_time = my_clock->split() / 1000;
-
-			if (jump_time < 1000) {
-				//LM.writeLog("Too quick to jump!");
-				//LM.writeLog("%ld", jump_time);
-				return;
-			}
-
-			my_clock->delta(); // Reset Clock
-			m_p_character->jump(); // Jump
+			m_p_character->processUpArrow();
 		}
 		break;
-	case df::Keyboard::A:       // Left
+	case df::Keyboard::A:       // Process Left
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			m_p_character->moveLeft();
-			return;
+			m_p_character->processLeftArrow();
 		}
 		break;
-	case df::Keyboard::S:       // Defend
+	case df::Keyboard::S:       // Process Down
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			//
-			break;
-	case df::Keyboard::D:       // Right
+			m_p_character->processDownArrow();
+		break;
+	case df::Keyboard::D:       // Process Right
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			m_p_character->moveRight();
+			m_p_character->processRightArrow();
 		break;
 
 	case df::Keyboard::ESCAPE:  // quit
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			//new GameOver;
-			break;
+		break;
 	case df::Keyboard::R:  // quit
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;

@@ -14,12 +14,12 @@ Player::Player() {
 	setType("Player");
 
 	setHealth(PLAYER_MAX_HEALTH); // Initialize m_health
-	my_clock = new Clock(); // Initialize Clock
 
 	registerInterest(df::KEYBOARD_EVENT); // Listen to Keyboard Events
 	registerInterest(df::STEP_EVENT); // Listen to Keyboard Events
 
 	facing_right = true;
+	setSolidness(df::SPECTRAL);
 
 }
 
@@ -37,7 +37,6 @@ int Player::eventHandler(const df::Event* p_e) {
 		}
 		else { // Else if originally at other player's right and now become left
 			if (getRightBoundary() < getOpponentPlayer()->getLeftBoundary() - 10 && !facing_right) {
-				LM.writeLog("Go to left now");
 				swapFacing();
 				m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Original);
 			}

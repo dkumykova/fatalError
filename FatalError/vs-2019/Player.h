@@ -9,7 +9,6 @@
 // Game Includes
 #include "Object.h"
 #include "PlayerCharacter.h"
-#include <Clock.h>
 
 // Event Includes
 #include "EventKeyboard.h"
@@ -33,7 +32,6 @@ private :
 
 protected:
 	void setHealth(int health); // Setter for health
-	Clock* my_clock; // Clock
 	PlayerCharacter* m_p_character; // Pointer of the character
 	Player* m_p_other_player; // Pointer to the opponent player
 
