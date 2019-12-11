@@ -2,13 +2,16 @@
 // Game Include
 #include "CharacterSelectMenu.h"
 #include "Platform.h"
-#include "Character_C.h"
 #include "PlayerOne.h"
 #include "PlayerTwo.h"
 #include "PlayerCharacter.h"
 #include <ViewObject.h>
 #include "TestCharacter2.h"
 #include "Explosion.h"
+
+// Character Includes
+#include "Character_C.h"
+#include "Character_CPP.h"
 
 // Event Include
 #include <EventStep.h>
@@ -45,7 +48,7 @@ void CharacterSelectMenu::start() {
 		PlayerOne* p1 = new PlayerOne;
 		PlayerTwo* p2 = new PlayerTwo;
 
-		Character_C* c1 = new Character_C();
+		Character_CPP* c1 = new Character_CPP();
 		Character_C* c2 = new Character_C();
 
 		p1->setCharacter(c1);

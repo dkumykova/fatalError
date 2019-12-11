@@ -37,7 +37,7 @@ PlayerCharacter::PlayerCharacter() {
 	attack_1_slowdown = 15;
 	attack_1_countdown = attack_1_slowdown;
 	attack_2_slowdown = 300;
-	attack_2_countdown = 0;
+	attack_2_countdown = attack_2_slowdown;
 	error_attack_channeling_slowdown = 90;
 	error_attack_channeling_countdown = error_attack_channeling_slowdown;
 	super_attack_slowdown = 600;
@@ -46,6 +46,10 @@ PlayerCharacter::PlayerCharacter() {
 	super_channeling_countdown = super_channeling_slowdown;
 	defense_slowdown = 30;
 	defense_countdown = defense_slowdown;
+	frozen_countdown = 1;
+	m_is_frozen = false;
+	m_default_color = df::WHITE;
+	heightOfSprite = 0;
 
 	// Move Related
 	jump_speed = INITIAL_JUMP_SPEED;
@@ -211,6 +215,10 @@ void PlayerCharacter::startErrorChanneling(){
 	setVelocity(df::Vector(0, 0));
 }
 
+void PlayerCharacter::setSuperAttacking(bool attacking){
+	m_super_attacking = attacking;
+}
+
 bool PlayerCharacter::isTimeToJump(){
 	if (jump_countdown > 0 || !on_ground)
 		return false;
@@ -266,6 +274,9 @@ void PlayerCharacter::getFrozen(int time){
 	attack_2_countdown = actual_slowdown_time;
 	super_attack_countdown = actual_slowdown_time;
 	defense_countdown = actual_slowdown_time;
+	frozen_countdown = actual_slowdown_time;
+	m_is_frozen = true;
+	getAnimation().getSprite()->setColor(df::CYAN);
 }
 
 int PlayerCharacter::eventHandler(const df::Event* p_e){
@@ -315,6 +326,15 @@ void PlayerCharacter::step() {
 	if (super_attack_countdown < 0)
 		super_attack_countdown = 0;
 	
+	// Frozen Countdown
+	if (m_is_frozen) {
+		frozen_countdown--;
+		if (frozen_countdown <= 0) {
+			m_is_frozen = false;
+			getAnimation().getSprite()->setColor(m_default_color);
+		}
+	}
+
 	// Super Channeling countdown
 	if (m_super_channeling) { // If started super channeling
 		super_channeling_countdown--;
@@ -331,7 +351,7 @@ void PlayerCharacter::step() {
 		defense_countdown = 0;
 	
 	// Super Chanelling Related
-	if (super_channeling_countdown <= 0) {
+	if (super_channeling_countdown < 0) {
 		super_channeling_countdown = super_channeling_slowdown;
 		m_super_channeling = false;
 		m_super_attacking = true;
@@ -374,8 +394,8 @@ void PlayerCharacter::step() {
 
 	// Error Check for Height
 	if (!(getErrorAttacking() || m_error_channeling)) {
-		if (this->getPosition().getY() > 40) {
-			this->setPosition(df::Vector(getPosition().getX(), 40));
+		if (this->getPosition().getY() > 46 - heightOfSprite) {
+			this->setPosition(df::Vector(getPosition().getX(), 46 - heightOfSprite));
 		}
 	} else {
 		if (this->getPosition().getY() > 45) {
@@ -442,6 +462,17 @@ void PlayerCharacter::flipSprite(SpriteStatus sprite_status){
 
 void PlayerCharacter::processCollision(){
 	// No implementation because this is player dependent
+}
+
+void PlayerCharacter::setDefaultColor(df::Color color, bool change){
+	m_default_color = color;
+
+	if (change)
+		getAnimation().getSprite()->setColor(color);
+}
+
+void PlayerCharacter::setHeightOfSprite(int height){
+	heightOfSprite = height;
 }
 
 void PlayerCharacter::setHorizontalSlowdown(int slowdown, bool counterAlso){
@@ -558,6 +589,10 @@ void PlayerCharacter::setCharacterAcceleration(Vector new_a) {
 
 void PlayerCharacter::setOnGroundStatus(bool status){
 	on_ground = status;
+}
+
+bool PlayerCharacter::getOnGroundStatus() const{
+	return on_ground;
 }
 
 void PlayerCharacter::setJumpSpeed(float speed){

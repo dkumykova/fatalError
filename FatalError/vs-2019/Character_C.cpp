@@ -2,7 +2,7 @@
 
 // Game Include
 #include "Character_C.h"
-#include "Bullet.h"
+#include "Character_C_pointer.h"
 #include "Player.h"
 
 // Engine Include
@@ -13,6 +13,8 @@ Character_C::Character_C() {
 
 	//link to ship sprite
 	setSprite("Character_C");
+	setDefaultColor(df::WHITE, true); // Second parameter default as false. If true, update the default color to sprite also.
+	setHeightOfSprite(6);
 
 	// Set Attack Related Damage 
 	setAttackOneDamage(30);
@@ -29,17 +31,16 @@ Character_C::Character_C() {
 	setDefenseSlowdown(30,true);
 	setAttackOneSlowdown(30,true);
 	setSuperAttackSlowdown(900,true); // 30 secs
-	setSuperChanelingSlowdown(60,true);
-
+	setSuperChanelingSlowdown(60);
 
 }
 
 void Character_C::do_action_move_right(){
-	move(1.5,0);
+	move(2,0);
 }
 
 void Character_C::do_action_move_left(){
-	move(-1.5, 0);
+	move(-2, 0);
 }
 
 void Character_C::do_action_jump(){
@@ -51,12 +52,24 @@ void Character_C::do_action_defense(){
 }
 
 void Character_C::do_action_attack_1(){
-	Bullet* p = new Bullet(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
-	p->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 0));
+	Character_C_Pointer* p = new Character_C_Pointer(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
+	if (getPlayer()->getFacingRight() == -1) {
+		p->setSprite("Character_C_pointer_flipped");
+	}
+	p->setVelocity(df::Vector(1.5 * getPlayer()->getFacingRight(), 0));
+	
 }
 
 void Character_C::do_action_super_attack(){
-	// To do
+	getPlayer()->getOpponentPlayer()->getCharacter()->getFrozen(5);
+	df::ObjectList object_list = WM.getAllObjects(true);
+	df::ObjectListIterator i(&object_list);
+	for (i.first(); !i.isDone(); i.next()) {
+		df::Object* p_o = i.currentObject();
+		if (p_o->getType() == "projectile")
+			WM.markForDelete(p_o);
+	}
+	setSuperAttacking(false);
 }
 
 
