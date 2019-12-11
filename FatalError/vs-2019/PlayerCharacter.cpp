@@ -4,6 +4,7 @@
 #include "PlayerCharacter.h"
 #include "GameOver.h"
 #include "Player.h"
+#include "Explosion.h"
 
 // Event Includes
 #include "EventStep.h"
@@ -37,6 +38,8 @@ PlayerCharacter::PlayerCharacter() {
 	attack_1_countdown = attack_1_slowdown;
 	attack_2_slowdown = 300;
 	attack_2_countdown = 0;
+	error_attack_channeling_slowdown = 90;
+	error_attack_channeling_countdown = error_attack_channeling_slowdown;
 	super_attack_slowdown = 600;
 	super_attack_countdown = super_attack_slowdown;
 	super_channeling_slowdown = 60;
@@ -70,6 +73,7 @@ PlayerCharacter::PlayerCharacter() {
 	m_super_cast_time = 4;
 	m_super_channeling = false;
 	m_super_attacking = false;
+	m_error_channeling = false;
 	setErrorAttacking(false); // Initiate Error Attacking to false
 	setAttackOneDamage(10); // If not specifically defined, then it's 10
 	setAttackTwoDamage(20); // If not specifically defined, then it's 20
@@ -88,6 +92,11 @@ PlayerCharacter::~PlayerCharacter() {
 void PlayerCharacter::processRightArrow(){
 	// See if time to move.
 	if (isTimeToHorizontalMove()) {
+		if (getErrorAttacking()) {
+			setVelocity(df::Vector(getVelocity().getX() + 0.3, getVelocity().getY()));
+			return;
+		}
+
 		do_action_move_right();
 		return;
 	}
@@ -96,6 +105,11 @@ void PlayerCharacter::processRightArrow(){
 void PlayerCharacter::processLeftArrow(){
 	// See if time to move.
 	if (isTimeToHorizontalMove()) {
+		if (getErrorAttacking()) {
+			setVelocity(df::Vector(getVelocity().getX() - 0.3, getVelocity().getY()));
+			return;
+		}
+		
 		do_action_move_left();
 		return;
 	}
@@ -138,10 +152,9 @@ void PlayerCharacter::attack_2() {
 	if (isTimeToAttackTwo()){
 		on_ground = false;
 		flipSprite(SpriteStatus::Error_Attacking); // Flip To Error Attacking Sprite
-		setVelocity(df::Vector(1 * getPlayer()->getFacingRight(), -0.4));
+		setVelocity(df::Vector(1.6 * getPlayer()->getFacingRight(), -1.6));
 		setCharacterAcceleration(df::Vector(0, 0));
 		setErrorAttacking(true);
-		
 	}
 }
 
@@ -174,6 +187,10 @@ bool PlayerCharacter::getErrorAttacking() const {
 	return m_error_attacking;
 }
 
+bool PlayerCharacter::getErrorChanneling() const{
+	return m_error_channeling;
+}
+
 void PlayerCharacter::startSuperChanneling(){
 	if (super_channeling_slowdown == 0) { // which means no cd for super
 		super_attack_countdown = m_super_cast_time * 30 + super_attack_slowdown;
@@ -184,6 +201,14 @@ void PlayerCharacter::startSuperChanneling(){
 
 	// Else start channeling
 	m_super_channeling = true;
+}
+
+void PlayerCharacter::startErrorChanneling(){
+	getFrozen(5);
+	setErrorAttacking(false);
+	m_error_channeling = true;
+	setCharacterAcceleration(df::Vector(0, 0));
+	setVelocity(df::Vector(0, 0));
 }
 
 bool PlayerCharacter::isTimeToJump(){
@@ -219,7 +244,7 @@ bool PlayerCharacter::isTimeToAttackOne(){
 }
 
 bool PlayerCharacter::isTimeToAttackTwo(){
-	if (attack_2_countdown > 0 || getErrorAttacking())
+	if (attack_2_countdown > 0 || getErrorAttacking() || m_error_channeling)
 		return false;
 
 	return true;
@@ -290,9 +315,14 @@ void PlayerCharacter::step() {
 	if (super_attack_countdown < 0)
 		super_attack_countdown = 0;
 	
-	// Super Chaneling countdown
+	// Super Channeling countdown
 	if (m_super_channeling) { // If started super channeling
 		super_channeling_countdown--;
+	}
+
+	// Error Attack Channeling countdown
+	if (m_error_channeling) {
+		error_attack_channeling_countdown--;
 	}
 
 	// Defense countdown
@@ -308,10 +338,19 @@ void PlayerCharacter::step() {
 		do_action_super_attack();
 	}
 
-
-	if (getErrorAttacking()) {
-		acceleration = df::Vector(acceleration.getX() + 0.033, acceleration.getY() + 0.013);
+	// Error Attack Channeling Related
+	if (error_attack_channeling_countdown <= 0) {
+		error_attack_channeling_countdown = error_attack_channeling_slowdown;
+		m_error_channeling = false;
+		do_action_attack_2(10);
 	}
+
+	
+	// Error Attacking Acceleration
+	if (getErrorAttacking()) {
+		acceleration = df::Vector((acceleration.getX() + 0.004) * -1, acceleration.getY() + 0.006);
+	}
+
 	Vector new_velocity = Vector((getVelocity().getX() + acceleration.getX()),
 		(getVelocity().getY() + acceleration.getY()));;
 	
@@ -332,11 +371,16 @@ void PlayerCharacter::step() {
 
 
 	
-	
 
 	// Error Check for Height
-	if (this->getPosition().getY() > 40) {
-		this->setPosition(df::Vector(getPosition().getX(), 40));
+	if (!(getErrorAttacking() || m_error_channeling)) {
+		if (this->getPosition().getY() > 40) {
+			this->setPosition(df::Vector(getPosition().getX(), 40));
+		}
+	} else {
+		if (this->getPosition().getY() > 45) {
+			this->setPosition(df::Vector(getPosition().getX(), 45));
+		}
 	}
 
 	if (this->getPosition().getY() < 3) {
@@ -371,19 +415,20 @@ void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
 			(p_c_event->getObject2()->getType() == "Platform")) {
 			LM.writeLog("Collide!!!");
 			if (getErrorAttacking()) {
-				setErrorAttacking(false);
-				attack_2_countdown = attack_2_slowdown;
-				if (getPlayer()->getFacingRight() == 1) {
-					flipSprite(Original);
-				}
-				else {
-					flipSprite(Flipped);
-				}
-				setCharacterAcceleration(df::Vector(0, 0.5));
+				startErrorChanneling();
+				return;
 			}
-
 			setOnGroundStatus(true);
 			setVelocity(df::Vector(0,0)); //reset velocity to 0
+
+		}
+		
+		if (getErrorAttacking()) {
+			if ((p_c_event->getObject1()->getType() == "PlayerCharacter")) {
+				setErrorAttacking(false);
+				do_action_attack_2(30);
+				getPlayer()->getOpponentPlayer()->getCharacter()->getFrozen(2);
+			}
 		}
 	}
 
@@ -472,8 +517,31 @@ void PlayerCharacter::do_action_attack_1(){
 	// No implementation because this is player dependent
 }
 
-void PlayerCharacter::do_action_attack_2()
-{
+void PlayerCharacter::do_action_attack_2(int damage){
+	attack_2_countdown = attack_2_slowdown;
+
+	// Do Explosion Damage
+	// Create an explision animation here
+	Explosion* p_explosion = new Explosion;
+	p_explosion->setPosition(df::Vector(getPosition().getX(),getPosition().getY()-5));
+
+	// Detect Player Distance
+	float v_x = getPosition().getX() - getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getX();
+	float v_y = getPosition().getY() - getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getY();
+	df::Vector distance_between_players(v_x, v_y);
+
+	if (distance_between_players.getMagnitude() < 50) {
+		getPlayer()->getOpponentPlayer()->handleHealth(damage);
+	}
+
+	// Swap back to appropriate sprite
+	if (getPlayer()->getFacingRight() == 1) {
+		flipSprite(Original);
+	}
+	else {
+		flipSprite(Flipped);
+	}
+	setCharacterAcceleration(df::Vector(0,0.5));
 }
 
 void PlayerCharacter::do_action_super_attack(){

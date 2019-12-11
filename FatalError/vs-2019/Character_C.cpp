@@ -34,16 +34,6 @@ Character_C::Character_C() {
 
 }
 
-//void Character_C::attack_1(){
-//	Bullet* p = new Bullet(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
-//	p->setVelocity(df::Vector(0.2 * getPlayer()->getFacingRight(), 0));
-//}
-//
-//void Character_C::attack_2(){
-//	Bullet* p = new Bullet(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
-//	p->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 0));
-//}
-
 void Character_C::do_action_move_right(){
 	move(1.5,0);
 }
@@ -82,7 +72,6 @@ void Character_C::flipSprite(PlayerCharacter::SpriteStatus sprite_status){
 		break;
 	case PlayerCharacter::SpriteStatus::Error_Attacking:
 		setSprite("Character_C_error");
-		setBox(getAnimation().getBox());
 		break;
 	default:
 		break;

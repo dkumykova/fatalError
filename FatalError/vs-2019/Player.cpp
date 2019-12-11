@@ -29,16 +29,18 @@ int Player::eventHandler(const df::Event* p_e) {
 	if (p_e->getType() == df::STEP_EVENT) {
 
 		// If originally at other player's left and now become right
-		if (facing_right) {
-			if (getLeftBoundary() > getOpponentPlayer()->getRightBoundary() + 10) {
-				swapFacing();
-				m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Flipped);
+		if (!(getCharacter()->getErrorAttacking() || getCharacter()->getErrorChanneling())) {
+			if (facing_right) {
+				if (getLeftBoundary() > getOpponentPlayer()->getRightBoundary() + 10) {
+					swapFacing();
+					m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Flipped);
+				}
 			}
-		}
-		else { // Else if originally at other player's right and now become left
-			if (getRightBoundary() < getOpponentPlayer()->getLeftBoundary() - 10 && !facing_right) {
-				swapFacing();
-				m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Original);
+			else { // Else if originally at other player's right and now become left
+				if (getRightBoundary() < getOpponentPlayer()->getLeftBoundary() - 10 && !facing_right) {
+					swapFacing();
+					m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Original);
+				}
 			}
 		}
 		return 1;
@@ -78,6 +80,10 @@ void Player::handleHealth(int damage){
 
 void Player::setCharacter(PlayerCharacter* new_char){
 	// No implementation because this is player dependent
+}
+
+PlayerCharacter* Player::getCharacter() const{
+	return m_p_character;
 }
 
 void Player::setOpponentPlayer(Player* new_player){

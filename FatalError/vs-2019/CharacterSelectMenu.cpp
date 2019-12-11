@@ -8,6 +8,7 @@
 #include "PlayerCharacter.h"
 #include <ViewObject.h>
 #include "TestCharacter2.h"
+#include "Explosion.h"
 
 // Event Include
 #include <EventStep.h>

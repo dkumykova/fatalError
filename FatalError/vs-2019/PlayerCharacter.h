@@ -34,6 +34,8 @@ private:
 	int attack_1_countdown;
 	int attack_2_slowdown;
 	int attack_2_countdown;
+	int error_attack_channeling_slowdown;
+	int error_attack_channeling_countdown;
 	int super_attack_slowdown;
 	int super_attack_countdown;
 	int super_channeling_slowdown;
@@ -53,6 +55,7 @@ private:
 	int m_attack_2_damage;
 	int m_super_cast_time;
 	bool m_error_attacking;
+	bool m_error_channeling;
 	bool m_super_channeling;
 	bool m_super_attacking;
 	
@@ -93,7 +96,9 @@ public:
 	int getAttackTwoDamage() const;
 	void setErrorAttacking(bool status);
 	bool getErrorAttacking() const;
+	bool getErrorChanneling() const;
 	void startSuperChanneling();
+	void startErrorChanneling();
 
 	// Sprite Related
 	enum SpriteStatus { Original, Flipped, Normal_Attacking, Defending, Jumping, Error_Attacking };
@@ -129,7 +134,7 @@ public:
 	virtual void do_action_move_right();
 	virtual void do_action_move_left();
 	virtual void do_action_attack_1();
-	virtual void do_action_attack_2(); // Should be private to children. But put here for convenience
+	virtual void do_action_attack_2(int damage); // Should be private to children. But put here for convenience
 	virtual void do_action_super_attack();
 };
 
