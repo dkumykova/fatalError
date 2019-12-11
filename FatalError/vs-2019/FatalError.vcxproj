@@ -163,6 +163,7 @@
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="GameStart.h" />
+    <ClInclude Include="JavaClone.h" />
     <ClInclude Include="LispSuper.h" />
     <ClInclude Include="MenuReticle.h" />
     <ClInclude Include="Platform.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="GameStart.cpp" />
+    <ClCompile Include="JavaClone.cpp" />
     <ClCompile Include="LispSuper.cpp" />
     <ClCompile Include="MenuReticle.cpp" />
     <ClCompile Include="Platform.cpp" />

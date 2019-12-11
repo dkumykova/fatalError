@@ -1,11 +1,13 @@
 #pragma once
 #include "PlayerCharacter.h"
 #include "LispSuper.h"
+#include "JavaClone.h"
 
 
 class Character_Java : public PlayerCharacter {
 private:
-	LispSuper* super;
+	JavaClone* clone1;
+	JavaClone* clone2;
 
 public:
 	Character_Java();
@@ -17,6 +19,9 @@ public:
 	void do_action_defense();
 	void do_action_attack_1();
 	void do_action_super_attack();
+
+	JavaClone* getClone1() const;
+	JavaClone* getClone2() const;
 
 
 	// Sprite Related

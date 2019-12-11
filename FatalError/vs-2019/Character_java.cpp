@@ -35,8 +35,8 @@ Character_Java::Character_Java() {
 	setIsHigherLevel(true); 
 
 	//super_countdown = 10;
-	super = new LispSuper();
-	super->setActive(false);
+	//super = new LispSuper();
+	//super->setActive(false);
 
 }
 
@@ -53,13 +53,21 @@ void Character_Java::do_action_jump() {
 }
 
 void Character_Java::do_action_defense() {
-	// TO DO
+	//implementation in player character
 }
 
 void Character_Java::do_action_attack_1() {
-	Bullet* p = new Bullet(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
-	p->setSprite("paren");
-	p->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 0));
+	//normal - jump up and duplicate into 3 versions of self that land, but only 1 does damage - randomly chosen
+	setVelocity(df::Vector(0, getJumpSpeed()));
+
+	Vector p1 = Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY());
+	
+	//getPlayer()->getOpponentPlayer().
+	clone1 = new JavaClone(p1);
+	clone1->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 3));
+	
+	
+	
 }
 
 void Character_Java::do_action_super_attack() {
@@ -68,8 +76,8 @@ void Character_Java::do_action_super_attack() {
 
 	LM.writeLog("Lisp super called");
 	//setSprite("Character_Lisp_super");
-	super->setPosition(Vector(getPosition().getX(), getPosition().getY()));
-	super->setActive(true);
+	//super->setPosition(Vector(getPosition().getX(), getPosition().getY()));
+	//super->setActive(true);
 
 
 	//getAnimation().getSprite()->setColor(df::CYAN);

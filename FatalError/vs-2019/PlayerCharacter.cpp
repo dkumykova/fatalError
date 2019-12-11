@@ -478,7 +478,9 @@ void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
 			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
 			//Player* p_p = p_c->getPlayer();
 			//reduce hero health
+			//getPlayer();
 			getPlayer()->handleHealth(getSuperDamage());
+			
 			if (getPlayer()->getHealth() <= 0) {
 				getFrozen(5);
 				WM.markForDelete(this);

@@ -53,7 +53,7 @@ void Character_Lisp::do_action_jump() {
 }
 
 void Character_Lisp::do_action_defense() {
-	// TO DO
+	//implementation in player character
 }
 
 void Character_Lisp::do_action_attack_1() {
