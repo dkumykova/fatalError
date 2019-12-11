@@ -73,6 +73,8 @@ void loadResources(void) {
 	RM.loadSprite("sprites/Character_C_flipped-spr.txt", "Character_C_flip");
 	RM.loadSprite("sprites/Character_C_error-spr.txt", "Character_C_error");
 
+	RM.loadSprite("sprites/comment-wall-spr.txt", "commentwall");
+
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
 	RM.loadSound("sounds/nuke.wav", "nuke");

@@ -155,6 +155,7 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="CharacterSelectMenu.h" />
     <ClInclude Include="Character_C.h" />
+    <ClInclude Include="CommentWall.h" />
     <ClInclude Include="EventHealth.h" />
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameOver.h" />
@@ -177,6 +178,7 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CharacterSelectMenu.cpp" />
     <ClCompile Include="Character_C.cpp" />
+    <ClCompile Include="CommentWall.cpp" />
     <ClCompile Include="EventHealth.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameOver.cpp" />

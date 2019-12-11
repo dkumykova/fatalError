@@ -21,6 +21,7 @@
 #include <EventOut.h>
 
 
+
 using namespace df;
 
 // PlayerCharacter Constructor
@@ -81,6 +82,9 @@ PlayerCharacter::PlayerCharacter() {
 
 	// Set Solidness
 	setSolidness(df::SOFT);
+
+	wall = new CommentWall();
+	wall->setActive(false);
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -138,7 +142,7 @@ void PlayerCharacter::processDownArrow(){
 	}
 
 	// If not all above, then it's time to defense
-	do_action_defense();
+	do_action_defense(getIsHigherLevel());
 }
 
 void PlayerCharacter::attack_1() {
@@ -519,10 +523,31 @@ void PlayerCharacter::do_action_jump(){
 void PlayerCharacter::do_action_defense(bool isHigher){
 	// No implementation because this is player dependent
 	if (isHigher) {
+		LM.writeLog("Higher level defense called");
 		//do dash dodge
 	}
 	else {
+		LM.writeLog("Lower level defense called");
 		//comment wall 
+		
+		int isRight = getPlayer()->getFacingRight();
+		Vector wall_pos;
+		int spriteWidth = getAnimation().getSprite()->getWidth();
+		int spriteHeight = getAnimation().getSprite()->getHeight();
+		int wallWidth = wall->getAnimation().getSprite()->getWidth();
+		if (isRight > 0) { //character is facing right, so display wall on right side
+			wall_pos = Vector(getPosition().getX() + spriteWidth/2 
+				+ wallWidth, getPosition().getY());
+			wall->setPosition(wall_pos);
+		}
+		else { //character facing left
+			wall_pos = Vector(getPosition().getX() - spriteWidth / 2
+				- wallWidth, getPosition().getY());
+			wall->setPosition(wall_pos);
+		}
+		wall->setActive(true);
+		
+
 	}
 }
 
@@ -596,4 +621,11 @@ void PlayerCharacter::setPlayer(Player* n_player){
 
 Player* PlayerCharacter::getPlayer() const {
 	return m_p_player;
+}
+
+void PlayerCharacter::setIsHigherLevel(bool is) {
+	isHigherLevel = is;
+}
+bool PlayerCharacter::getIsHigherLevel() const {
+	return isHigherLevel;
 }

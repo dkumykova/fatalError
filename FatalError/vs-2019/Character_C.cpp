@@ -31,6 +31,7 @@ Character_C::Character_C() {
 	setSuperAttackSlowdown(900,true); // 30 secs
 	setSuperChanelingSlowdown(60,true);
 
+	setIsHigherLevel(false); //C is a lower level language, set for defend function
 
 }
 

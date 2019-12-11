@@ -1,0 +1,22 @@
+<HEADER>
+frames 2
+width 4
+height 4
+color yellow
+slowdown 5
+</HEADER>
+<BODY>
+/**/
+/**/
+/**/
+/**/
+end
+////
+////
+////
+////
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

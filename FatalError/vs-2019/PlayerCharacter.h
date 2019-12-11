@@ -4,6 +4,7 @@
 #include "EventKeyboard.h"
 #include "EventMouse.h"
 #include "EventCollision.h"
+#include "CommentWall.h"
 
 // Defines
 #define TERMINAL_VELOCITY_X 3
@@ -58,7 +59,9 @@ private:
 	bool m_error_channeling;
 	bool m_super_channeling;
 	bool m_super_attacking;
-	
+
+	bool isHigherLevel; //true if language is higher level, false if not
+	CommentWall *wall;
 
 	// Player Pointer
 	Player* m_p_player;
@@ -136,5 +139,11 @@ public:
 	virtual void do_action_attack_1();
 	virtual void do_action_attack_2(int damage); // Should be private to children. But put here for convenience
 	virtual void do_action_super_attack();
+
+	void setIsHigherLevel(bool is);
+	bool getIsHigherLevel() const;
+
+	
+
 };
 
