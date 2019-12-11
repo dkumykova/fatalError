@@ -1,10 +1,13 @@
-#pragma once
-
 #include "Object.h"
 #include "EventKeyboard.h"
 #include "EventMouse.h"
 #include "EventCollision.h"
 #include "CommentWall.h"
+
+#ifndef __PLAYER_CHARACTER_H__
+#define __PLAYER_CHARACTER_H__
+
+
 
 // Defines
 #define TERMINAL_VELOCITY_X 3
@@ -44,6 +47,8 @@ private:
 	int defense_slowdown;
 	int defense_countdown;
 
+	int super_hold_countdown;
+
 	// Move Related
 	float jump_speed; // The jump speed
 	bool on_ground; // Help Collision only Process Once if on_ground
@@ -59,6 +64,7 @@ private:
 	bool m_error_channeling;
 	bool m_super_channeling;
 	bool m_super_attacking;
+	int m_super_attack_damage;
 
 	bool isHigherLevel; //true if language is higher level, false if not
 	CommentWall *wall;
@@ -103,6 +109,9 @@ public:
 	void startSuperChanneling();
 	void startErrorChanneling();
 
+	void setSuperDamage(int damage);
+	int getSuperDamage() const;
+
 	// Sprite Related
 	enum SpriteStatus { Original, Flipped, Normal_Attacking, Defending, Jumping, Error_Attacking };
 	virtual void flipSprite(SpriteStatus sprite_status);
@@ -121,6 +130,8 @@ public:
 	void setSuperChanelingSlowdown(int slowdown, bool counterAlso = false);
 	void setSuperCastTime(int time);
 
+	int getSuperHoldCountdown() const;
+	void setSuperHoldCountdown(int slowdown, bool counterAlso = false);
 
 	// Counter Related
 	bool isTimeToJump();
@@ -146,4 +157,5 @@ public:
 	
 
 };
+#endif
 

@@ -66,6 +66,7 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 			PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
 			Player* p_p = p_c->getPlayer();
 			//reduce hero health
+			LM.writeLog("bananan");
 			p_p->handleHealth(p_c->getAttackOneDamage());
 			if (p_p->getHealth() <= 0) {
 				p_c->getFrozen(5);
@@ -79,6 +80,8 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 			PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject2());
 			Player* p_p = p_c->getPlayer();
 			//reduce hero health
+			LM.writeLog("bananan");
+
 			p_p->handleHealth(p_c->getAttackTwoDamage());
 			if (p_p->getHealth() <= 0) {
 				p_c->getFrozen(5);
@@ -88,4 +91,6 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 			WM.markForDelete(p_collision_event->getObject1());
 		}
 	}
+
+	
 }

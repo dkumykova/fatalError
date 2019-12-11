@@ -43,17 +43,21 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;
 		break;
-	case df::Keyboard::J: // attack 1
+	case df::Keyboard::RIGHTCONTROL: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_1();
 		break;
-	case df::Keyboard::K: // attack 2
+	case df::Keyboard::PERIOD: // attack 2
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_2();
 		break;
-	case df::Keyboard::L: // defend
+	case df::Keyboard::RIGHTSHIFT: // defend
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
+		break;
+	case df::Keyboard::SLASH: // super
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			m_p_character->do_action_super_attack();
 		break;
 
 	default: // Key not handled.

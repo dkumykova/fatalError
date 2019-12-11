@@ -57,6 +57,10 @@ void PlayerOne::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
 		break;
+	case df::Keyboard::G: // super
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			m_p_character->do_action_super_attack();
+		break;
 
 	default: // Key not handled.
 		return;

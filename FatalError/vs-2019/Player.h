@@ -1,4 +1,4 @@
-#pragma once
+
 // The Player Class
 // Helps Control Player Chracter
 
@@ -15,7 +15,8 @@
 
 // Engine Includes
 
-
+#ifndef __PLAYER_H__
+#define __PLAYER_H__
 // Defines
 #define PLAYER_MAX_HEALTH 100
 
@@ -56,3 +57,5 @@ public:
 
 
 };
+
+#endif

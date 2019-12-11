@@ -31,7 +31,7 @@ Character_C::Character_C() {
 	setSuperAttackSlowdown(900,true); // 30 secs
 	setSuperChanelingSlowdown(60,true);
 
-	setIsHigherLevel(false); //C is a lower level language, set for defend function
+	setIsHigherLevel(true); //C is a lower level language, set for defend function
 
 }
 
@@ -58,6 +58,7 @@ void Character_C::do_action_attack_1(){
 
 void Character_C::do_action_super_attack(){
 	// To do
+	LM.writeLog("C super called");
 }
 
 

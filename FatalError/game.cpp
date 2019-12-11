@@ -73,7 +73,23 @@ void loadResources(void) {
 	RM.loadSprite("sprites/Character_C_flipped-spr.txt", "Character_C_flip");
 	RM.loadSprite("sprites/Character_C_error-spr.txt", "Character_C_error");
 
+	RM.loadSprite("sprites/Character_Lisp-spr.txt", "Character_Lisp");
+	RM.loadSprite("sprites/Character_Lisp_flipped-spr.txt", "Character_Lisp_flip");
+	RM.loadSprite("sprites/Character_Lisp_error-spr.txt", "Character_Lisp_error");
+	RM.loadSprite("sprites/Character_Lisp_super-spr.txt", "Character_Lisp_super");
+
+	RM.loadSprite("sprites/Character_Java-spr.txt", "Character_Java");
+	RM.loadSprite("sprites/Character_Java_flipped-spr.txt", "Character_Java_flip");
+	RM.loadSprite("sprites/Character_Java_error-spr.txt", "Character_Java_error");
+	RM.loadSprite("sprites/Character_Java_super-spr.txt", "Character_Java_super");
+
+	RM.loadSprite("sprites/Character_Js-spr.txt", "Character_Js");
+	RM.loadSprite("sprites/Character_Js_flipped-spr.txt", "Character_Js_flip");
+	RM.loadSprite("sprites/Character_Js_error-spr.txt", "Character_Js_error");
+	RM.loadSprite("sprites/Character_Js_super-spr.txt", "Character_Js_super");
+
 	RM.loadSprite("sprites/comment-wall-spr.txt", "commentwall");
+	RM.loadSprite("sprites/paren-spr.txt", "paren");
 
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");

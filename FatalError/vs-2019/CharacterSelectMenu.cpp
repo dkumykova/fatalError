@@ -15,6 +15,7 @@
 
 // Engine Include
 #include <LogManager.h>
+#include "Character_Lisp.h"
 
 
 CharacterSelectMenu::CharacterSelectMenu() {
@@ -46,7 +47,7 @@ void CharacterSelectMenu::start() {
 		PlayerTwo* p2 = new PlayerTwo;
 
 		Character_C* c1 = new Character_C();
-		Character_C* c2 = new Character_C();
+		Character_Lisp* c2 = new Character_Lisp();
 
 		p1->setCharacter(c1);
 		c1->setPlayer(p1);

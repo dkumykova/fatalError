@@ -42,13 +42,15 @@ PlayerCharacter::PlayerCharacter() {
 	attack_2_countdown = 0;
 	error_attack_channeling_slowdown = 90;
 	error_attack_channeling_countdown = error_attack_channeling_slowdown;
-	super_attack_slowdown = 600;
+	super_attack_slowdown = 600; //600
 	super_attack_countdown = super_attack_slowdown;
 	super_channeling_slowdown = 60;
 	super_channeling_countdown = super_channeling_slowdown;
 	defense_slowdown = 30;
 	defense_countdown = defense_slowdown;
+	m_super_attack_damage = 0;
 
+	super_hold_countdown = 30;
 	// Move Related
 	jump_speed = INITIAL_JUMP_SPEED;
 	on_ground = false;
@@ -375,59 +377,79 @@ void PlayerCharacter::step() {
 	}
 
 
-	
 
-	// Error Check for Height
-	if (!(getErrorAttacking() || m_error_channeling)) {
-		if (this->getPosition().getY() > 40) {
-			this->setPosition(df::Vector(getPosition().getX(), 40));
-		}
-	} else {
-		if (this->getPosition().getY() > 45) {
-			this->setPosition(df::Vector(getPosition().getX(), 45));
-		}
+
+// Error Check for Height
+if (!(getErrorAttacking() || m_error_channeling)) {
+	if (this->getPosition().getY() > 40) {
+		this->setPosition(df::Vector(getPosition().getX(), 40));
 	}
-
-	if (this->getPosition().getY() < 3) {
-		this->setPosition(df::Vector(getPosition().getX(), 3));
+}
+else {
+	if (this->getPosition().getY() > 45) {
+		this->setPosition(df::Vector(getPosition().getX(), 45));
 	}
+}
 
-	if (this->getPosition().getX() < 0) {
-		this->setPosition(df::Vector(getPosition().getX(), 0));
-	}
+if (this->getPosition().getY() < 3) {
+	this->setPosition(df::Vector(getPosition().getX(), 3));
+}
 
-	if (this->getPosition().getY() > 194) {
-		this->setPosition(df::Vector(getPosition().getX(), 194));
-	}
+if (this->getPosition().getX() < 0) {
+	this->setPosition(df::Vector(getPosition().getX(), 0));
+}
 
-	stepProcessor();
+if (this->getPosition().getY() > 194) {
+	this->setPosition(df::Vector(getPosition().getX(), 194));
+}
+
+//super hold (right now, just for lisp)
+
+if (super_hold_countdown == 0) {
+	//reset to normal sprite
+	//setActive(false); 
+	super_hold_countdown = 30; //reset
+	return;
+}
+else {
+	super_hold_countdown--; //countdown
+
+}
+
+
+
+
+
+stepProcessor();
 }
 
 void PlayerCharacter::move(float dx, float dy) {
 	// If stays on window, allow move.
 	int halfWidth = getAnimation().getSprite()->getWidth() / 2;
 	df::Vector new_pos(getPosition().getX() + dx, getPosition().getY() + dy);
-	
+
 	//handle out of bounds x
 	if (new_pos.getX() < halfWidth && new_pos.getX() < (int)WM.getBoundary().getHorizontal() / 2) { //character went out of bounds on left side
 		WM.moveObject(this, Vector(halfWidth, getPosition().getY()));
+		setAcceleration(Vector());
 		return;
 	}
-	else if (new_pos.getX() > halfWidth && new_pos.getX() > (int)WM.getBoundary().getHorizontal() - halfWidth) { //character went out of bounds of right side
+	else if (new_pos.getX() > halfWidth&& new_pos.getX() > (int)WM.getBoundary().getHorizontal() - halfWidth) { //character went out of bounds of right side
 		WM.moveObject(this, Vector(WM.getBoundary().getHorizontal() - halfWidth, getPosition().getY()));
+		setAcceleration(Vector());
 		return;
 	}
 	//handle out of bounds y
-	else if (new_pos.getY() > 3 && new_pos.getY() < WM.getBoundary().getVertical()){
+	else if (new_pos.getY() > 3 && new_pos.getY() < WM.getBoundary().getVertical()) {
 		WM.moveObject(this, new_pos);
 		return;
 	}
-	
+
 }
 
 // Process General Collisions
 void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
-
+	LM.writeLog("player hello");
 	// Helps Only Process when Player Is Not On Ground
 	if (!on_ground) {
 		if ((p_c_event->getObject1()->getType() == "Platform") ||
@@ -438,16 +460,32 @@ void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
 				return;
 			}
 			setOnGroundStatus(true);
-			setVelocity(df::Vector(0,0)); //reset velocity to 0
+			setVelocity(df::Vector(0, 0)); //reset velocity to 0
 
 		}
-		
+
 		if (getErrorAttacking()) {
 			if ((p_c_event->getObject1()->getType() == "PlayerCharacter")) {
 				setErrorAttacking(false);
 				do_action_attack_2(30);
 				getPlayer()->getOpponentPlayer()->getCharacter()->getFrozen(2);
 			}
+		}
+
+		if ((p_c_event->getObject1()->getType() == "super") ||
+			(p_c_event->getObject2()->getType() == "super")) {
+			LM.writeLog("Player was hit by super!");
+			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
+			//Player* p_p = p_c->getPlayer();
+			//reduce hero health
+			getPlayer()->handleHealth(getSuperDamage());
+			if (getPlayer()->getHealth() <= 0) {
+				getFrozen(5);
+				WM.markForDelete(this);
+				new GameOver();
+			}
+			/*WM.markForDelete(p_collision_event->getObject2());*/
+			
 		}
 	}
 
@@ -522,15 +560,25 @@ void PlayerCharacter::do_action_jump(){
 
 void PlayerCharacter::do_action_defense(bool isHigher){
 	// No implementation because this is player dependent
+	int isRight = getPlayer()->getFacingRight();
 	if (isHigher) {
 		LM.writeLog("Higher level defense called");
 		//do dash dodge
+		if (isRight > 0) { //dash right
+			setVelocity(Vector(20, 0));
+			setAcceleration(Vector(5, 0));
+			//setHorizontalSlowdown(0);
+		}
+		else {
+			setVelocity(df::Vector(-20, 0));
+		}
+		
 	}
 	else {
 		LM.writeLog("Lower level defense called");
 		//comment wall 
 		
-		int isRight = getPlayer()->getFacingRight();
+		
 		Vector wall_pos;
 		int spriteWidth = getAnimation().getSprite()->getWidth();
 		int spriteHeight = getAnimation().getSprite()->getHeight();
@@ -591,6 +639,7 @@ void PlayerCharacter::do_action_attack_2(int damage){
 }
 
 void PlayerCharacter::do_action_super_attack(){
+	LM.writeLog("Character super called");
 	// No implementation because this is player dependent
 }
 
@@ -628,4 +677,18 @@ void PlayerCharacter::setIsHigherLevel(bool is) {
 }
 bool PlayerCharacter::getIsHigherLevel() const {
 	return isHigherLevel;
+}
+
+int PlayerCharacter::getSuperHoldCountdown() const {
+	return super_hold_countdown;
+}
+void PlayerCharacter::setSuperHoldCountdown(int slowdown, bool counterAlso) {
+	super_hold_countdown = slowdown;
+}
+
+void PlayerCharacter::setSuperDamage(int damage){
+	m_super_attack_damage = damage;
+}
+int PlayerCharacter::getSuperDamage() const {
+	return m_super_attack_damage;
 }

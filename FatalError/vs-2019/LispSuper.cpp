@@ -1,23 +1,20 @@
-#include "CommentWall.h"
+#include "LispSuper.h"
 #include <EventStep.h>
-#include <WorldManager.h>
 #include <LogManager.h>
+#include <WorldManager.h>
 
 
-
-CommentWall::CommentWall() {
-	setSprite("commentwall");
-	setType("wall");
-	setSolidness(df::HARD);
+LispSuper::LispSuper() {
+	setSprite("Character_Lisp_super");
+	setType("super");
+	countdown = 100;
+	setAltitude(1);
+	setSolidness(SOFT);
 
 	registerInterest(df::STEP_EVENT);
 	registerInterest(df::COLLISION_EVENT);
-
-	wallCountdown = 40; //wall stays up for 10 steps then disappears
-	damageSaved = 0;
 }
-
-int CommentWall::eventHandler(const df::Event* p_e) {
+int LispSuper::eventHandler(const df::Event* p_e) {
 	if (p_e->getType() == df::COLLISION_EVENT) {
 		const df::EventCollision* p_collision_event =
 			dynamic_cast <const df::EventCollision*> (p_e);
@@ -31,14 +28,13 @@ int CommentWall::eventHandler(const df::Event* p_e) {
 	}
 	return 1;
 }
-
-void CommentWall::collide(const df::EventCollision* p_e) {
+void LispSuper::collide(const df::EventCollision* p_e) {
 	//change to projectile when merge
 	if (p_e->getObject1()->getType() == "Bullet" || p_e->getObject2()->getType() == "Bullet") {
 		//block object + destroy
 		LM.writeLog("wall collided with projectile!");
 		if (p_e->getObject1()->getType() == "Bullet") {
-			
+
 			WM.markForDelete(p_e->getObject1());
 			//might be able to get away with just adding to health
 			//player->handleHealth(-20); //reduce damage by 20
@@ -51,32 +47,23 @@ void CommentWall::collide(const df::EventCollision* p_e) {
 
 	}
 }
-
-void CommentWall::step() {
+void LispSuper::step() {
 	LM.writeLog("wall step called");
-	LM.writeLog("wall countdown value: " + wallCountdown);
-	if (wallCountdown == 0) {
+	LM.writeLog("wall countdown value: " + countdown);
+	if (countdown == 0) {
 		setActive(false); //remove wall
-		wallCountdown = 40; //reset
+		countdown = 100; //reset
 		return;
 	}
 	else {
-		wallCountdown--; //countdown
+		//WM.moveObject();
+		countdown--; //countdown
 
 	}
-
 }
-
-void CommentWall::setWallCountdown(int num) {
-	wallCountdown = num;
+void LispSuper::setCountdown(int num) {
+	countdown = num;
 }
-int CommentWall::getWallCountdown() const {
-	return wallCountdown;
-}
-
-void CommentWall::setDamageSaved(int num) {
-	damageSaved = num;
-}
-int CommentWall::getDamageSaved() const {
-	return damageSaved;
+int LispSuper::getCountdown() const {
+	return countdown;
 }
