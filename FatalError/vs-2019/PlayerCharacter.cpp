@@ -471,8 +471,14 @@ void PlayerCharacter::do_action_jump(){
 	// No implementation because this is player dependent
 }
 
-void PlayerCharacter::do_action_defense(){
+void PlayerCharacter::do_action_defense(bool isHigher){
 	// No implementation because this is player dependent
+	if (isHigher) {
+		//do dash dodge
+	}
+	else {
+		//comment wall 
+	}
 }
 
 void PlayerCharacter::do_action_move_right(){

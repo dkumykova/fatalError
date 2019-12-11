@@ -125,7 +125,7 @@ public:
 
 	// Actions Children Can Do, And Should Do
 	virtual void do_action_jump();
-	virtual void do_action_defense();
+	virtual void do_action_defense(bool isHigher);
 	virtual void do_action_move_right();
 	virtual void do_action_move_left();
 	virtual void do_action_attack_1();
