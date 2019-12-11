@@ -21,9 +21,9 @@ GameStart::GameStart() {
 	setType("GameStart");
 	registerInterest(df::KEYBOARD_EVENT);
 
-	//start_music = RM.getMusic("startMusic");
-	//game_music = RM.getMusic("gameMusic");
-	//playMusic(start_music);
+    start_music = RM.getMusic("startMusic");
+	
+	playMusic(start_music);
 	setLocation(df::CENTER_CENTER);
 
 }
@@ -56,7 +56,8 @@ void GameStart::start() {
 
 	//new Platform();
 	
-	new CharacterSelectMenu();
+	CharacterSelectMenu *m = new CharacterSelectMenu();
+	m->setStartMusic(start_music);
 	//new Hero;
 	//new MenuReticle();
 	//new Player1Reticle();
@@ -83,9 +84,7 @@ void GameStart::start() {
 	//p_health->setColor(df::GREEN);
 
 	setActive(false);
-	//start_music->pause();
-
-	//playMusic(game_music);
+	
 }
 
 int GameStart::draw() {

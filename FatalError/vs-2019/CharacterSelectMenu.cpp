@@ -16,6 +16,7 @@
 // Engine Include
 #include <LogManager.h>
 #include "Character_Lisp.h"
+#include <ResourceManager.h>
 
 
 CharacterSelectMenu::CharacterSelectMenu() {
@@ -79,6 +80,10 @@ void CharacterSelectMenu::start() {
 		p_health2->setValue(100);
 		p_health2->setColor(df::GREEN);
 
+		game_music = RM.getMusic("gameMusic");
+		start_music->pause();
+
+		game_music->play();
 
 	}
 	else {
@@ -112,4 +117,12 @@ int CharacterSelectMenu::eventHandler(const df::Event* p_e) {
 		return 1;
 	}
 	return 0;
+}
+
+void CharacterSelectMenu::setStartMusic(Music* m) {
+	start_music = m;
+}
+
+Music* CharacterSelectMenu::getGameMusic() const{
+	return game_music;
 }

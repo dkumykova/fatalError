@@ -6,6 +6,7 @@
 #include "Sound.h"
 #include "GameStart.h"
 #include <LogManager.h>
+#include "CharacterSelectMenu.h"
 
 GameOver::GameOver() {
 	if (setSprite("KO") == 0) {
@@ -46,12 +47,17 @@ GameOver::~GameOver() {
 	for (i.first(); !i.isDone(); i.next()) {
 
 		df::Object* p_o = i.currentObject();
+		if (p_o->getType() == "select") {
+			CharacterSelectMenu* c = dynamic_cast <CharacterSelectMenu*> (p_o);
+			c->getGameMusic()->pause();
+			
+		}
 		if (p_o->getType() == "GameStart") {
 			p_o->setActive(true);
 			continue;
 			//pause game music and play menu music again
-			//dynamic_cast <GameStart*> (p_o)->game_music->pause();
-			//dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
+			LM.writeLog("hit game start in game over");
+			dynamic_cast <GameStart*> (p_o)->playMusic(dynamic_cast <GameStart *> (p_o)->start_music); 
 		}
 
 		if (p_o->getType() == "Star")

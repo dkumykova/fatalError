@@ -97,8 +97,8 @@ void loadResources(void) {
 	RM.loadSound("sounds/game-over.wav", "gameOver");
 	RM.loadSound("sounds/health-pickup.wav", "healthpickup");
 
-	RM.loadMusic("sounds/start-music.wav", "startMusic");
-	RM.loadMusic("sounds/game-music.wav", "gameMusic");
+	RM.loadMusic("sounds/start_music_fight.wav", "startMusic");
+	RM.loadMusic("sounds/play_music_fight.wav", "gameMusic");
 }
 
 
