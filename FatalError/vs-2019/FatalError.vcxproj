@@ -156,6 +156,7 @@
     <ClInclude Include="CharacterSelectMenu.h" />
     <ClInclude Include="Character_C.h" />
     <ClInclude Include="EventHealth.h" />
+    <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="GameStart.h" />
     <ClInclude Include="MenuReticle.h" />
@@ -177,6 +178,7 @@
     <ClCompile Include="CharacterSelectMenu.cpp" />
     <ClCompile Include="Character_C.cpp" />
     <ClCompile Include="EventHealth.cpp" />
+    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="MenuReticle.cpp" />

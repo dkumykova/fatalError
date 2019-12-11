@@ -58,6 +58,7 @@ void loadResources(void) {
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
 	RM.loadSprite("sprites/platform2-spr.txt", "platform");
 	RM.loadSprite("sprites/title-screen-spr.txt", "title");
+	RM.loadSprite("sprites/explosion-spr.txt", "explosion");
 
 	RM.loadSprite("sprites/player1select-spr.txt", "select");
 	RM.loadSprite("sprites/menu-reticle1-spr.txt", "menureticle1");

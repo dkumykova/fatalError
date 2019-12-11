@@ -42,7 +42,7 @@ public:
 	virtual void handleHealth(int damage); // Handle Health
 
 	virtual void setCharacter(PlayerCharacter* new_char); // Set Character 
-	
+	PlayerCharacter* getCharacter() const; // Get Character
 
 	void setOpponentPlayer(Player* new_player); // Set opponent player pointer
 	Player* getOpponentPlayer() const; // Get opponent player pointer
