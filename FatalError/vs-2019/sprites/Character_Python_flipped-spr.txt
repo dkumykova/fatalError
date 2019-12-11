@@ -1,0 +1,25 @@
+<HEADER>
+frames 2
+width 9
+height 5
+color white
+slowdown 7
+transparency @
+</HEADER>
+<BODY>
+@@@...@@@
+##.......
+#######..
+@@@###@@@
+@@@@@@@@@
+end
+@@@###@@@
+..#######
+.......##
+@@@...@@@
+@@@@@@@@@
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

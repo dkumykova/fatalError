@@ -80,7 +80,7 @@ PlayerCharacter::PlayerCharacter() {
 	m_error_channeling = false;
 	setErrorAttacking(false); // Initiate Error Attacking to false
 	setAttackOneDamage(10); // If not specifically defined, then it's 10
-	setAttackTwoDamage(20); // If not specifically defined, then it's 20
+	setAttackTwoDamage(10); // If not specifically defined, then it's 10
 
 	// Set Solidness
 	setSolidness(df::SOFT);
@@ -362,7 +362,7 @@ void PlayerCharacter::step() {
 	if (error_attack_channeling_countdown <= 0) {
 		error_attack_channeling_countdown = error_attack_channeling_slowdown;
 		m_error_channeling = false;
-		do_action_attack_2(10);
+		do_action_attack_2(m_attack_2_damage);
 	}
 
 	
@@ -446,7 +446,7 @@ void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
 		if (getErrorAttacking()) {
 			if ((p_c_event->getObject1()->getType() == "PlayerCharacter")) {
 				setErrorAttacking(false);
-				do_action_attack_2(30);
+				do_action_attack_2(m_attack_2_damage * 3);
 				getPlayer()->getOpponentPlayer()->getCharacter()->getFrozen(2);
 			}
 		}

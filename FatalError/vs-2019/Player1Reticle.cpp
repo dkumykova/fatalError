@@ -1,6 +1,8 @@
 #include "Player1Reticle.h"
 #include <LogManager.h>
 #include <DisplayManager.h>
+#include <EventStep.h>
+
 using namespace df;
 
 Player1Reticle::Player1Reticle() {
@@ -10,25 +12,23 @@ Player1Reticle::Player1Reticle() {
 	selectedString->setPosition(Vector(5, 5));
 
 }
-//int Player1Reticle::eventHandler(const df::Event* p_e) {
-//
-//}
-//Player1Reticle::~Player1Reticle() {
-//
-//}
+
+
 void Player1Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	switch (p_key_event->getKey()) {
 	case df::Keyboard::A:
 
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			LM.writeLog("move reticle with A");
-			move(-25);
+			if (!getCharacterSet())
+				move(-25);
 		}
 		break;
 	case df::Keyboard::D:
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
 			LM.writeLog("move reticle with D");
-			move(+25);
+			if (!getCharacterSet())
+				move(+25);
 		}
 		break;
 	case df::Keyboard::LEFTSHIFT:
@@ -38,6 +38,7 @@ void Player1Reticle::kbd(const df::EventKeyboard* p_key_event) {
 			selectedString->setSprite("selected1");
 			selectedString->setPosition(Vector(5, 5));
 			//selectedString = PlayerSelected();
+			setCharacterSet(true);
 			setHighlightedChar(getPosition());
 		}
 		break;
@@ -47,6 +48,7 @@ void Player1Reticle::kbd(const df::EventKeyboard* p_key_event) {
 			selectedString->setSprite("unselected1");
 			selectedString->setPosition(Vector(5, 5));
 			//DM.drawString(Vector(100, 10), "Player 1 has selected", CENTER_JUSTIFIED, RED);
+			setCharacterSet(false);
 			setHighlightedChar(Vector());
 		}
 		break;
@@ -55,8 +57,3 @@ void Player1Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	};
 	return;
 }
-
-
-
-
-

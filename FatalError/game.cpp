@@ -80,6 +80,10 @@ void loadResources(void) {
 	RM.loadSprite("sprites/Character_CPP_plus-spr.txt", "Character_CPP_Plus");
 	RM.loadSprite("sprites/Character_CPP_error-spr.txt", "Character_CPP_error");
 
+	RM.loadSprite("sprites/Character_Python-spr.txt", "Character_Python");
+	RM.loadSprite("sprites/Character_Python_flipped-spr.txt", "Character_Python_flip");
+	RM.loadSprite("sprites/Character_Python_error-spr.txt", "Character_Python_error");
+
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
 	RM.loadSound("sounds/nuke.wav", "nuke");

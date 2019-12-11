@@ -158,6 +158,7 @@
     <ClInclude Include="Character_CPP.h" />
     <ClInclude Include="Character_CPP_plus.h" />
     <ClInclude Include="Character_C_pointer.h" />
+    <ClInclude Include="Character_Python.h" />
     <ClInclude Include="EventHealth.h" />
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameOver.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="Character_CPP.cpp" />
     <ClCompile Include="Character_CPP_plus.cpp" />
     <ClCompile Include="Character_C_pointer.cpp" />
+    <ClCompile Include="Character_Python.cpp" />
     <ClCompile Include="EventHealth.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameOver.cpp" />
