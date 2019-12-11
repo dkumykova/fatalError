@@ -3,6 +3,11 @@
 #include <EventStep.h>
 #include <WorldManager.h>
 #include <LogManager.h>
+#include "Character_Lisp.h"
+#include "Character_Java.h"
+#include "Character_Js.h"
+#include "Character_C.h"
+
 using namespace df;
 
 MenuReticle::MenuReticle() {
@@ -10,7 +15,7 @@ MenuReticle::MenuReticle() {
 	move_countdown = move_slowdown;
 	//setSprite("menureticle");
 	setType("MenuReticle");
-	highlightedChar = Vector();
+	highlightedChar = NULL;
 
 	registerInterest(df::KEYBOARD_EVENT);
 	registerInterest(df::STEP_EVENT);
@@ -75,10 +80,10 @@ void MenuReticle::setHighlightedChar(Vector pos) {
 	switch (x)
 	{
 	case 38:
-		//Lisp
+		highlightedChar = new Character_Lisp();
 		break;
 	case 63:
-		//Java
+		highlightedChar = new Character_Java();
 		break;
 	case 88:
 		//C++
@@ -88,9 +93,11 @@ void MenuReticle::setHighlightedChar(Vector pos) {
 		break;
 	case 138:
 		//C
+		highlightedChar = new Character_C();
 		break;
 	case 163:
 		//javascript
+		highlightedChar = new Character_Js();
 		break;
 	case 0:
 		setCharacterSet(false);
@@ -100,9 +107,10 @@ void MenuReticle::setHighlightedChar(Vector pos) {
 
 		break;
 	}
+	highlightedChar->setActive(false);
 }
 
-Vector MenuReticle::getHighlightedChar() const{
+PlayerCharacter* MenuReticle::getHighlightedChar() const{
 	return highlightedChar;
 }
 

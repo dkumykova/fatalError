@@ -46,8 +46,11 @@ void CharacterSelectMenu::start() {
 		PlayerOne* p1 = new PlayerOne;
 		PlayerTwo* p2 = new PlayerTwo;
 
-		Character_C* c1 = new Character_C();
-		Character_Lisp* c2 = new Character_Lisp();
+		//Character_C* c1 = new Character_C();
+		//Character_Lisp* c2 = new Character_Lisp();
+
+		PlayerCharacter* c1 = player1->getHighlightedChar();
+		PlayerCharacter* c2 = player2->getHighlightedChar();
 
 		p1->setCharacter(c1);
 		c1->setPlayer(p1);
@@ -61,6 +64,8 @@ void CharacterSelectMenu::start() {
 		player2->setActive(false);
 		player1->selectedString->setActive(false);
 		player2->selectedString->setActive(false);
+		c1->setActive(true);
+		c2->setActive(true);
 
 		df::ViewObject* p_health = new df::ViewObject; //keep track of health
 		p_health->setLocation(df::TOP_LEFT);
