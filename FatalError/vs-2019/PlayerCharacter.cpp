@@ -54,6 +54,8 @@ PlayerCharacter::PlayerCharacter() {
 	m_default_color = df::WHITE;
 	heightOfSprite = 0;
 
+	defense_count = 80;
+
 	super_hold_countdown = 30;
 	// Move Related
 	jump_speed = INITIAL_JUMP_SPEED;
@@ -91,6 +93,7 @@ PlayerCharacter::PlayerCharacter() {
 
 	wall = new CommentWall();
 	wall->setActive(false);
+	isDefending = false;
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -298,6 +301,21 @@ int PlayerCharacter::eventHandler(const df::Event* p_e){
 		return 1;
 	}
 
+	if (p_e->getType() == df::OUT_EVENT) {
+		const df::EventOut* p = dynamic_cast <const df::EventOut*> (p_e);
+		LM.writeLog("Character has left the filed!");
+		int halfWidth = getAnimation().getSprite()->getWidth() / 2;
+		if (getPlayer()->getFacingRight() > 0) {
+			WM.moveObject(this, Vector(WM.getBoundary().getHorizontal() - halfWidth, getPosition().getY()));
+		}
+		else {
+			WM.moveObject(this, Vector(halfWidth, getPosition().getY()));
+		}
+		setAcceleration(Vector());
+		setVelocity(Vector());
+		return 1;
+	}
+
 	// if get super attack end event, then check for caster. If caster is this character, reset counter to slowdown
 	// Also remember to turn super_attacking back to false
 	// To do
@@ -307,6 +325,7 @@ int PlayerCharacter::eventHandler(const df::Event* p_e){
 }
 
 void PlayerCharacter::step() {
+ 
 	// Move countdown.
 	horizontal_move_countdown--;
 	if (horizontal_move_countdown < 0)
@@ -606,6 +625,7 @@ void PlayerCharacter::do_action_defense(bool isHigher){
 	if (isHigher) {
 		LM.writeLog("Higher level defense called");
 		//do dash dodge
+		
 		if (isRight > 0) { //dash right
 			setVelocity(Vector(20, 0));
 			setAcceleration(Vector(5, 0));
@@ -613,6 +633,8 @@ void PlayerCharacter::do_action_defense(bool isHigher){
 		}
 		else {
 			setVelocity(df::Vector(-20, 0));
+			setAcceleration(Vector(5, 0));
+
 		}
 		
 	}
@@ -737,4 +759,11 @@ void PlayerCharacter::setSuperDamage(int damage){
 }
 int PlayerCharacter::getSuperDamage() const {
 	return m_super_attack_damage;
+}
+
+void PlayerCharacter::setIsDefending(bool t) {
+	isDefending = t;
+}
+bool PlayerCharacter::getIsDefending() const {
+	return isDefending;
 }

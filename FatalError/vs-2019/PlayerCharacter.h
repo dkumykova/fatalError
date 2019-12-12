@@ -51,6 +51,8 @@ private:
 
 	int super_hold_countdown;
 
+	int defense_count;
+
 	// Move Related
 	float jump_speed; // The jump speed
 	bool on_ground; // Help Collision only Process Once if on_ground
@@ -70,6 +72,7 @@ private:
 
 	bool isHigherLevel; //true if language is higher level, false if not
 	CommentWall *wall;
+	bool isDefending;
 	
 	// Frozen Related
 	bool m_is_frozen;
@@ -166,6 +169,9 @@ public:
 
 	void setIsHigherLevel(bool is);
 	bool getIsHigherLevel() const;
+
+	void setIsDefending(bool t);
+	bool getIsDefending() const;
 
 	
 
