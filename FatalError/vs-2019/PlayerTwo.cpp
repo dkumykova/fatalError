@@ -53,7 +53,8 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 			else {
 				getControls()->setPosition(Vector(100, 10));
 				getControls()->setActive(true);
-				getControls()->setErase(true);
+			    getControls()->setErase(true);
+				
 			}
 			
 		}
