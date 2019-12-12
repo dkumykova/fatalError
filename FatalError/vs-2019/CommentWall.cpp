@@ -34,17 +34,18 @@ int CommentWall::eventHandler(const df::Event* p_e) {
 
 void CommentWall::collide(const df::EventCollision* p_e) {
 	//change to projectile when merge
-	if (p_e->getObject1()->getType() == "Bullet" || p_e->getObject2()->getType() == "Bullet") {
+	if (p_e->getObject1()->getType() == "Bullet" || p_e->getObject2()->getType() == "Bullet" ||
+		p_e->getObject1()->getType() == "projectile" || p_e->getObject2()->getType() == "projectile" ) {
 		//block object + destroy
 		LM.writeLog("wall collided with projectile!");
-		if (p_e->getObject1()->getType() == "Bullet") {
+		if (p_e->getObject1()->getType() == "Bullet" || p_e->getObject2()->getType() == "projectile") {
 			
 			WM.markForDelete(p_e->getObject1());
 			//might be able to get away with just adding to health
 			//player->handleHealth(-20); //reduce damage by 20
 			//handle health by reducing health by projectile damage amount + wall padding
 		}
-		else if (p_e->getObject2()->getType() == "Bullet") {
+		else if (p_e->getObject2()->getType() == "Bullet" || p_e->getObject2()->getType() == "projectile") {
 			WM.markForDelete(p_e->getObject2());
 			//handle health by reducing health by projectile damage amount + wall padding
 		}

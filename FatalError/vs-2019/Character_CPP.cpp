@@ -17,8 +17,8 @@ Character_CPP::Character_CPP() {
 	setHeightOfSprite(8);
 
 	// Set Attack Related Damage 
-	setAttackOneDamage(30);
-	setAttackTwoDamage(60);
+	setAttackOneDamage(10);
+	setAttackTwoDamage(5);
 	setSuperCastTime(2); // 2 secs
 
 	// Set Jump Speed

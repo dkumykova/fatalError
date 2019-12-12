@@ -35,6 +35,8 @@ private :
 	ControlsDisplay* controls;
 	int playerNum;
 
+	bool _gameover;
+
 protected:
 	void setHealth(int health); // Setter for health
 	PlayerCharacter* m_p_character; // Pointer of the character
@@ -62,6 +64,8 @@ public:
 	
 	int getPlayerNum() const;
 	void setPlayerNum(int n);
+
+	void setGameOver(bool gameover);
 
 
 

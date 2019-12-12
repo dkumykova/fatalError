@@ -17,8 +17,8 @@ Character_C::Character_C() {
 	setHeightOfSprite(6);
 
 	// Set Attack Related Damage 
-	setAttackOneDamage(30);
-	setAttackTwoDamage(60);
+	setAttackOneDamage(10);
+	setAttackTwoDamage(10);
 	setSuperCastTime(2); // 2 secs
 	
 	// Set Jump Speed

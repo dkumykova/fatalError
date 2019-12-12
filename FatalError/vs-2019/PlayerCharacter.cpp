@@ -173,7 +173,8 @@ void PlayerCharacter::attack_2() {
 }
 
 void PlayerCharacter::specialAttack() {
-	do_action_super_attack();
+	if (isTimeToSuperAttack())
+		startSuperChanneling();
 }
 
 void PlayerCharacter::setAttackOneDamage(int damage) {
@@ -483,7 +484,6 @@ void PlayerCharacter::move(float dx, float dy) {
 
 // Process General Collisions
 void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
-	LM.writeLog("player hello");
 	// Helps Only Process when Player Is Not On Ground
 	if (!on_ground) {
 		if ((p_c_event->getObject1()->getType() == "Platform") ||
@@ -506,23 +506,6 @@ void PlayerCharacter::collide(const df::EventCollision* p_c_event) {
 			}
 		}
 
-		if ((p_c_event->getObject1()->getType() == "super") ||
-			(p_c_event->getObject2()->getType() == "super")) {
-			LM.writeLog("Player was hit by super!");
-			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
-			//Player* p_p = p_c->getPlayer();
-			//reduce hero health
-			//getPlayer();
-			getPlayer()->handleHealth(getSuperDamage());
-			
-			if (getPlayer()->getHealth() <= 0) {
-				getFrozen(5);
-				WM.markForDelete(this);
-				new GameOver();
-			}
-			/*WM.markForDelete(p_collision_event->getObject2());*/
-			
-		}
 	}
 
 	// Call Character Specific Collision Processor

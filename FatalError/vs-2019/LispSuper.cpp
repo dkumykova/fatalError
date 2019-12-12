@@ -34,26 +34,16 @@ int LispSuper::eventHandler(const df::Event* p_e) {
 void LispSuper::collide(const df::EventCollision* p_e) {
 	//change to projectile when merge
 	
-	LM.writeLog("wall collided with projectile!");
 	if (p_e->getObject1()->getType() == "PlayerCharacter" || p_e->getObject2()->getType() == "PlayerCharacter") {
 
 		if (p_e->getObject1()->getType() == "PlayerCharacter") {
 				
 			PlayerCharacter* p = dynamic_cast <PlayerCharacter*> (p_e->getObject1());
 			LM.writeLog("super hit a player!");
-			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
-			//Player* p_p = p_c->getPlayer();
-			//reduce hero health
 			Player* p_p = p->getPlayer();
-
+			LM.writeLog("%d, hitting %d", getPNum(), p_p->getPlayerNum());
 			if (getPNum() != p_p->getPlayerNum()) {
-				p_p->handleHealth(p->getSuperDamage());
-
-				if (p_p->getHealth() <= 0) {
-					p->getFrozen(5);
-					WM.markForDelete(p);
-					new GameOver();
-				}
+				p_p->handleHealth(2);
 				return;
 			}
 				
@@ -71,13 +61,7 @@ void LispSuper::collide(const df::EventCollision* p_e) {
 			Player* p_p = p->getPlayer();
 
 			if (getPNum() != p_p->getPlayerNum()) {
-				p_p->handleHealth(p->getSuperDamage());
-
-				if (p_p->getHealth() <= 0) {
-					p->getFrozen(5);
-					WM.markForDelete(p);
-					new GameOver();
-				}
+				p_p->handleHealth(2);
 				return;
 			}
 			return;

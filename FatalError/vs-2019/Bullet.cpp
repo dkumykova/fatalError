@@ -52,11 +52,6 @@ void Bullet::out() {
 
 //if bullet hits saucer, mark both for deletion
 void Bullet::hit(const df::EventCollision *p_collision_event) {
-	if ((p_collision_event->getObject1()->getType() == "Saucer") ||
-		(p_collision_event->getObject2()->getType() == "Saucer")) {
-		WM.markForDelete(p_collision_event->getObject1());
-		WM.markForDelete(p_collision_event->getObject2());
-	}
 
 	//if bullet hits player 1
 	if ((p_collision_event->getObject1()->getType() == "PlayerCharacter") ||
@@ -68,11 +63,6 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 			//reduce hero health
 			LM.writeLog("bananan");
 			p_p->handleHealth(p_c->getAttackOneDamage());
-			if (p_p->getHealth() <= 0) {
-				p_c->getFrozen(5);
-				WM.markForDelete(p_collision_event->getObject1());
-				new GameOver();
-			}
 			WM.markForDelete(p_collision_event->getObject2());
 		}
 
@@ -83,11 +73,6 @@ void Bullet::hit(const df::EventCollision *p_collision_event) {
 			LM.writeLog("bananan");
 
 			p_p->handleHealth(p_c->getAttackTwoDamage());
-			if (p_p->getHealth() <= 0) {
-				p_c->getFrozen(5);
-				WM.markForDelete(p_collision_event->getObject2());
-				new GameOver();
-			}
 			WM.markForDelete(p_collision_event->getObject1());
 		}
 	}

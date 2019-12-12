@@ -98,8 +98,7 @@ void PlayerOne::handleHealth(int damage){
 	df::EventView ev("Player 1 Health:", -damage, true);
 	WM.onEvent(&ev);
 	if (getHealth() <= 0) {
-		m_p_character->getFrozen(10);
-		WM.markForDelete(m_p_character);
+		setGameOver(true);
 		new GameOver;
 	}
 }

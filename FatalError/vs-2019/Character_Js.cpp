@@ -15,8 +15,8 @@ Character_Js::Character_Js() {
 	setSprite("Character_Java");
 
 	// Set Attack Related Damage 
-	setAttackOneDamage(30);
-	setAttackTwoDamage(60);
+	setAttackOneDamage(10);
+	setAttackTwoDamage(10);
 	setSuperDamage(100);
 	setSuperCastTime(2); // 2 secs
 

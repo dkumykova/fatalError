@@ -15,9 +15,9 @@ Character_Lisp::Character_Lisp() {
 	setSprite("Character_Lisp");
 
 	// Set Attack Related Damage 
-	setAttackOneDamage(30);
-	setAttackTwoDamage(60);
-	setSuperDamage(80);
+	setAttackOneDamage(10);
+	setAttackTwoDamage(10);
+	setSuperDamage(10);
 	setSuperCastTime(2); // 2 secs
 
 	// Set Jump Speed
@@ -29,7 +29,7 @@ Character_Lisp::Character_Lisp() {
 	setJumpSlowdown(30, true);
 	setDefenseSlowdown(30, true);
 	setAttackOneSlowdown(30, true);
-	setSuperAttackSlowdown(900, true); // 30 secs
+	setSuperAttackSlowdown(300, true); // 30 secs
 	setSuperChanelingSlowdown(60, true);
 
 	setIsHigherLevel(false); //C is a lower level language, set for defend function
@@ -76,7 +76,7 @@ void Character_Lisp::do_action_super_attack() {
 	
 	//getAnimation().getSprite()->setColor(df::CYAN);
 	//setSprite("Character_Lisp"); //set sprute back to normal
-
+	setSuperAttacking(false);
 
 }
 

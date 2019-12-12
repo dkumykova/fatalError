@@ -58,11 +58,6 @@ void JavaClone::hit(const df::EventCollision* p_collision_event) {
 			LM.writeLog("bananan");
 			if (getAffect()) {
 				p_p->handleHealth(p_c->getAttackOneDamage());
-				if (p_p->getHealth() <= 0) {
-					p_c->getFrozen(5);
-					WM.markForDelete(p_collision_event->getObject1());
-					new GameOver();
-				}
 				WM.markForDelete(p_collision_event->getObject2());
 			}
 			return;
@@ -75,11 +70,6 @@ void JavaClone::hit(const df::EventCollision* p_collision_event) {
 			LM.writeLog("bananan");
 			if (getAffect()) {
 				p_p->handleHealth(p_c->getAttackOneDamage());
-				if (p_p->getHealth() <= 0) {
-					p_c->getFrozen(5);
-					WM.markForDelete(p_collision_event->getObject2());
-					new GameOver();
-				}
 				WM.markForDelete(p_collision_event->getObject1());
 			}
 			return;

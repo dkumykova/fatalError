@@ -15,8 +15,8 @@ Character_Java::Character_Java() {
 	setSprite("Character_Java");
 
 	// Set Attack Related Damage 
-	setAttackOneDamage(30);
-	setAttackTwoDamage(60);
+	setAttackOneDamage(10);
+	setAttackTwoDamage(10);
 	setSuperDamage(100);
 	setSuperCastTime(2); // 2 secs
 
@@ -38,6 +38,7 @@ Character_Java::Character_Java() {
 	//super = new LispSuper();
 	//super->setActive(false);
 	setHeightOfSprite(6);
+	setSuperChanelingSlowdown(60);
 
 }
 
@@ -93,7 +94,7 @@ void Character_Java::do_action_super_attack() {
 			WM.markForDelete(p_o);
 		}
 	}
-	//setSuperAttacking(false);
+	setSuperAttacking(false);
 }
 
 

@@ -25,6 +25,7 @@ Player::Player() {
 	controls->setActive(false);
 	playerNum = 1;
 
+	_gameover = false;
 }
 
 // General Event Handler
@@ -52,7 +53,8 @@ int Player::eventHandler(const df::Event* p_e) {
 
 	if (p_e->getType() == df::KEYBOARD_EVENT) {
 		const df::EventKeyboard* p_keyboard_event = dynamic_cast <const df::EventKeyboard*> (p_e);
-		kbd(p_keyboard_event);
+		if (!_gameover)
+			kbd(p_keyboard_event);
 		return 1;
 	}
 
@@ -126,4 +128,8 @@ int Player::getPlayerNum() const {
 }
 void Player::setPlayerNum(int n) {
 	playerNum = n;
+}
+
+void Player::setGameOver(bool gameover){
+	_gameover = gameover;
 }
