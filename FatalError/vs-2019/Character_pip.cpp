@@ -36,17 +36,17 @@ int Character_Pip::eventHandler(const df::Event* p_e){
 		if (p.getMagnitude() < 10) {
 			if (p_master->getPlayer()->getFacingRight() == 1) {
 				setSprite("Character_Pip_attacking_flipped");
-				p_master->attackingbot(5);
+				p_master->attackingbot(1);
 			}
 			else {
 				setSprite("Character_Pip_flipped");
-				p_master->attackingbot(5);
+				p_master->attackingbot(1);
 			}
 		}
 
-		df::Vector m(p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getX(), 0);
+		df::Vector m(x, 0);
 		m.normalize();
-		setPosition(df::Vector(getPosition().getX() + m.getX() * 0.3, getPosition().getY()));
+		setPosition(df::Vector(getPosition().getX() + m.getX() * 0.1 * -1, getPosition().getY()));
 		return 1;
 	}
 
