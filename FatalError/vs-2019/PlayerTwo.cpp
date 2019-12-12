@@ -61,7 +61,7 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 			
 		}*/
 		break;
-	case df::Keyboard::COMMA: // attack 1
+	case df::Keyboard::RIGHTCONTROL: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_1();
 		break;
