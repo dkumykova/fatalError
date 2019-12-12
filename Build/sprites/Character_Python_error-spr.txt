@@ -1,0 +1,18 @@
+<HEADER>
+frames 2
+width 27
+height 1
+color white
+slowdown 20
+</HEADER>
+<BODY>
+   < \t Indentation \t >   
+end
+< \s\s\s\s Error \s\s\s\s >
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
+
+30 blanks:                               

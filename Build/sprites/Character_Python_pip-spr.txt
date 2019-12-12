@@ -1,0 +1,30 @@
+<HEADER>
+frames 1
+width 27
+height 15
+color white
+slowdown 7
+transparency @
+</HEADER>
+<BODY>
+|\             //          
+ \\           _!_          
+  \\         /___\         
+   \\        [+++]         
+    \\    _ _\^^^/_ _      
+     \\/ (    '-'  ( )     
+     /( \/ | PIP   /\ \    
+       \  / \     / _> )   
+        "`   >:::;-'`""'-. 
+            /:::/         \
+           /  /||   {+}   |
+          (  / (\         /
+          / /   \'-.___.-' 
+        _/ /     \ \       
+       /___|    /___|      
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
+

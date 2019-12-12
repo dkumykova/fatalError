@@ -1,0 +1,18 @@
+<HEADER>
+frames 2
+width 23
+height 1
+color white
+slowdown 8
+</HEADER>
+<BODY>
+< Uncaught-TypeError > 
+end
+ < Uncaught-TypeError >
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
+
+30 blanks:                               

@@ -1,0 +1,60 @@
+<HEADER>
+frames 3
+width 51
+height 15
+color green
+slowdown 4
+</HEADER>
+<BODY>
+                                                   
+                                                   
+               )() ()   ()                         
+           )(              ())                     
+          ()                  )                    
+        (                      )                   
+      (                         )                  
+     )                          )                  
+  ()                             )                 
+  (                               )                
+ (                                  )              
+                                                   
+                                                   
+                                                   
+                                                   
+end
+                                                   
+          )  ()  () ()    ()                       
+        ()                   )                     
+      )(                       ())                 
+      ()                          )                
+     (                             )               
+   (                               )               
+  )                                 )              
+  ()                                )              
+  (                                  )             
+ (                                     )           
+                                                   
+                                                   
+                                                   
+                                                   
+end
+               (  )  )   (  )                      
+         )                       ()                
+       ()                            )             
+       )(                                ())       
+     ()                                    )       
+    (                                        )     
+  (                                          )     
+   )                                          )    
+  ()                                           )   
+  (                                            )   
+(                                               )  
+                                                   
+                                                   
+                                                   
+                                                   
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

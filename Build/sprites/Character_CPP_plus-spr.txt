@@ -1,0 +1,16 @@
+<HEADER>
+frames 1
+width 7
+height 4
+color white
+</HEADER>
+<BODY>
+   _   
+ _| |_ 
+|_   _|
+  |_|  
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
