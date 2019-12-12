@@ -42,7 +42,7 @@ PlayerCharacter::PlayerCharacter() {
 	attack_2_countdown = attack_2_slowdown;
 	error_attack_channeling_slowdown = 90;
 	error_attack_channeling_countdown = error_attack_channeling_slowdown;
-	super_attack_slowdown = 600; //600
+	super_attack_slowdown = 2; //600
 	super_attack_countdown = super_attack_slowdown;
 	super_channeling_slowdown = 60;
 	super_channeling_countdown = super_channeling_slowdown;
@@ -351,6 +351,8 @@ void PlayerCharacter::step() {
 			m_is_dashing = false;
 			dashing_countdown = 15;
 			setVelocity(df::Vector(0, 0));
+			setCharacterAcceleration(df::Vector(0,0.5));
+			setAcceleration(df::Vector(0, 0));
 			getAnimation().getSprite()->setColor(m_default_color);
 		}
 	}

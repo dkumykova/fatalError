@@ -76,6 +76,7 @@
     <ClCompile Include="ControlsDisplay.cpp">
       <Filter>Menu</Filter>
     </ClCompile>
+    <ClCompile Include="Character_pip.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventHealth.h" />
@@ -151,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="ControlsDisplay.h">
       <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_pip.h">
+      <Filter>Characters</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

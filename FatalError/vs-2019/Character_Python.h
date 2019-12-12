@@ -19,4 +19,5 @@ public:
 
 	// Sprite Related
 	void flipSprite(PlayerCharacter::SpriteStatus sprite_status);
+	void attackingbot(int damage);
 };

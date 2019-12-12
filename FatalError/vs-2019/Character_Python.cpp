@@ -3,6 +3,7 @@
 // Game Include
 #include "Character_Python.h"
 #include "Player.h"
+#include "Character_pip.h"
 
 // Engine Include
 #include <WorldManager.h>
@@ -21,7 +22,7 @@ Character_Python::Character_Python() {
 	setSuperCastTime(2); // 2 secs
 
 	// Set Jump Speed
-	setJumpSpeed(-4);
+	setJumpSpeed(-5);
 
 	// Set Slowdowns (Character Unique) [30 means 1 sec] 
 	// [Parameter 2 default as false. If true, means set countdown to slowdown at the same time]
@@ -30,9 +31,8 @@ Character_Python::Character_Python() {
 	setDefenseSlowdown(30, true);
 	setAttackOneSlowdown(30, true);
 	setAttackTwoDamage(3);
-	setSuperAttackSlowdown(900, true); // 30 secs
+	setSuperAttackSlowdown(900); // 30 secs
 	setSuperChanelingSlowdown(60);
-
 }
 
 void Character_Python::do_action_move_right() {
@@ -48,7 +48,7 @@ void Character_Python::do_action_jump() {
 }
 
 void Character_Python::do_action_defense() {
-	// TO DO
+
 }
 
 void Character_Python::do_action_attack_1() {
@@ -56,7 +56,7 @@ void Character_Python::do_action_attack_1() {
 }
 
 void Character_Python::do_action_super_attack() {
-
+	new Character_Pip(this);
 }
 
 
@@ -76,5 +76,9 @@ void Character_Python::flipSprite(PlayerCharacter::SpriteStatus sprite_status) {
 	default:
 		break;
 	}
+}
+
+void Character_Python::attackingbot(int damage){
+	getPlayer()->getOpponentPlayer()->handleHealth(damage);
 }
 

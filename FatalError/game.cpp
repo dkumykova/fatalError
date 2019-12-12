@@ -83,7 +83,11 @@ void loadResources(void) {
 	RM.loadSprite("sprites/Character_Python-spr.txt", "Character_Python");
 	RM.loadSprite("sprites/Character_Python_flipped-spr.txt", "Character_Python_flip");
 	RM.loadSprite("sprites/Character_Python_error-spr.txt", "Character_Python_error");
-
+	RM.loadSprite("sprites/Character_Python_pip-spr.txt", "Character_Pip");
+	RM.loadSprite("sprites/Character_Python_pip_flipped-spr.txt", "Character_Pip_flipped");
+	RM.loadSprite("sprites/Character_Python_pip_attacking-spr.txt", "Character_Pip_attacking");
+	RM.loadSprite("sprites/Character_Python_pip_attacking_flipped-spr.txt", "Character_Pip_attacking_flipped");
+	
 	RM.loadSprite("sprites/Character_Lisp-spr.txt", "Character_Lisp");
 	RM.loadSprite("sprites/Character_Lisp_flipped-spr.txt", "Character_Lisp_flip");
 	RM.loadSprite("sprites/Character_Lisp_error-spr.txt", "Character_Lisp_error");

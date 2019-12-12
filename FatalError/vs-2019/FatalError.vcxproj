@@ -158,6 +158,7 @@
     <ClInclude Include="Character_Java.h" />
     <ClInclude Include="Character_Js.h" />
     <ClInclude Include="Character_Lisp.h" />
+    <ClInclude Include="Character_pip.h" />
     <ClInclude Include="CommentWall.h" />
     <ClInclude Include="Character_CPP.h" />
     <ClInclude Include="Character_CPP_plus.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="Character_java.cpp" />
     <ClCompile Include="Character_Js.cpp" />
     <ClCompile Include="Character_Lisp.cpp" />
+    <ClCompile Include="Character_pip.cpp" />
     <ClCompile Include="CommentWall.cpp" />
     <ClCompile Include="Character_CPP.cpp" />
     <ClCompile Include="Character_CPP_plus.cpp" />
