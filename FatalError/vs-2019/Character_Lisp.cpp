@@ -38,6 +38,7 @@ Character_Lisp::Character_Lisp() {
 	super = new LispSuper();
 	super->setActive(false);
 	//super->setPNum(getPlayer()->getPlayerNum());
+	setHeightOfSprite(6);
 
 }
 

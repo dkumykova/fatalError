@@ -37,6 +37,7 @@ Character_Java::Character_Java() {
 	//super_countdown = 10;
 	//super = new LispSuper();
 	//super->setActive(false);
+	setHeightOfSprite(6);
 
 }
 

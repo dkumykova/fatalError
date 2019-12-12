@@ -424,20 +424,9 @@ void PlayerCharacter::step() {
 		}
 	}
 
-// Error Check for Height
-if (!(getErrorAttacking() || m_error_channeling)) {
-	if (this->getPosition().getY() > 40) {
-		this->setPosition(df::Vector(getPosition().getX(), 40));
-	}
-}
-else {
-	if (this->getPosition().getY() > 45) {
-		this->setPosition(df::Vector(getPosition().getX(), 45));
-	}
-}
 
-if (this->getPosition().getY() < 3) {
-	this->setPosition(df::Vector(getPosition().getX(), 3));
+if (this->getPosition().getY() < 2) {
+	this->setPosition(df::Vector(getPosition().getX(), 2));
 }
 
 if (this->getPosition().getX() < 0) {

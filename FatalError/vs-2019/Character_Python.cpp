@@ -22,7 +22,7 @@ Character_Python::Character_Python() {
 	setSuperCastTime(2); // 2 secs
 
 	// Set Jump Speed
-	setJumpSpeed(-5);
+	setJumpSpeed(-4);
 
 	// Set Slowdowns (Character Unique) [30 means 1 sec] 
 	// [Parameter 2 default as false. If true, means set countdown to slowdown at the same time]
@@ -32,7 +32,7 @@ Character_Python::Character_Python() {
 	setAttackOneSlowdown(30, true);
 	setAttackTwoDamage(3);
 	setSuperAttackSlowdown(900); // 30 secs
-	setSuperChanelingSlowdown(60);
+	setSuperChanelingSlowdown(1,true);
 }
 
 void Character_Python::do_action_move_right() {
@@ -44,6 +44,7 @@ void Character_Python::do_action_move_left() {
 }
 
 void Character_Python::do_action_jump() {
+	LM.writeLog("Python calling jump");
 	setVelocity(df::Vector(0, getJumpSpeed()));
 }
 
