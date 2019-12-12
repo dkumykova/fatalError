@@ -17,7 +17,7 @@ slowdown 10
          
          
 end
-     (	 
+     (   
      )   
   (    ) 
  .=~~=.  
@@ -33,4 +33,4 @@ end
 version 1
 </FOOTER>
 
-30 blanks:                               
+30 blanks:                                

@@ -78,18 +78,21 @@ void Character_Java::do_action_attack_1() {
 
 void Character_Java::do_action_super_attack() {
 	// To do
+	//stops all projectiles, clears all walls, stops enemy for attacking for 3 seconds
 	//i want to use a countdown but might need to use a clock since i can't override eventhandler here
 
-	LM.writeLog("Lisp super called");
-	//setSprite("Character_Lisp_super");
-	//super->setPosition(Vector(getPosition().getX(), getPosition().getY()));
-	//super->setActive(true);
+	LM.writeLog("Java super called");
 
-
-	//getAnimation().getSprite()->setColor(df::CYAN);
-	//setSprite("Character_Lisp"); //set sprute back to normal
-
-
+	getPlayer()->getOpponentPlayer()->getCharacter()->getFrozen(3);
+	df::ObjectList object_list = WM.getAllObjects(true);
+	df::ObjectListIterator i(&object_list);
+	for (i.first(); !i.isDone(); i.next()) {
+		df::Object* p_o = i.currentObject();
+		if (p_o->getType() == "projectile" || p_o->getType() == "wall") {
+			WM.markForDelete(p_o);
+		}
+	}
+	//setSuperAttacking(false);
 }
 
 

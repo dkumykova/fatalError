@@ -35,7 +35,7 @@ Character_CPP::Character_CPP() {
 
 	num_of_pluses = 2;
 
-
+	setIsHigherLevel(false);
 }
 
 void Character_CPP::do_action_move_right() {

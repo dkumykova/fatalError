@@ -170,8 +170,7 @@ void PlayerCharacter::attack_2() {
 }
 
 void PlayerCharacter::specialAttack() {
-	if (isTimeToSuperAttack())
-		startSuperChanneling();
+	do_action_super_attack();
 }
 
 void PlayerCharacter::setAttackOneDamage(int damage) {
