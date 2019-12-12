@@ -33,6 +33,7 @@ private :
 	void virtual kbd(const df::EventKeyboard* p_key_event); // Listen and react to the keyboard inputs
 
 	ControlsDisplay* controls;
+	int playerNum;
 
 protected:
 	void setHealth(int health); // Setter for health
@@ -59,6 +60,8 @@ public:
 
 	ControlsDisplay* getControls() const;
 	
+	int getPlayerNum() const;
+	void setPlayerNum(int n);
 
 
 

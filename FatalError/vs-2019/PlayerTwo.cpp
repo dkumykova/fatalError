@@ -13,6 +13,7 @@
 PlayerTwo::PlayerTwo() {
 	setPosition(df::Vector(180, WM.getBoundary().getVertical() / 2));
 	swapFacing();
+	setPlayerNum(2);
 }
 
 void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){

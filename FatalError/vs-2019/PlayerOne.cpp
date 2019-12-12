@@ -14,6 +14,7 @@
 
 PlayerOne::PlayerOne() {
 	setPosition(df::Vector(20, WM.getBoundary().getVertical() / 2));
+	setPlayerNum(1);
 }
 
 void PlayerOne::kbd(const df::EventKeyboard* p_key_event){

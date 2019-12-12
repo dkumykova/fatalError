@@ -10,6 +10,7 @@ private:
 	int countdown;
 	//int damageSaved;
 	//PlayerCharacter* character;
+	int pNum;
 public:
 	LispSuper();
 	int eventHandler(const df::Event* p_e);
@@ -17,6 +18,8 @@ public:
 	void step();
 	void setCountdown(int num);
 	int getCountdown() const;
+	void setPNum(int n);
+	int getPNum();
 
 };
 

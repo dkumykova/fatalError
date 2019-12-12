@@ -43,75 +43,13 @@ void CharacterSelectMenu::start() {
 	if (player1->getCharacterSet() && player2->getCharacterSet()) {
 		//both players have selected their character and game is ready to go
 		LM.writeLog("Both characters have been set!");
-
-		//PlayerCharacter* c1;
-		//PlayerCharacter* c2;
-
-		//// Generate According Character
-		//switch ((int)player1->getPosition().getX()) {
-		//case 38:
-		//	// LISP
-		//	break;
-		//case 63:
-		//	// JAVA
-		//	break;
-		//case 88:
-		//	// C++
-		//	c1 = new Character_CPP;
-		//	break;
-		//case 113:
-		//	// Python
-		//	c1 = new Character_Python;
-		//	break;
-		//case 138:
-		//	// C
-		//	c1 = new Character_C;
-		//	break;
-		//case 163:
-		//	// JS
-		//	break;
-		//default:
-		//	LM.writeLog("Character Select Error: Value Error");
-		//	break;
-		//}
-
-		//switch ((int)player2->getPosition().getX()) {
-		//case 38:
-		//	// LISP
-		//	break;
-		//case 63:
-		//	// JAVA
-		//	break;
-		//case 88:
-		//	// C++
-		//	c2 = new Character_CPP;
-		//	break;
-		//case 113:
-		//	// Python
-		//	c2 = new Character_Python;
-		//	break;
-		//case 138:
-		//	// C
-		//	c2 = new Character_C;
-		//	break;
-		//case 163:
-		//	// JS
-		//	break;
-		//default:
-		//	LM.writeLog("Character Select Error: Value Error");
-		//	break;
-		//}
 		
 
 		new Platform();
 
-		//this should be replaced with 2 chosen characters based on getHighlightedChar function for each reticle + switch statement
-		
+
 		PlayerOne* p1 = new PlayerOne;
 		PlayerTwo* p2 = new PlayerTwo;
-
-		//Character_C* c1 = new Character_C();
-		//Character_Lisp* c2 = new Character_Lisp();
 
 		PlayerCharacter* c1 = player1->getHighlightedChar();
 		PlayerCharacter* c2 = player2->getHighlightedChar();

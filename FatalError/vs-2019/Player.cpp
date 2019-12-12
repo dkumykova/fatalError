@@ -23,6 +23,7 @@ Player::Player() {
 
 	controls = new ControlsDisplay();
 	controls->setActive(false);
+	playerNum = 1;
 
 }
 
@@ -118,4 +119,11 @@ void Player::swapFacing(){
 
 ControlsDisplay* Player::getControls() const {
 	return controls;
+}
+
+int Player::getPlayerNum() const {
+	return playerNum;
+}
+void Player::setPlayerNum(int n) {
+	playerNum = n;
 }

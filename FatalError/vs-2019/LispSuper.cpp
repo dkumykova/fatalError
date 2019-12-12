@@ -33,19 +33,20 @@ int LispSuper::eventHandler(const df::Event* p_e) {
 }
 void LispSuper::collide(const df::EventCollision* p_e) {
 	//change to projectile when merge
-	if (p_e->getObject1()->getType() == "Bullet" || p_e->getObject2()->getType() == "Bullet") {
-		//block object + destroy
-		LM.writeLog("wall collided with projectile!");
-		if (p_e->getObject1()->getType() == "PlayerCharacter" || p_e->getObject2()->getType() == "PlayerCharacter") {
-			if (p_e->getObject1()->getType() == "PlayerCharacter") {
+	
+	LM.writeLog("wall collided with projectile!");
+	if (p_e->getObject1()->getType() == "PlayerCharacter" || p_e->getObject2()->getType() == "PlayerCharacter") {
+
+		if (p_e->getObject1()->getType() == "PlayerCharacter") {
 				
-				PlayerCharacter* p = dynamic_cast <PlayerCharacter*> (p_e->getObject1());
-				LM.writeLog("super hit a player!");
-				//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
-				//Player* p_p = p_c->getPlayer();
-				//reduce hero health
-				Player* p_p = p->getPlayer();
-				
+			PlayerCharacter* p = dynamic_cast <PlayerCharacter*> (p_e->getObject1());
+			LM.writeLog("super hit a player!");
+			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
+			//Player* p_p = p_c->getPlayer();
+			//reduce hero health
+			Player* p_p = p->getPlayer();
+
+			if (getPNum() != p_p->getPlayerNum()) {
 				p_p->handleHealth(p->getSuperDamage());
 
 				if (p_p->getHealth() <= 0) {
@@ -53,38 +54,39 @@ void LispSuper::collide(const df::EventCollision* p_e) {
 					WM.markForDelete(p);
 					new GameOver();
 				}
-				/*WM.markForDelete(p_collision_event->getObject2());*/
+				return;
 			}
-
-			if (p_e->getObject2()->getType() == "PlayerCharacter") {
-
-				PlayerCharacter* p = dynamic_cast <PlayerCharacter*> (p_e->getObject2());
-				LM.writeLog("super hit a player!");
-				//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
-				//Player* p_p = p_c->getPlayer();
-				//reduce hero health
-				Player* p_p = p->getPlayer();
-
-				p_p->handleHealth(p->getSuperDamage());
-
-				if (p_p->getHealth() <= 0) {
-					p->getFrozen(5);
-					WM.markForDelete(p);
-					new GameOver();
-				}
-				/*WM.markForDelete(p_collision_event->getObject2());*/
-			}
-			//WM.markForDelete(p_e->getObject1());
-			//might be able to get away with just adding to health
-			//player->handleHealth(-20); //reduce damage by 20
-			//handle health by reducing health by projectile damage amount + wall padding
+				
+			return;
+			/*WM.markForDelete(p_collision_event->getObject2());*/
 		}
-		else if (p_e->getObject2()->getType() == "Bullet") {
-			WM.markForDelete(p_e->getObject2());
-			//handle health by reducing health by projectile damage amount + wall padding
+
+		if (p_e->getObject2()->getType() == "PlayerCharacter") {
+
+			PlayerCharacter* p = dynamic_cast <PlayerCharacter*> (p_e->getObject2());
+			LM.writeLog("super hit a player!");
+			//PlayerCharacter* p_c = dynamic_cast <PlayerCharacter*> (p_collision_event->getObject1());
+			//Player* p_p = p_c->getPlayer();
+			//reduce hero health
+			Player* p_p = p->getPlayer();
+
+			if (getPNum() != p_p->getPlayerNum()) {
+				p_p->handleHealth(p->getSuperDamage());
+
+				if (p_p->getHealth() <= 0) {
+					p->getFrozen(5);
+					WM.markForDelete(p);
+					new GameOver();
+				}
+				return;
+			}
+			return;
+			
+			/*WM.markForDelete(p_collision_event->getObject2());*/
 		}
 
 	}
+
 }
 void LispSuper::step() {
 	LM.writeLog("wall step called");
@@ -105,4 +107,11 @@ void LispSuper::setCountdown(int num) {
 }
 int LispSuper::getCountdown() const {
 	return countdown;
+}
+
+void LispSuper::setPNum(int n) {
+	pNum = n;
+}
+int LispSuper::getPNum() {
+	return pNum;
 }

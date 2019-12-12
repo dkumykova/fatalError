@@ -17,7 +17,7 @@ Character_Lisp::Character_Lisp() {
 	// Set Attack Related Damage 
 	setAttackOneDamage(30);
 	setAttackTwoDamage(60);
-	setSuperDamage(100);
+	setSuperDamage(80);
 	setSuperCastTime(2); // 2 secs
 
 	// Set Jump Speed
@@ -37,6 +37,7 @@ Character_Lisp::Character_Lisp() {
 	//super_countdown = 10;
 	super = new LispSuper();
 	super->setActive(false);
+	//super->setPNum(getPlayer()->getPlayerNum());
 
 }
 
@@ -65,7 +66,7 @@ void Character_Lisp::do_action_attack_1() {
 void Character_Lisp::do_action_super_attack() {
 	// To do
 	//i want to use a countdown but might need to use a clock since i can't override eventhandler here
-	
+	super->setPNum(getPlayer()->getPlayerNum());
 	LM.writeLog("Lisp super called");
 	//setSprite("Character_Lisp_super");
 	super->setPosition(Vector(getPosition().getX(), getPosition().getY()));
