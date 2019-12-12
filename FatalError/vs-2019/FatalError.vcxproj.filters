@@ -61,6 +61,21 @@
     <ClCompile Include="JavaClone.cpp">
       <Filter>CharacterPowers</Filter>
     </ClCompile>
+    <ClCompile Include="Character_CPP.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Python.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_C_pointer.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_CPP_plus.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlsDisplay.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventHealth.h" />
@@ -121,6 +136,21 @@
     </ClInclude>
     <ClInclude Include="JavaClone.h">
       <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_CPP.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Python.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_C_pointer.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_CPP_plus.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlsDisplay.h">
+      <Filter>Menu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

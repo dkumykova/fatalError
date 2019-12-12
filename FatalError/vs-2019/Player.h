@@ -12,6 +12,7 @@
 
 // Event Includes
 #include "EventKeyboard.h"
+#include "ControlsDisplay.h"
 
 // Engine Includes
 
@@ -30,6 +31,8 @@ private :
 	// Functions
 	int virtual eventHandler(const df::Event* p_e); // Event Hanlder
 	void virtual kbd(const df::EventKeyboard* p_key_event); // Listen and react to the keyboard inputs
+
+	ControlsDisplay* controls;
 
 protected:
 	void setHealth(int health); // Setter for health
@@ -53,6 +56,9 @@ public:
 	
 	int getFacingRight(); // Return 1 if facing right (relative to the opponent player), else -1
 	void swapFacing(); // Swap the facing_right status
+
+	ControlsDisplay* getControls() const;
+	
 
 
 

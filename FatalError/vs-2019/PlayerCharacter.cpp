@@ -148,7 +148,7 @@ void PlayerCharacter::processDownArrow(){
 	}
 
 	// If not all above, then it's time to defense
-	do_action_defense(getIsHigherLevel());
+	//do_action_defense(getIsHigherLevel());
 }
 
 void PlayerCharacter::attack_1() {

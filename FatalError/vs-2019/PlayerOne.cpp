@@ -57,12 +57,24 @@ void PlayerOne::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
 		break;
-	case df::Keyboard::G: // super
-		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			m_p_character->do_action_super_attack();
-		break;
+	//case df::Keyboard::T: // controls
+	//	if (p_key_event->getKeyboardAction() == df::KEY_PRESSED) {
+	//		if (getControls()->isActive()) {
+	//			setActive(false);
+	//		}
+	//		else {
+	//			getControls()->setPosition(Vector(50, 10));
+	//			getControls()->setActive(true);
+	//		}
 
-	case df::Keyboard::B: // Super Attack
+	//	}
+	//	break;
+	//case df::Keyboard::G: // super
+	//	if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+	//		m_p_character->do_action_super_attack();
+	//	break;
+
+	case df::Keyboard::G: // Super Attack
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->specialAttack();
 		break;

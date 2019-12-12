@@ -43,6 +43,20 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;
 		break;
+	case df::Keyboard::T: // controls
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED) {
+			if (getControls()->getErase()) {
+				getControls()->setActive(false);
+
+			}
+			else {
+				getControls()->setPosition(Vector(100, 10));
+				getControls()->setActive(true);
+				getControls()->setErase(true);
+			}
+			
+		}
+		break;
 	case df::Keyboard::RIGHTCONTROL: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_1();
@@ -55,12 +69,12 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
 		break;
-	case df::Keyboard::SLASH: // super
-		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
-			m_p_character->do_action_super_attack();
-		break;
+	//case df::Keyboard::SLASH: // super
+	//	if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+	//		m_p_character->do_action_super_attack();
+	//	break;
 
-	case df::Keyboard::L: // Super attack
+	case df::Keyboard::SLASH: // Super attack
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->specialAttack();
 		break;

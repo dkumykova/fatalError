@@ -102,6 +102,9 @@ void loadResources(void) {
 	RM.loadSprite("sprites/comment-wall-spr.txt", "commentwall");
 	RM.loadSprite("sprites/paren-spr.txt", "paren");
 
+	RM.loadSprite("sprites/Controls-spr.txt", "controls");
+
+
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
 	RM.loadSound("sounds/nuke.wav", "nuke");

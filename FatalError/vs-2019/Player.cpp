@@ -21,6 +21,9 @@ Player::Player() {
 	facing_right = true;
 	setSolidness(df::SPECTRAL);
 
+	controls = new ControlsDisplay();
+	controls->setActive(false);
+
 }
 
 // General Event Handler
@@ -111,4 +114,8 @@ int Player::getFacingRight(){
 
 void Player::swapFacing(){
 	facing_right = !facing_right;
+}
+
+ControlsDisplay* Player::getControls() const {
+	return controls;
 }
