@@ -61,11 +61,17 @@ void Character_Java::do_action_attack_1() {
 	setVelocity(df::Vector(0, getJumpSpeed()));
 
 	Vector p1 = Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY());
+	Vector p2 = Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY());
 	
-	//getPlayer()->getOpponentPlayer().
+	//getPlayer()->getOpponentPlayer().df::Vector(2 * getPlayer()->getFacingRight(), 3)
 	clone1 = new JavaClone(p1);
-	clone1->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 3));
-	
+	clone2 = new JavaClone(p2);
+	clone1->setAffect(true);
+
+	clone1->setVelocity(df::Vector(.6*getPlayer()->getFacingRight(), getJumpSpeed() + 1));
+	clone1->setAcceleration(df::Vector(0, 0.5));
+	clone2->setVelocity(df::Vector(.6*getPlayer()->getFacingRight() + 1, getJumpSpeed() + 2));
+	clone2->setAcceleration(df::Vector(0, 0.5));
 	
 	
 }
