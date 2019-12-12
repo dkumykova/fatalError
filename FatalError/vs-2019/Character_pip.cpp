@@ -29,8 +29,8 @@ int Character_Pip::eventHandler(const df::Event* p_e){
 			setSprite("Character_Pip");
 		}
 
-		float x = p_master->getPosition().getX() - p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getX();
-		float y = p_master->getPosition().getY() - p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getY();
+		float x = getPosition().getX() - p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getX();
+		float y = getPosition().getY() - p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getY();
 		df::Vector p(x, y);
 
 		if (p.getMagnitude() < 10) {
