@@ -28,6 +28,7 @@ private:
 	// Step Event Related
 	void step(); // General Step Processor
 	virtual void stepProcessor(); // Character Specific Step Processor
+	int heightOfSprite;
 
 	// Counter Related
 	int horizontal_move_slowdown;
@@ -46,6 +47,7 @@ private:
 	int super_channeling_countdown;
 	int defense_slowdown;
 	int defense_countdown;
+	int frozen_countdown;
 
 	int super_hold_countdown;
 
@@ -68,6 +70,10 @@ private:
 
 	bool isHigherLevel; //true if language is higher level, false if not
 	CommentWall *wall;
+	
+	// Frozen Related
+	bool m_is_frozen;
+	df::Color m_default_color;
 
 	// Player Pointer
 	Player* m_p_player;
@@ -89,8 +95,10 @@ public:
 	void move(float dx, float dy);
 	void setCharacterAcceleration(Vector new_a);
 	void setOnGroundStatus(bool status);
+	bool getOnGroundStatus() const;
 	void setJumpSpeed(float speed);
 	float getJumpSpeed() const;
+
 
 	// Event Handler
 	int virtual eventHandler(const df::Event* p_e);
@@ -108,17 +116,22 @@ public:
 	bool getErrorChanneling() const;
 	void startSuperChanneling();
 	void startErrorChanneling();
+	void setSuperAttacking(bool attacking);
 
 	void setSuperDamage(int damage);
 	int getSuperDamage() const;
 
 	// Sprite Related
-	enum SpriteStatus { Original, Flipped, Normal_Attacking, Defending, Jumping, Error_Attacking };
+	enum SpriteStatus { Original, Flipped, Normal_Attacking, Defending, Jumping, Error_Attacking};
 	virtual void flipSprite(SpriteStatus sprite_status);
 
 	// Collision Related
 	void collide(const df::EventCollision* p_c_event); // General Collision Process
 	virtual void processCollision(); // Character Specific Collision Process
+
+	// Color Related
+	void setDefaultColor(df::Color color, bool change = 0);
+	void setHeightOfSprite(int height);
 
 	// SlowDown (Counter) Related
 	void setHorizontalSlowdown(int slowdown, bool counterAlso = false);

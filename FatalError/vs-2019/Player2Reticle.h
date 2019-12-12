@@ -6,6 +6,7 @@
 
 class Player2Reticle : public MenuReticle {
 
+
 public:
 	Player2Reticle();
 	//int eventHandler(const df::Event* p_e);

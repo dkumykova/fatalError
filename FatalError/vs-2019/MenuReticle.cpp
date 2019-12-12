@@ -7,6 +7,8 @@
 #include "Character_Java.h"
 #include "Character_Js.h"
 #include "Character_C.h"
+#include "Character_CPP.h"
+#include "Character_Python.h"
 
 using namespace df;
 
@@ -87,9 +89,11 @@ void MenuReticle::setHighlightedChar(Vector pos) {
 		break;
 	case 88:
 		//C++
+		highlightedChar = new Character_CPP();
 		break;
 	case 113:
 		//python
+		highlightedChar = new Character_Python();
 		break;
 	case 138:
 		//C

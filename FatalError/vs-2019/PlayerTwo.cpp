@@ -51,7 +51,7 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_2();
 		break;
-	case df::Keyboard::RIGHTSHIFT: // defend
+	case df::Keyboard::RIGHTSHIFT: // defend //**WE HAVE 2 SPECIALS
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
 		break;
@@ -60,6 +60,10 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 			m_p_character->do_action_super_attack();
 		break;
 
+	case df::Keyboard::L: // Super attack
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			m_p_character->specialAttack();
+		break;
 	default: // Key not handled.
 		return;
 	};
@@ -78,6 +82,12 @@ void PlayerTwo::handleHealth(int damage){
 	// Update Health Bar
 	df::EventView ev("Player 2 Health:", -damage, true);
 	WM.onEvent(&ev);
+
+	if (getHealth() <= 0) {
+		m_p_character->getFrozen(10);
+		WM.markForDelete(m_p_character);
+		new GameOver;
+	}
 }
 
 void PlayerTwo::setCharacter(PlayerCharacter* new_char) {

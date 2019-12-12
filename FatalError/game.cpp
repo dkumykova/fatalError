@@ -72,6 +72,17 @@ void loadResources(void) {
 	RM.loadSprite("sprites/Character_C-spr.txt", "Character_C");
 	RM.loadSprite("sprites/Character_C_flipped-spr.txt", "Character_C_flip");
 	RM.loadSprite("sprites/Character_C_error-spr.txt", "Character_C_error");
+	RM.loadSprite("sprites/Character_C_pointer-spr.txt", "Character_C_pointer");
+	RM.loadSprite("sprites/Character_C_pointer_flipped-spr.txt", "Character_C_pointer_flipped");
+
+	RM.loadSprite("sprites/Character_CPP-spr.txt", "Character_CPP");
+	RM.loadSprite("sprites/Character_CPP_flipped-spr.txt", "Character_CPP_flip");
+	RM.loadSprite("sprites/Character_CPP_plus-spr.txt", "Character_CPP_Plus");
+	RM.loadSprite("sprites/Character_CPP_error-spr.txt", "Character_CPP_error");
+
+	RM.loadSprite("sprites/Character_Python-spr.txt", "Character_Python");
+	RM.loadSprite("sprites/Character_Python_flipped-spr.txt", "Character_Python_flip");
+	RM.loadSprite("sprites/Character_Python_error-spr.txt", "Character_Python_error");
 
 	RM.loadSprite("sprites/Character_Lisp-spr.txt", "Character_Lisp");
 	RM.loadSprite("sprites/Character_Lisp_flipped-spr.txt", "Character_Lisp_flip");
