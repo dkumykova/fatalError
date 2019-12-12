@@ -110,6 +110,9 @@ void loadResources(void) {
 	RM.loadSound("sounds/nuke.wav", "nuke");
 	RM.loadSound("sounds/game-over.wav", "gameOver");
 	RM.loadSound("sounds/health-pickup.wav", "healthpickup");
+	RM.loadSound("sounds/health-pickup.wav", "healthpickup");
+	RM.loadSound("sounds/lisp_wave.wav", "lispwave");
+	RM.loadSound("sounds/lisp_shot.wav", "lispshot");
 
 	RM.loadMusic("sounds/start_music_fight.wav", "startMusic");
 	RM.loadMusic("sounds/play_music_fight.wav", "gameMusic");

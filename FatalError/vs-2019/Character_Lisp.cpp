@@ -8,6 +8,7 @@
 // Engine Include
 #include <WorldManager.h>
 #include <LogManager.h>
+#include <ResourceManager.h>
 
 Character_Lisp::Character_Lisp() {
 
@@ -61,6 +62,9 @@ void Character_Lisp::do_action_attack_1() {
 	Bullet* p = new Bullet(Vector(getPosition().getX() + 20 * getPlayer()->getFacingRight(), getPosition().getY()));
 	p->setSprite("paren");
 	p->setVelocity(df::Vector(2 * getPlayer()->getFacingRight(), 0));
+	Sound* s = new Sound();
+	s->loadSound("lispshot");
+	s->play();
 }
 
 void Character_Lisp::do_action_super_attack() {
@@ -71,6 +75,9 @@ void Character_Lisp::do_action_super_attack() {
 	//setSprite("Character_Lisp_super");
 	super->setPosition(Vector(getPosition().getX(), getPosition().getY()));
 	super->setActive(true);
+	Sound* s = new Sound();
+	s->loadSound("lispwave");
+	s->play();
 
 	
 	//getAnimation().getSprite()->setColor(df::CYAN);
