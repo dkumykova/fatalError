@@ -23,4 +23,9 @@ vs-2019/ - contains Visual Studio solution files (Microsoft Windows)
 
 --------------------------------------------------------------------
 
+Notes:
+Javascript was not implemented, so do not select it on the character select menu.
+There is sound, but unfortunately we didn't have time to fix the volume of the background music relative
+to the sounds.
 
+Controls can be displayed through T.

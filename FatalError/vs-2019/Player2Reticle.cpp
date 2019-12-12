@@ -36,12 +36,16 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 		break;
 	case df::Keyboard::RIGHTSHIFT:
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
+
 			LM.writeLog("confirm character for player 2");
-			selectedString->setSprite("selected2");
-			selectedString->setPosition(Vector(5, 35));
-			//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
-			setHighlightedChar(getPosition());
-			setCharacterSet(true);
+			if (getPosition().getX() != 163) {
+				selectedString->setSprite("selected2");
+				selectedString->setPosition(Vector(5, 35));
+				//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
+				setHighlightedChar(getPosition());
+				setCharacterSet(true);
+			}
+			
 		}
 		break;
 	case df::Keyboard::RIGHTCONTROL:

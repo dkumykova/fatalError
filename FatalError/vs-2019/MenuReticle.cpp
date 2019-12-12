@@ -101,14 +101,16 @@ void MenuReticle::setHighlightedChar(Vector pos) {
 		break;
 	case 163:
 		//javascript
-		highlightedChar = new Character_Js();
+		setCharacterSet(false);
+		//highlightedChar = new Character_Js();
+		return;
 		break;
 	case 0:
 		setCharacterSet(false);
 		break;
 
 	default:
-
+		
 		break;
 	}
 	highlightedChar->setActive(false);

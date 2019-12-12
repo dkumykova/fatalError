@@ -5,6 +5,7 @@ ControlsDisplay::ControlsDisplay() {
 	setSprite("controls");
 	setSolidness(df::SPECTRAL);
 
+	
 	erase = false;
 }
 

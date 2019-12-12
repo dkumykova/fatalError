@@ -1,7 +1,7 @@
 <HEADER>
 frames 1
 width 49
-height 8
+height 10
 color white
 slowdown 5
 </HEADER>
@@ -14,6 +14,8 @@ C attack 1              Right control attack 1
 V attack 2              Period attack 2          
 F defend                Right Shift defend       
 G special attack        Slash special attack     
+                                                 
+              R to restart                       
 end
 </BODY>
 <FOOTER>
