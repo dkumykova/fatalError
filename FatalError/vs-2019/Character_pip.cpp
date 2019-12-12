@@ -6,7 +6,7 @@ Character_Pip::Character_Pip(Character_Python* master){
 
 	p_master = master;
 	
-	setPosition(master->getPosition());
+	setPosition(df::Vector(master->getPosition().getX(), master->getPosition().getY()-5));
 
 	if (p_master->getPlayer()->getFacingRight() == 1) {
 		setSprite("Character_Pip_flipped");
@@ -15,6 +15,7 @@ Character_Pip::Character_Pip(Character_Python* master){
 		setSprite("Character_Pip");
 	}
 
+	registerInterest(STEP_EVENT);
 	setSolidness(df::SPECTRAL);
 	setAltitude(4);
 }
@@ -32,7 +33,7 @@ int Character_Pip::eventHandler(const df::Event* p_e){
 		float y = p_master->getPosition().getY() - p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getY();
 		df::Vector p(x, y);
 
-		if (p.getMagnitude() < 50) {
+		if (p.getMagnitude() < 10) {
 			if (p_master->getPlayer()->getFacingRight() == 1) {
 				setSprite("Character_Pip_attacking_flipped");
 				p_master->attackingbot(5);
@@ -43,7 +44,9 @@ int Character_Pip::eventHandler(const df::Event* p_e){
 			}
 		}
 
-		setPosition(df::Vector(getPosition().getX() + p_master->getPlayer()->getFacingRight() * 1, getPosition().getY()));
+		df::Vector m(p_master->getPlayer()->getOpponentPlayer()->getCharacter()->getPosition().getX(), 0);
+		m.normalize();
+		setPosition(df::Vector(getPosition().getX() + m.getX() * 0.3, getPosition().getY()));
 		return 1;
 	}
 

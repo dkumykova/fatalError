@@ -44,7 +44,6 @@ void Character_Python::do_action_move_left() {
 }
 
 void Character_Python::do_action_jump() {
-	LM.writeLog("Python calling jump");
 	setVelocity(df::Vector(0, getJumpSpeed()));
 }
 
