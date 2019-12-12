@@ -13,6 +13,12 @@ Mac, F7 on Windows from Visual Studio).
 2) Run game, as appropriate for the platform (e.g., "./game" on
 Linux or Mac, F5 on Windows from Visual Studio)
 
+To run exe:
+
+1) Go into the Build Folder in the root directory.
+
+2) Double cloick FatalError.exe.
+
 --------------------------------------------------------------------
 
 Directories:
