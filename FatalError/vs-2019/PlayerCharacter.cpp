@@ -53,8 +53,8 @@ PlayerCharacter::PlayerCharacter() {
 	m_is_frozen = false;
 	m_default_color = df::WHITE;
 	heightOfSprite = 0;
-
-	defense_count = 80;
+	m_is_dashing = false;
+	dashing_countdown = 15;
 
 	super_hold_countdown = 30;
 	// Move Related
@@ -93,7 +93,6 @@ PlayerCharacter::PlayerCharacter() {
 
 	wall = new CommentWall();
 	wall->setActive(false);
-	isDefending = false;
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -151,7 +150,8 @@ void PlayerCharacter::processDownArrow(){
 	}
 
 	// If not all above, then it's time to defense
-	//do_action_defense(getIsHigherLevel());
+	if (isTimeToDefense())
+		do_action_defense(getIsHigherLevel());
 }
 
 void PlayerCharacter::attack_1() {
@@ -284,6 +284,7 @@ void PlayerCharacter::getFrozen(int time){
 	super_attack_countdown = actual_slowdown_time;
 	defense_countdown = actual_slowdown_time;
 	frozen_countdown = actual_slowdown_time;
+	dashing_countdown = actual_slowdown_time;
 	m_is_frozen = true;
 	getAnimation().getSprite()->setColor(df::CYAN);
 }
@@ -301,21 +302,6 @@ int PlayerCharacter::eventHandler(const df::Event* p_e){
 		return 1;
 	}
 
-	if (p_e->getType() == df::OUT_EVENT) {
-		const df::EventOut* p = dynamic_cast <const df::EventOut*> (p_e);
-		LM.writeLog("Character has left the filed!");
-		int halfWidth = getAnimation().getSprite()->getWidth() / 2;
-		if (getPlayer()->getFacingRight() > 0) {
-			WM.moveObject(this, Vector(WM.getBoundary().getHorizontal() - halfWidth, getPosition().getY()));
-		}
-		else {
-			WM.moveObject(this, Vector(halfWidth, getPosition().getY()));
-		}
-		setAcceleration(Vector());
-		setVelocity(Vector());
-		return 1;
-	}
-
 	// if get super attack end event, then check for caster. If caster is this character, reset counter to slowdown
 	// Also remember to turn super_attacking back to false
 	// To do
@@ -325,7 +311,6 @@ int PlayerCharacter::eventHandler(const df::Event* p_e){
 }
 
 void PlayerCharacter::step() {
- 
 	// Move countdown.
 	horizontal_move_countdown--;
 	if (horizontal_move_countdown < 0)
@@ -356,6 +341,16 @@ void PlayerCharacter::step() {
 		frozen_countdown--;
 		if (frozen_countdown <= 0) {
 			m_is_frozen = false;
+			getAnimation().getSprite()->setColor(m_default_color);
+		}
+	}
+
+	if (m_is_dashing) {
+		dashing_countdown--;
+		if (dashing_countdown <= 0) {
+			m_is_dashing = false;
+			dashing_countdown = 15;
+			setVelocity(df::Vector(0, 0));
 			getAnimation().getSprite()->setColor(m_default_color);
 		}
 	}
@@ -625,16 +620,15 @@ void PlayerCharacter::do_action_defense(bool isHigher){
 	if (isHigher) {
 		LM.writeLog("Higher level defense called");
 		//do dash dodge
-		
 		if (isRight > 0) { //dash right
-			setVelocity(Vector(20, 0));
-			setAcceleration(Vector(5, 0));
-			//setHorizontalSlowdown(0);
+			setVelocity(Vector(3, 0));
+			m_is_dashing = true;
+			getAnimation().getSprite()->setColor(df::Color::MAGENTA);
 		}
 		else {
-			setVelocity(df::Vector(-20, 0));
-			setAcceleration(Vector(5, 0));
-
+			setVelocity(df::Vector(-3, 0));
+			m_is_dashing = true;
+			getAnimation().getSprite()->setColor(df::Color::MAGENTA);
 		}
 		
 	}
@@ -759,11 +753,4 @@ void PlayerCharacter::setSuperDamage(int damage){
 }
 int PlayerCharacter::getSuperDamage() const {
 	return m_super_attack_damage;
-}
-
-void PlayerCharacter::setIsDefending(bool t) {
-	isDefending = t;
-}
-bool PlayerCharacter::getIsDefending() const {
-	return isDefending;
 }

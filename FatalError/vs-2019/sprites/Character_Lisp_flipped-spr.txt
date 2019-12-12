@@ -1,28 +1,31 @@
 <HEADER>
 frames 3
-width 20
-height 5
-color white
+width 30
+height 6
+color cyan
 slowdown 10
 </HEADER>
 <BODY>
-         (``)       
-             )      
-             ()     
-            (  )    
-           (    )   
+        .-------.             
+        / .(^-^).  \          
+   /               ( _\       
+  O         Lisp  |   |  O    
+         \'-----'  ' _)       
+            '--------'        
 end
-         (``)       
-             )      
-             ()     
-           (    )   
-         (        ) 
+          .-------.           
+          / .(^-^).  \        
+     /               ( _\     
+    O        Lisp   |   |  O  
+           \'-----'  ' _)     
+             '--------'       
 end
-         (``)       
-             )      
-             ()     
-            (  )    
-           (    )   
+           .-------.          
+           / .(^-^).  \       
+       /               ( _\   
+     O       Lisp    |   |  O 
+         \'-----'  ' _)       
+           '--------'         
 end
 </BODY>
 <FOOTER>

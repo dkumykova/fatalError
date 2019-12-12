@@ -27,7 +27,7 @@ Character_Java::Character_Java() {
 	// [Parameter 2 default as false. If true, means set countdown to slowdown at the same time]
 	setHorizontalSlowdown(2, true);
 	setJumpSlowdown(30, true);
-	setDefenseSlowdown(30, true);
+	setDefenseSlowdown(300, true);
 	setAttackOneSlowdown(30, true);
 	setSuperAttackSlowdown(900, true); // 30 secs
 	setSuperChanelingSlowdown(60, true);
