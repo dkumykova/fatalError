@@ -14,12 +14,16 @@ Player::Player() {
 	setType("Player");
 
 	setHealth(PLAYER_MAX_HEALTH); // Initialize m_health
-	my_clock = new Clock(); // Initialize Clock
 
 	registerInterest(df::KEYBOARD_EVENT); // Listen to Keyboard Events
 	registerInterest(df::STEP_EVENT); // Listen to Keyboard Events
 
 	facing_right = true;
+	setSolidness(df::SPECTRAL);
+
+	controls = new ControlsDisplay();
+	controls->setActive(false);
+	playerNum = 1;
 
 }
 
@@ -28,9 +32,20 @@ int Player::eventHandler(const df::Event* p_e) {
 
 	if (p_e->getType() == df::STEP_EVENT) {
 
-		LM.writeLog("Player Facing %d", getFacingRight());
-		if ((getPosition().getX() > 100 && facing_right) || (getPosition().getX() < 100 && !facing_right)) {
-			swapFacing();
+		// If originally at other player's left and now become right
+		if (!(getCharacter()->getErrorAttacking() || getCharacter()->getErrorChanneling())) {
+			if (facing_right) {
+				if (getLeftBoundary() > getOpponentPlayer()->getRightBoundary() + 10) {
+					swapFacing();
+					m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Flipped);
+				}
+			}
+			else { // Else if originally at other player's right and now become left
+				if (getRightBoundary() < getOpponentPlayer()->getLeftBoundary() - 10 && !facing_right) {
+					swapFacing();
+					m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Original);
+				}
+			}
 		}
 		return 1;
 	}
@@ -68,7 +83,27 @@ void Player::handleHealth(int damage){
 }
 
 void Player::setCharacter(PlayerCharacter* new_char){
-	m_p_character = new_char;
+	// No implementation because this is player dependent
+}
+
+PlayerCharacter* Player::getCharacter() const{
+	return m_p_character;
+}
+
+void Player::setOpponentPlayer(Player* new_player){
+	m_p_other_player = new_player;
+}
+
+Player* Player::getOpponentPlayer() const{
+	return m_p_other_player;
+}
+
+float Player::getLeftBoundary(){
+	return df::getWorldBox(m_p_character).getCorner().getX();
+}
+
+float Player::getRightBoundary(){
+	return df::getWorldBox(m_p_character).getCorner().getX() + m_p_character->getBox().getHorizontal();
 }
 
 int Player::getFacingRight(){
@@ -80,4 +115,15 @@ int Player::getFacingRight(){
 
 void Player::swapFacing(){
 	facing_right = !facing_right;
+}
+
+ControlsDisplay* Player::getControls() const {
+	return controls;
+}
+
+int Player::getPlayerNum() const {
+	return playerNum;
+}
+void Player::setPlayerNum(int n) {
+	playerNum = n;
 }

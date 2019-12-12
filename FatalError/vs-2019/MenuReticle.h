@@ -4,6 +4,7 @@
 #include "Object.h"
 #include "EventKeyboard.h"
 #include "PlayerSelected.h"
+#include "PlayerCharacter.h"
 using namespace df;
 
 class MenuReticle : public df::Object {
@@ -12,7 +13,7 @@ private:
 	void step();
 	int move_slowdown;
 	int move_countdown;
-	Vector highlightedChar;
+	PlayerCharacter* highlightedChar;
 	bool characterSet; //true if character has been selected
 	
 
@@ -23,7 +24,7 @@ public:
 	int eventHandler(const df::Event* p_e);
 	/*~MenuReticle();*/
 	void setHighlightedChar(Vector pos);
-	Vector getHighlightedChar() const;
+	PlayerCharacter* getHighlightedChar() const;
 	void setCharacterSet(bool isSet);
 	bool getCharacterSet() const;
 	PlayerSelected* selectedString;

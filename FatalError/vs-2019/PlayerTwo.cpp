@@ -12,58 +12,73 @@
 
 PlayerTwo::PlayerTwo() {
 	setPosition(df::Vector(180, WM.getBoundary().getVertical() / 2));
-	setSolidness(df::SPECTRAL);
 	swapFacing();
+	setPlayerNum(2);
 }
 
 void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 	switch (p_key_event->getKey()) {
 	case df::Keyboard::UPARROW:       // Jump
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			long int jump_time = my_clock->split() / 1000;
-
-			if (jump_time < 1000) {
-				//LM.writeLog("Too quick to jump!");
-				//LM.writeLog("%ld", jump_time);
-				return;
-			}
-
-			my_clock->delta(); // Reset Clock
-			m_p_character->jump(); // Jump
+			m_p_character->processUpArrow(); // Jump
 		}
 		break;
 	case df::Keyboard::LEFTARROW:       // Left
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			m_p_character->moveLeft();
-			return;
+			m_p_character->processLeftArrow();
 		}
 		break;
 	case df::Keyboard::DOWNARROW:       // Defend
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			//
-			break;
+			m_p_character->processDownArrow();
+		break;
 	case df::Keyboard::RIGHTARROW:       // Right
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN)
-			m_p_character->moveRight();
+			m_p_character->processRightArrow();
 		break;
-
 	case df::Keyboard::ESCAPE:  // quit
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			//new GameOver;
-			break;
+		break;
 	case df::Keyboard::R:  // quit
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			new GameOver;
 		break;
-	case df::Keyboard::J: // attack 1
+	case df::Keyboard::T: // controls
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED) {
+			if (getControls()->getErase()) {
+				getControls()->setActive(false);
+
+			}
+			else {
+				getControls()->setPosition(Vector(100, 10));
+				getControls()->setActive(true);
+				getControls()->setErase(true);
+			}
+			
+		}
+		break;
+	case df::Keyboard::RIGHTCONTROL: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_1();
 		break;
-	case df::Keyboard::K: // attack 2
+	case df::Keyboard::PERIOD: // attack 2
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
 			m_p_character->attack_2();
 		break;
+	case df::Keyboard::RIGHTSHIFT: // defend //**WE HAVE 2 SPECIALS
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			m_p_character->do_action_defense(m_p_character->getIsHigherLevel());
+		break;
+	//case df::Keyboard::SLASH: // super
+	//	if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+	//		m_p_character->do_action_super_attack();
+	//	break;
 
+	case df::Keyboard::SLASH: // Super attack
+		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
+			m_p_character->specialAttack();
+		break;
 	default: // Key not handled.
 		return;
 	};
@@ -82,4 +97,15 @@ void PlayerTwo::handleHealth(int damage){
 	// Update Health Bar
 	df::EventView ev("Player 2 Health:", -damage, true);
 	WM.onEvent(&ev);
+
+	if (getHealth() <= 0) {
+		m_p_character->getFrozen(10);
+		WM.markForDelete(m_p_character);
+		new GameOver;
+	}
+}
+
+void PlayerTwo::setCharacter(PlayerCharacter* new_char) {
+	m_p_character = new_char;
+	m_p_character->flipSprite(PlayerCharacter::SpriteStatus::Flipped);
 }

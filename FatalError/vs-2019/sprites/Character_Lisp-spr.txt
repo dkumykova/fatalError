@@ -1,0 +1,32 @@
+<HEADER>
+frames 3
+width 20
+height 5
+color white
+slowdown 10
+</HEADER>
+<BODY>
+         (``)       
+        (           
+       ()           
+      (  )          
+     (    )         
+end
+         (``)       
+        (           
+       ()           
+     (    )         
+   (        )       
+end
+         (``)       
+        (           
+       ()           
+      (  )          
+     (    )         
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
+
+30 blanks:                               

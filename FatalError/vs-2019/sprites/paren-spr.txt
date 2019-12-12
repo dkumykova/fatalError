@@ -1,0 +1,24 @@
+<HEADER>
+frames 3
+width 3
+height 3
+color green
+slowdown 5
+</HEADER>
+<BODY>
+))(
+   
+(()
+end
+)))
+   
+(((
+end
+))(
+   
+(()
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

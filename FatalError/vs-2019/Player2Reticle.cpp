@@ -22,14 +22,16 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	case df::Keyboard::LEFTARROW:
 
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			LM.writeLog("move reticle with A");
-			move(-25);
+			LM.writeLog("move reticle with left arrow");
+			if (!getCharacterSet())
+				move(-25);
 		}
 		break;
 	case df::Keyboard::RIGHTARROW:
 		if (p_key_event->getKeyboardAction() == df::KEY_DOWN) {
-			LM.writeLog("move reticle with D");
-			move(+25);
+			LM.writeLog("move reticle with right arrow");
+			if (!getCharacterSet())
+				move(+25);
 		}
 		break;
 	case df::Keyboard::RIGHTSHIFT:
@@ -39,6 +41,7 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 			selectedString->setPosition(Vector(5, 35));
 			//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
 			setHighlightedChar(getPosition());
+			setCharacterSet(true);
 		}
 		break;
 	case df::Keyboard::RIGHTCONTROL:
@@ -49,6 +52,7 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 			//selectedString = new PlayerSelected();
 			//DM.drawString(Vector(70, 35), "Player 2 has selected", CENTER_JUSTIFIED, RED);
 			setHighlightedChar(Vector());
+			setCharacterSet(false);
 		}
 		break;
 	default:
@@ -56,7 +60,5 @@ void Player2Reticle::kbd(const df::EventKeyboard* p_key_event) {
 	};
 	return;
 }
-
-
 
 

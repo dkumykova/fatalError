@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="EventHealth.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="GameStart.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Star.cpp" />
+    <ClCompile Include="TestCharacter2.cpp" />
+    <ClCompile Include="TestingCharacter.cpp" />
+    <ClCompile Include="Character_C.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_java.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Js.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Lisp.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="CommentWall.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="LispSuper.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Player1Reticle.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Player2Reticle.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerOne.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTwo.cpp">
+      <Filter>PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterSelectMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuReticle.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSelected.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="JavaClone.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_CPP.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Python.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_C_pointer.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_CPP_plus.cpp">
+      <Filter>CharacterPowers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlsDisplay.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EventHealth.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="GameStart.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Star.h" />
+    <ClInclude Include="TestCharacter2.h" />
+    <ClInclude Include="TestingCharacter.h" />
+    <ClInclude Include="Character_C.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Java.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Js.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Lisp.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="CommentWall.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="LispSuper.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Player1Reticle.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Player2Reticle.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCharacter.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerOne.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerTwo.h">
+      <Filter>PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterSelectMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuReticle.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSelected.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="JavaClone.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_CPP.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Python.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_C_pointer.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_CPP_plus.h">
+      <Filter>CharacterPowers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlsDisplay.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Characters">
+      <UniqueIdentifier>{2832dd68-2ac1-4407-81e3-5538f9415666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharacterPowers">
+      <UniqueIdentifier>{3414463c-877c-4a56-8095-6a65538b6264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayerControl">
+      <UniqueIdentifier>{ab483db8-59fd-4983-934e-caf51128e616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{98d0b7aa-1d66-428c-8774-7e7e33ed498f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

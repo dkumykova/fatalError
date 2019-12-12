@@ -2,18 +2,25 @@
 // Game Include
 #include "CharacterSelectMenu.h"
 #include "Platform.h"
-#include "Character_C.h"
 #include "PlayerOne.h"
 #include "PlayerTwo.h"
 #include "PlayerCharacter.h"
 #include <ViewObject.h>
 #include "TestCharacter2.h"
+#include "Explosion.h"
+
+// Character Includes
+#include "Character_C.h"
+#include "Character_CPP.h"
+#include "Character_Python.h"
 
 // Event Include
 #include <EventStep.h>
 
 // Engine Include
 #include <LogManager.h>
+#include "Character_Lisp.h"
+#include <ResourceManager.h>
 
 
 CharacterSelectMenu::CharacterSelectMenu() {
@@ -37,26 +44,30 @@ void CharacterSelectMenu::start() {
 		//both players have selected their character and game is ready to go
 		LM.writeLog("Both characters have been set!");
 		
+
 		new Platform();
 
-		//this should be replaced with 2 chosen characters based on getHighlightedChar function for each reticle + switch statement
-		
+
 		PlayerOne* p1 = new PlayerOne;
 		PlayerTwo* p2 = new PlayerTwo;
 
-		Character_C* c1 = new Character_C();
-		Character_C* c2 = new Character_C();
+		PlayerCharacter* c1 = player1->getHighlightedChar();
+		PlayerCharacter* c2 = player2->getHighlightedChar();
 
 		p1->setCharacter(c1);
 		c1->setPlayer(p1);
+		p1->setOpponentPlayer(p2);
 		p2->setCharacter(c2);
 		c2->setPlayer(p2);
+		p2->setOpponentPlayer(p1);
 
 		setActive(false);
 		player1->setActive(false);
 		player2->setActive(false);
 		player1->selectedString->setActive(false);
 		player2->selectedString->setActive(false);
+		c1->setActive(true);
+		c2->setActive(true);
 
 		df::ViewObject* p_health = new df::ViewObject; //keep track of health
 		p_health->setLocation(df::TOP_LEFT);
@@ -70,6 +81,10 @@ void CharacterSelectMenu::start() {
 		p_health2->setValue(100);
 		p_health2->setColor(df::GREEN);
 
+		game_music = RM.getMusic("gameMusic");
+		start_music->pause();
+
+		game_music->play();
 
 	}
 	else {
@@ -103,4 +118,12 @@ int CharacterSelectMenu::eventHandler(const df::Event* p_e) {
 		return 1;
 	}
 	return 0;
+}
+
+void CharacterSelectMenu::setStartMusic(Music* m) {
+	start_music = m;
+}
+
+Music* CharacterSelectMenu::getGameMusic() const{
+	return game_music;
 }

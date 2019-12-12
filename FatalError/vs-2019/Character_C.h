@@ -7,10 +7,16 @@ class Character_C : public PlayerCharacter {
 
 public:
 	Character_C();
-	void attack_1();
-	void attack_2();
-	void specialAttack();
-	void moveRight();
-	void moveLeft();
-	void jump();
+	
+	// Move Related
+	void do_action_move_right();
+	void do_action_move_left();
+	void do_action_jump();
+	void do_action_defense();
+	void do_action_attack_1();
+	void do_action_super_attack();
+
+
+	// Sprite Related
+	void flipSprite(PlayerCharacter::SpriteStatus sprite_status);
 };

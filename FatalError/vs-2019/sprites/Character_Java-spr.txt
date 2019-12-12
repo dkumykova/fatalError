@@ -1,0 +1,36 @@
+<HEADER>
+frames 2
+width 9
+height 10
+color white
+slowdown 10
+</HEADER>
+<BODY>
+         
+    ) (  
+   (  )  
+  .=~~=. 
+,|`=~~='|
+||  Jv  |
+`|      |
+  `-__-' 
+         
+         
+end
+      (	 
+      )  
+   (    )
+  .=~~=. 
+,|`=~~='|
+||  Jv  |
+`|      |
+  `-__-' 
+         
+         
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
+
+30 blanks:                               
