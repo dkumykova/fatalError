@@ -17,7 +17,7 @@ slowdown 15
                                                                                                                                                       
                                                             ***Press SPACE to Begin***                                                                
                                                                                                                                                       
-Player 1:   Left Shift to Select, Left Control to UnSelect                                                                                            
+Player 1:   AD to move, Left Shift to Select, Left Control to UnSelect                                                                                
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
@@ -38,7 +38,7 @@ Player 1:   Left Shift to Select, Left Control to UnSelect
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
-Player 2:   Right Shift to Select, Right Control to UnSelect                                                                                          
+Player 2:   Left and Right Arrows to move, Right Shift to Select, Right Control to UnSelect                                                           
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
@@ -68,7 +68,7 @@ end
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
-Player 1:   Left Shift to Select, Left Control to UnSelect                                                                                            
+Player 1:   AD to move, Left Shift to Select, Left Control to UnSelect                                                                                
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
@@ -89,7 +89,7 @@ Player 1:   Left Shift to Select, Left Control to UnSelect
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
-Player 2:   Right Shift to Select, Right Control to UnSelect                                                                                          
+Player 2:   Left and Right Arrows to move, Right Shift to Select, Right Control to UnSelect                                                           
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       

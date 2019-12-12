@@ -14,6 +14,8 @@ PlayerTwo::PlayerTwo() {
 	setPosition(df::Vector(180, WM.getBoundary().getVertical() / 2));
 	swapFacing();
 	setPlayerNum(2);
+	getControls()->setActive(true);
+	getControls()->setPosition(Vector(100, 10));
 }
 
 void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
@@ -45,7 +47,7 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 			new GameOver;
 		break;
 	case df::Keyboard::T: // controls
-		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED) {
+		/*if (p_key_event->getKeyboardAction() == df::KEY_PRESSED) {
 			if (getControls()->getErase()) {
 				getControls()->setActive(false);
 
@@ -57,7 +59,7 @@ void PlayerTwo::kbd(const df::EventKeyboard* p_key_event){
 				
 			}
 			
-		}
+		}*/
 		break;
 	case df::Keyboard::RIGHTCONTROL: // attack 1
 		if (p_key_event->getKeyboardAction() == df::KEY_PRESSED)
